@@ -21,6 +21,7 @@ module.exports = {
 
     module: {
         rules: [
+
 			{
 				test: /\.sass$/,
 				use: [
@@ -38,6 +39,30 @@ module.exports = {
 						loader: 'sass-loader',
 						options: { sourceMap: true }
 					},
+				]
+			},
+
+			{
+				test: /\.(png|gif|jpe?g)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: 'img/[name].[ext]'
+						}
+					}
+				]
+			},
+
+			{
+				test: /\.(woff|woff2|ttf|otf|eof)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: 'fonts/[name].[ext]'
+						}
+					}
 				]
 			},
 		]
