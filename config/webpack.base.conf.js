@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const PATHS = {
@@ -15,11 +15,7 @@ const PAGES = fs.readdirSync(PAGES_DIR).filter(filename => filename.endsWith('.p
 
 module.exports = {
 
-    entry: {
-        app: PATHS.src + 'index.js'
-    },
     output: {
-        filename: 'js/[name].js',
         path: PATHS.dist
     },
 
@@ -43,8 +39,10 @@ module.exports = {
 					},
 					{
 						loader: 'postcss-loader',
-						options: { sourceMap: true },
-						config: { path: __dirname + '../' }
+						options: { 
+							sourceMap: true,
+							config: { path: __dirname + '../' }
+						},
 					},
 					{
 						loader: 'sass-loader',
