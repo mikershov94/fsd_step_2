@@ -10,12 +10,16 @@ const PATHS = {
     dist: path.join(__dirname, '../dist'),
 };
 
-const PAGES_DIR = `${PATHS.src}/pug/pages`;
+const PAGES_DIR = `${PATHS.src}/pages`;
 const PAGES = fs.readdirSync(PAGES_DIR).filter(filename => filename.endsWith('.pug'));
 
 module.exports = {
 
-    output: {
+	entry: {
+		app: PATHS.src + '/index.js'
+	},
+	output: {
+		filename: 'js/app.js',
         path: PATHS.dist
     },
 
@@ -41,7 +45,7 @@ module.exports = {
 						loader: 'postcss-loader',
 						options: { 
 							sourceMap: true,
-							config: { path: __dirname + '../' }
+							config: { path: __dirname }
 						},
 					},
 					{
