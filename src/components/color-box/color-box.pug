@@ -1,12 +1,25 @@
 mixin color-box(color, opacity, code)
-    - var name = ''
+    - var shade = ''
+    - var shadeClass = ''
+        
     if opacity!=''
-        - name = color + ' Shade'
-    else
-        - name = color
+        - shade = ' Shade ' + opacity + '%'
+
+    case opacity
+        when '100'
+            - shadeClass = ' color-box__pallete_shade_100'
+        when '75'
+            - shadeClass = ' color-box__pallete_shade_75'
+        when '50'
+            - shadeClass = ' color-box__pallete_shade_50'
+        when '25'
+            - shadeClass = ' color-box__pallete_shade_25'
+        when '5'
+            - shadeClass = ' color-box__pallete_shade_5'
 
     .color-box
-            div(class="pallete")
-            .info
-                .color-name= name + ' ' + opacity
-                .color-code= code
+            - var colorClass = 'color-box__pallete_theme_' + color.toLowerCase()
+            div(class= 'color-box__pallete ' + colorClass + shadeClass)
+            .color-box__info
+                .color-box__name= color + shade
+                .color-box__code= code

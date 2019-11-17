@@ -1,0 +1,43 @@
+.color-box
+	display: flex
+	margin-bottom: 1.21rem
+
+	&__pallete
+		width: 3.8em
+		height: 3.8em
+		border-radius: 0.35rem
+
+		&_theme_dark
+			background-color: $dark
+
+		&_theme_purple
+			background-color: $purple
+
+		&_theme_green
+			background-color: $green
+
+		&_shade_100
+			+shade(1)
+
+		&_shade_75
+			+shade(0.75)
+
+		&_shade_50
+			+shade(0.5)
+
+		&_shade_25
+			+shade(0.25)
+
+		&_shade_5
+			+shade(0.05)
+
+	&__info
+		padding-top: 8px
+		margin-left: 35px
+
+	&__name
+		font-weight: bold
+		letter-spacing: 0.036em
+
+	&__code
+		margin-top: 3px

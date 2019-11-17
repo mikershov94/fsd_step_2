@@ -1,42 +1,13 @@
 @import "./libs/_fonts.css";
+@import "./libs/_colors.sass";
+@import "./libs/_mixins.sass";
 
-$dark-shade: #1F2041
-$purple: #BC9CFF
-$green: #6FCF97
+@import "./components/color-box/color-box.sass";
 
 body
 	font-family: 'Open Sans', sans-serif
-	color: #1F2041
+	color: $dark
 
 .wrapper
 	padding-left: 7.84rem
 	padding-top: 7.5rem
-
-.color-box
-	display: flex
-	margin-bottom: 1.21rem
-
-.pallete
-	width: 3.8em
-	height: 3.8em
-	border-radius: 0.35rem
-
-.dark-shade
-	background-color: $dark-shade
-
-.purple
-	background-color: $purple
-
-.green
-	background-color: $green
-
-.info
-	padding-top: 8px
-	margin-left: 35px
-
-	.color-name
-		font-weight: bold
-		letter-spacing: 0.036em
-
-	.color-code
-		margin-top: 3px
