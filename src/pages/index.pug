@@ -2,8 +2,7 @@ extends layouts/base
 include ../components/color-box/color-box
 
 block content
-    header.uikit-header
-        img(src="../../static/logo.svg")
+    include ../components/uikit-header/uikit-header
     .wrapper
         +color-box('Dark', '100', '#1F2041')
         +color-box('Dark', '75', '#1F2041')
