@@ -1,0 +1,33 @@
+mixin font-type-box (type)
+    -var typeContent = ''
+    -var textContent = ''
+
+    case type
+        when 'h1'
+            - typeContent = 'H1'
+            - textContent = 'This one is the sub-section or widget title'
+            
+            .font-type
+                div(class="font-type__type font-type__type_h1")= typeContent
+                div(class="font-type__text font-type__text_h1")= textContent
+        when 'h2'
+            - typeContent = 'H2'
+            - textContent = 'Next one is the item title inside widgets'
+            
+            .font-type
+                div(class="font-type__type font-type__type_h2")= typeContent
+                div(class="font-type__text font-type__text_h2")= textContent
+        when 'h3'
+            - typeContent = 'H3'
+            - textContent = 'THIS IS A LABEL OR CTA TEXT'
+            
+            .font-type
+                div(class="font-type__type font-type__type_h3")= typeContent
+                div(class="font-type__text font-type__text_h3")= textContent
+        when 'body'
+            - typeContent = 'Body'
+            - textContent = 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'
+            
+            .font-type
+                div(class="font-type__type font-type__type_body")= typeContent
+                div(class="font-type__text font-type__text_body")= textContent

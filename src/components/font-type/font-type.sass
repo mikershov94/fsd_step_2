@@ -1,0 +1,53 @@
+.types
+    min-width: 25rem
+    padding-left: 3.3rem
+    padding-right: 8.3rem
+
+.font-type
+    display: flex
+    margin-bottom: 2.74rem
+
+    &__type
+        vertical-align: top
+        text-align: end
+        opacity: 0.25
+
+        &_h1
+            width: 4.8rem
+            +font-type(h1, normal)
+            
+        &_h2
+            width: 3.8rem
+            +font-type(h2, normal)
+
+        &_h3
+            width: 3.8rem
+            +font-type(h3, normal)
+
+        &_body
+            width: 3.8rem
+            +font-type(body, bold)
+
+        
+
+    &__text
+        vertical-align: top
+        text-align: start
+
+        &_h1
+            margin-left: 1.65rem
+            +font-type(h1, bold)
+
+        &_h2
+            margin-left: 1.63rem
+            width: 17rem
+            +font-type(h2, bold)
+
+        &_h3
+            margin-left: 1.58rem
+            +font-type(h3, bold)
+
+        &_body
+            margin-left: 1.59rem
+            width: 17rem
+            +font-type(body, normal)

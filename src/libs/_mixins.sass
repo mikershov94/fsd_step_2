@@ -1,2 +1,33 @@
 =shade ($opacity)
 	opacity: $opacity
+
+=font-type ($type, $weight)
+	@if $type == h1
+		font-weight: $weight
+		font-size: 1.33rem
+		line-height: 1.31em
+		letter-spacing: 0.002em
+		word-spacing: 0.14em
+	@else if $type == h2
+		font-weight: $weight
+		font-size: 1rem
+		line-height: 1.31em
+		letter-spacing: 0.002em
+		word-spacing: 0.14em
+	@else if $type == h3
+		font-weight: $weight
+		font-size: 0.7rem
+		line-height: 1.31em
+		letter-spacing: 0.002em
+		word-spacing: 0.14em
+	@else if $type == body
+		font-weight: normal
+		@if $weight == bold
+			font-size: 0.8rem
+			letter-spacing: 0.002em
+			line-height: 1.3em
+		@else 
+			font-size: 0.75rem
+			letter-spacing: 0.036em
+			line-height: 1.7em
+		word-spacing: 0.07em
