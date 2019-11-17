@@ -1,25 +1,42 @@
-@font-face
-	font-family: 'Open Sans'
-	font-style: normal
-	font-weight: 400
-	src: url('../static/fonts/open-sans-v17-latin_cyrillic-regular.eot') /* IE9 Compat Modes */
-	src: local('Open Sans Regular'), local('OpenSans-Regular'), url('../static/fonts/open-sans-v17-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), url('../static/fonts/open-sans-v17-latin_cyrillic-regular.woff2') format('woff2'), url('../static/fonts/open-sans-v17-latin_cyrillic-regular.woff') format('woff'), url('../static/fonts/OpenSans-Regular.ttf') format('truetype')
+@import "./libs/_fonts.css";
+
+$dark-shade: #1F2041
+$purple: #BC9CFF
+$green: #6FCF97
 
 body
-	font-family: "Open Sans", sans-serif
+	font-family: 'Open Sans', sans-serif
+	color: #1F2041
 
 .wrapper
-	position: relative
-	padding-left: 125px
-	padding-top: 120px
+	padding-left: 7.84rem
+	padding-top: 7.5rem
+
+.color-box
+	display: flex
+	margin-bottom: 1.21rem
 
 .pallete
-	float: left
-	width: 62px
-	height: 62px
-	border-radius: 5px
-	background-color: #1F2041
+	width: 3.8em
+	height: 3.8em
+	border-radius: 0.35rem
+
+.dark-shade
+	background-color: $dark-shade
+
+.purple
+	background-color: $purple
+
+.green
+	background-color: $green
 
 .info
-	padding-top: 12px
-	margin-left: 110px
+	padding-top: 8px
+	margin-left: 35px
+
+	.color-name
+		font-weight: bold
+		letter-spacing: 0.036em
+
+	.color-code
+		margin-top: 3px

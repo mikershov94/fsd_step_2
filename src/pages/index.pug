@@ -1,9 +1,12 @@
 extends layouts/base
+include ../components/color-box/color-box
 
 block content
     .wrapper
-        .color-box
-            .pallete
-            .info
-                .color-name Dark Shade 100%
-                .color-code #1F2041
+        +color-box('Dark', '100%', '#1F2041')
+        +color-box('Dark', '75%', '#1F2041')
+        +color-box('Dark', '50%', '#1F2041')
+        +color-box('Dark', '25%', '#1F2041')
+        +color-box('Dark', '5%', '#1F2041')
+        +color-box('Purple', '', '#BC9CFF')
+        +color-box('Green', '', '#6FCF97')

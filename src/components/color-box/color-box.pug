@@ -1,0 +1,12 @@
+mixin color-box(color, opacity, code)
+    - var name = ''
+    if opacity!=''
+        - name = color + ' Shade'
+    else
+        - name = color
+
+    .color-box
+            div(class="pallete")
+            .info
+                .color-name= name + ' ' + opacity
+                .color-code= code
