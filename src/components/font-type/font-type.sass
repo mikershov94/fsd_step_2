@@ -1,11 +1,11 @@
 .types
     min-width: 25rem
-    padding-left: 3.3rem
+    padding-left: 2.3rem
     padding-right: 8.3rem
 
 .font-type
     display: flex
-    margin-bottom: 2.74rem
+    margin-bottom: 2.82rem
 
     &__type
         vertical-align: top
@@ -35,7 +35,7 @@
         text-align: start
 
         &_h1
-            margin-left: 1.65rem
+            margin-left: 1.42rem
             +font-type(h1, bold)
 
         &_h2
@@ -44,10 +44,14 @@
             +font-type(h2, bold)
 
         &_h3
-            margin-left: 1.58rem
+            margin-left: 1.65rem
             +font-type(h3, bold)
 
         &_body
-            margin-left: 1.59rem
+            margin-left: 1.65rem
             width: 17rem
             +font-type(body, normal)
+
+.font-type:nth-child(3)
+    display: flex
+    margin-bottom: 2.55rem
