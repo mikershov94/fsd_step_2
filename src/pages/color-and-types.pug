@@ -1,0 +1,20 @@
+extends layouts/base
+include ../components/color-box/color-box
+include ../components/font-type/font-type
+
+block content
+    include ../components/uikit-header/uikit-header
+    .wrapper
+        .colors
+            +color-box('Dark', '100', '#1F2041')
+            +color-box('Dark', '75', '#1F2041')
+            +color-box('Dark', '50', '#1F2041')
+            +color-box('Dark', '25', '#1F2041')
+            +color-box('Dark', '5', '#1F2041')
+            +color-box('Purple', '', '#BC9CFF')
+            +color-box('Green', '', '#6FCF97')
+        .types
+            +font-type-box('h1')
+            +font-type-box('h2')
+            +font-type-box('h3')
+            +font-type-box('body')
