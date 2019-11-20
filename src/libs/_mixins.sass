@@ -1,51 +1,10 @@
-=shade ($opacity)
+=color-theme($color, $opacity)
+	background-color: $color
 	opacity: $opacity
 
-=font-type ($type, $weight)
-	@if $type == h1
-		@if $weight == bold
-			font-weight: $weight
-			font-size: 1.3045rem
-			line-height: 1.2785em
-			letter-spacing: 0.009em
-		@else 
-			font-weight: $weight
-			font-size: 1.304rem
-			line-height: 1.23em
-			letter-spacing: 0.005em
-		word-spacing: 0.054em
-	@else if $type == h2
-		@if $weight == bold
-			font-weight: $weight
-			font-size: 0.955rem
-			line-height: 1.38em
-			letter-spacing: 0.06em
-		@else 
-			font-weight: $weight
-			font-size: 1rem
-			line-height: 1.33em
-			letter-spacing: 0.002em
-		word-spacing: 0.017em
-	@else if $type == h3
-		@if $weight == bold
-			font-weight: $weight
-			font-size: 0.58rem
-			line-height: 1.3em
-			letter-spacing: 0.16em
-		@else 
-			font-weight: $weight
-			font-size: 0.6rem
-			line-height: 1.3em
-			letter-spacing: 0.04em
-		word-spacing: 0.0005em
-	@else if $type == body
-		font-weight: normal
-		@if $weight == bold
-			font-size: 0.8rem
-			letter-spacing: 0.002em
-			line-height: 1.7em
-		@else 
-			font-size: 0.73rem
-			letter-spacing: 0.046em
-			line-height: 1.8em
-		word-spacing: 0.045em
+=font-type ($params)
+	font-weight: map-get($params, weight)
+	font-size: map-get($params, size)
+	line-height: map-get($params, height)
+	letter-spacing: map-get($params, l-spacing)
+	word-spacing: map-get($params, w-spacing)

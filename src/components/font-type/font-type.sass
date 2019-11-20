@@ -1,3 +1,5 @@
+@import "../../libs/_types.sass";
+
 .types
     max-width: 24.6rem
     padding-left: 8.3rem
@@ -14,19 +16,19 @@
 
         &_h1
             width: 5.3rem
-            +font-type(h1, normal)
+            +font-type($type-h1-normal)
             
         &_h2
             width: 3.7rem
-            +font-type(h2, normal)
+            +font-type($type-h2-normal)
 
         &_h3
             width: 3.8rem
-            +font-type(h3, normal)
+            +font-type($type-h3-normal)
 
         &_body
             width: 3.8rem
-            +font-type(body, bold)
+            +font-type($body-bold)
 
         
 
@@ -37,21 +39,21 @@
 
         &_h1
             margin-left: 1.43rem
-            +font-type(h1, bold)
+            +font-type($type-h1)
 
         &_h2
             margin-left: 1.68rem
             width: 17rem
-            +font-type(h2, bold)
+            +font-type($type-h2)
 
         &_h3
             margin-left: 1.65rem
-            +font-type(h3, bold)
+            +font-type($type-h3)
 
         &_body
             margin-left: 1.65rem
             max-width: 17rem
-            +font-type(body, normal)
+            +font-type($type-body)
 
 .font-type:nth-child(3)
     display: flex
