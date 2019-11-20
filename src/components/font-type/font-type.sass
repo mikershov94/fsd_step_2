@@ -1,7 +1,7 @@
 .types
-    min-width: 25rem
-    padding-left: 2.3rem
-    padding-right: 8.3rem
+    max-width: 24.6rem
+    padding-left: 8.3rem
+    
 
 .font-type
     display: flex
@@ -13,11 +13,11 @@
         opacity: 0.25
 
         &_h1
-            width: 4.8rem
+            width: 5.3rem
             +font-type(h1, normal)
             
         &_h2
-            width: 3.8rem
+            width: 3.7rem
             +font-type(h2, normal)
 
         &_h3
@@ -33,13 +33,14 @@
     &__text
         vertical-align: top
         text-align: start
+        flex-grow: 1
 
         &_h1
-            margin-left: 1.42rem
+            margin-left: 1.43rem
             +font-type(h1, bold)
 
         &_h2
-            margin-left: 1.63rem
+            margin-left: 1.68rem
             width: 17rem
             +font-type(h2, bold)
 
@@ -49,7 +50,7 @@
 
         &_body
             margin-left: 1.65rem
-            width: 17rem
+            max-width: 17rem
             +font-type(body, normal)
 
 .font-type:nth-child(3)
