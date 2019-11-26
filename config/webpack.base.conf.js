@@ -20,7 +20,7 @@ module.exports = {
 	},
 	output: {
 		filename: 'js/app.js',
-        path: PATHS.dist
+		path: PATHS.dist,
     },
 
     module: {
@@ -66,7 +66,10 @@ module.exports = {
 					}
 				]
 			},
-
+			{
+				test: /\.(svg)$/,
+				loader: 'url-loader',
+			},
 			{
 				test: /\.(woff|woff2|ttf|otf|eot)$/,
 				use: [

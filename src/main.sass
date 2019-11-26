@@ -8,7 +8,7 @@
 
 body
 	font-family: 'Open Sans', sans-serif
-	color: $dark
+	color: $dark-shade-100
 	margin: 0
 	padding: 0
 	width: 100%
@@ -20,3 +20,45 @@ body
 	flex-wrap: wrap
 	width: 100%
 	padding-top: 2.3rem
+
+.wrapper-form-kit
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	padding-top: 1.65rem
+
+.fields
+	width: 25%
+	padding-left: 7.8rem
+
+	label
+		display: inline-block
+		+font-type($type-h3)
+		margin-bottom: 0.34rem
+
+	.form-input-field
+		margin-bottom: 0.7rem
+
+	.text-field input
+		width: 16rem
+		padding: 0.68rem
+		border: 1px solid $dark-shade-25
+		border-radius: 0.3rem
+
+	.dropdown select
+		display: none
+		background-color: transparent
+		width: 17.5rem
+		padding: 0.68rem
+		border: 0
+		border-radius: 0
+		-webkit-appearance: none
+		-moz-appearance: none
+
+	.dropdown
+		width: 17.5rem
+		overflow: hidden
+		border: 1px solid $dark-shade-25
+		border-radius: 0.3rem
+		padding: 0.68rem
+		//background: url('../static/icons/arrow_down.svg') no-repeat right

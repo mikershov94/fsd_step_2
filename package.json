@@ -25,7 +25,9 @@
     "postcss-loader": "^3.0.0",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
+    "resolve-url-loader": "^3.1.1",
     "sass-loader": "^8.0.0",
+    "url-loader": "^2.3.0",
     "webpack-dev-server": "^3.9.0"
   }
 }

@@ -1,4 +1,43 @@
 extends layouts/base
 
 block content
-    a(href="./color-and-types.html") Colors&Types
+    //a(href="./color-and-types.html") Colors&Types
+    include ../components/uikit-header/uikit-header
+    .wrapper-form-kit
+        .fields
+            .form-input-field
+                label Text field
+                .text-field._text-field_default
+                    input(type="text")
+            .form-input-field
+                label Text field
+                .text-field._text-field_hover-focus
+                    input(type="text")
+            .form-input-field
+                label Dropdown
+                .dropdown
+                    select <i class="material-icons">keyboard_arrow_down</i>
+                        option(value="1") Сколько гостей
+                        option(value="2") 2
+                        option(value="3") 3
+            .form-input-field
+                label Masked Textfield
+                .text-field._text-field_masked
+                    input(type="text")
+            .form-input-field
+                label Date dropdown
+                .date-dropdown
+                    input(type="date")
+            .form-input-field
+                label Date dropdown
+                .date-dropdown
+                    input(type="date")
+            .form-input-field
+                label Filter date dropdown
+                .filter-date-dropdown
+                    input(type="date")
+            .form-input-field
+                label Subscription Text field
+                .text-field._text-field_subcription
+                    input(type="email")
+            
