@@ -1,7 +1,7 @@
 extends layouts/base
 
 block content
-    //a(href="./color-and-types.html") Colors&Types
+    a(href="./color-and-types.html") Colors&Types
     include ../components/uikit-header/uikit-header
     .wrapper-form-kit
         .fields
@@ -15,12 +15,8 @@ block content
                     input(type="text")
             .form-input-field
                 label Dropdown
-                .dropdown
-                    select <i class="material-icons">keyboard_arrow_down</i>
-                        option(value="1") Сколько гостей
-                        option(value="2") 2
-                        option(value="3") 3
-            .form-input-field
+                       
+        //-    .form-input-field
                 label Masked Textfield
                 .text-field._text-field_masked
                     input(type="text")
@@ -39,5 +35,5 @@ block content
             .form-input-field
                 label Subscription Text field
                 .text-field._text-field_subcription
-                    input(type="email")
-            
+                    input(type="email")     
+        //
