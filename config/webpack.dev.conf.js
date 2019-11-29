@@ -9,9 +9,10 @@ module.exports = merge(baseWebpackConfig, {
 
     devServer: {
         contentBase: path.join(__dirname, '../'),
+        open: true,
         overlay: true,
         stats: 'errors-only',
-        port: 3001,
+        port: 3000,
     },
 
     optimization: {
