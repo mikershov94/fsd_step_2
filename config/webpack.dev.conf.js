@@ -11,8 +11,7 @@ module.exports = merge(baseWebpackConfig, {
         contentBase: path.join(__dirname, '../'),
         overlay: true,
         stats: 'errors-only',
-        port: 3000,
-        historyApiFallback: true,
+        port: 3001,
     },
 
     optimization: {
