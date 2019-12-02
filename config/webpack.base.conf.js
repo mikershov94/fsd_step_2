@@ -20,7 +20,7 @@ module.exports = {
 		app: PATHS.src + '/index.js'
 	},
 	output: {
-		filename: 'js/app.js',
+		filename: 'js/app-[hash:7].js',
 		path: PATHS.dist,
     },
 
@@ -62,7 +62,7 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: 'img/[name].[ext]'
+							name: 'img/[name]-[hash:7].[ext]'
 						}
 					}
 				]
@@ -77,7 +77,7 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: 'fonts/[name].[ext]'
+							name: 'fonts/[name]-[hash:7].[ext]'
 						}
 					}
 				]
@@ -87,7 +87,7 @@ module.exports = {
 	
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: 'css/main.css'
+			filename: 'css/main-[hash:7].css'
 		}),
 		new CleanWebpackPlugin(),
 

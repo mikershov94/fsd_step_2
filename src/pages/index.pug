@@ -8,20 +8,23 @@ block content
             .ham
             .form-input-field
                 label Text field
-                .text-field._text-field_default
-                    input(type="text")
+                .text-field.text-field_default
+                    input(type="text" placeholder="Email")
             .form-input-field
-                label Text 
-                .text-field._text-field_hover-focus
-                    input(type="text")
+                label Text field 
+                .text-field.text-field_hover-focus
+                    input(type="text" placeholder="This is a pretty awesome")
             .form-input-field
                 label Dropdown
-                .dropdown keyboard_arrow_down   
-        //-    .form-input-field
-                label Masked Textfield
-                .text-field._text-field_masked
-                    input(type="text")
+                .dropdown
+                    .dropdown__content Сколько гостей
+                    .dropdown__arrow keyboard_arrow_down
             .form-input-field
+                label Masked Textfield
+                .text-field.text-field_masked
+                    input(type="text" id="date")
+                    p
+        //-    .form-input-field
                 label Date dropdown
                 .date-dropdown
                     input(type="date")
