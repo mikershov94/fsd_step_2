@@ -2,6 +2,7 @@ extends layouts/base
 include ../components/form-elements/textfield/textfield
 include ../components/form-elements/dropdown/dropdown
 include ../components/form-elements/date-dropdown/date-dropdown
+include ../components/form-elements/textfield-masked/textfield-masked
 
 block content
     //a(href="./color-and-types.html") Colors&Types
@@ -15,10 +16,7 @@ block content
             .form-input-field
                 +dropdown()
             .form-input-field
-                label Masked Textfield
-                .text-field.text-field_masked
-                    input(type="text" id="date")
-                    p
+                +textfield-masked()
             .dropdown-wrapper
                 .form-input-field
                     +date-dropdown('ДД.ММ.ГГ')
