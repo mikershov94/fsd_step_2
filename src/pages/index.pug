@@ -1,5 +1,6 @@
 extends layouts/base
 include ../components/form-elements/textfield/textfield
+include ../components/form-elements/dropdown/dropdown
 
 block content
     //a(href="./color-and-types.html") Colors&Types
@@ -11,10 +12,7 @@ block content
             .form-input-field
                 +textfield('', 'This is a pretty awesome', true)
             .form-input-field
-                label Dropdown
-                .dropdown
-                    .dropdown__content Сколько гостей
-                    .dropdown__arrow keyboard_arrow_down
+                +dropdown()
             .form-input-field
                 label Masked Textfield
                 .text-field.text-field_masked
