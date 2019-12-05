@@ -1,18 +1,15 @@
 extends layouts/base
+include ../components/form-elements/textfield/textfield
 
 block content
     //a(href="./color-and-types.html") Colors&Types
     include ../components/uikit-header/uikit-header
     .wrapper-form-kit
-        .fields
+        .col-formkit-start
             .form-input-field
-                label Text field
-                .text-field.text-field_default
-                    input(type="text" placeholder="Email")
+                +textfield('Email')
             .form-input-field
-                label Text field 
-                .text-field.text-field_hover-focus
-                    input(type="text" value="This is a pretty awesome")
+                +textfield('', 'This is a pretty awesome', true)
             .form-input-field
                 label Dropdown
                 .dropdown
@@ -46,7 +43,7 @@ block content
                     .text-field_subcription__arrow arrow_forward  
 
     .wrapper-form-kit
-        .dropdowns-row-1
+        .col-formkit-start
             .form-input-field
                 label Dropdown
                 .dropdown.dropdown_default

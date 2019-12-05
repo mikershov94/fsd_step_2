@@ -1,0 +1,7 @@
+mixin textfield(placeholder="", value="", focus=false)
+    label Text field
+    .text-field
+        if !focus
+            input(type="text" placeholder=placeholder value=value)
+        else
+            input(type="text" placeholder=placeholder value=value autofocus)
