@@ -4,6 +4,7 @@ include ../components/form-elements/dropdown/dropdown
 include ../components/form-elements/date-dropdown/date-dropdown
 include ../components/form-elements/textfield-masked/textfield-masked
 include ../components/form-elements/filter-date-dropdown/filter-date-dropdown
+include ../components/form-elements/textfield-subscription/textfield-subscription
 
 block content
     //a(href="./color-and-types.html") Colors&Types
@@ -26,10 +27,7 @@ block content
             .form-input-field
                 +filter-date-dropdown()
             .form-input-field
-                label Subscription Text field
-                .text-field.text-field_subcription
-                    input(type="email" placeholder="Email")
-                    .text-field_subcription__arrow arrow_forward  
+                +textfield-subscription()  
 
     .wrapper-form-kit
         .col-formkit-start
