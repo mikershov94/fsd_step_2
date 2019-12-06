@@ -5,6 +5,7 @@ include ../components/form-elements/date-dropdown/date-dropdown
 include ../components/form-elements/textfield-masked/textfield-masked
 include ../components/form-elements/filter-date-dropdown/filter-date-dropdown
 include ../components/form-elements/textfield-subscription/textfield-subscription
+include ../components/form-elements/filter-dropdown/filter-dropdown 
 
 block content
     //a(href="./color-and-types.html") Colors&Types
@@ -16,7 +17,7 @@ block content
             .form-input-field
                 +textfield('', 'This is a pretty awesome', true)
             .form-input-field
-                +dropdown()
+                +dropdown('Сколько гостей')
             .form-input-field
                 +textfield-masked()
             .dropdown-wrapper
@@ -32,12 +33,7 @@ block content
     .wrapper-form-kit
         .col-formkit-start
             .form-input-field
-                label Dropdown
-                .dropdown.dropdown_default
-                    .dropdown_default__value-line
-                        .dropdown_default__content 2 спальни, 2 кровати...
-                        .dropdown_default__arrow keyboard_arrow_down
-                    .dropdown_default__list
+                +filter-dropdown()
             .form-input-field
                 label Dropdown
                 .dropdown.dropdown_expanded
