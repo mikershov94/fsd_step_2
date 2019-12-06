@@ -1,7 +1,14 @@
-mixin filter-dropdown()
+mixin filter-dropdown(expanded=false)
     label Dropdown
-    .filter-dropdown
-        .filter-dropdown__value-line
-            .filter-dropdown__content 2 спальни, 2 кровати...
-            .filter-dropdown__arrow keyboard_arrow_down
-        .filter-dropdown__list
+    if expanded
+        .filter-dropdown.filter-dropdown_expanded
+            .filter-dropdown__value-line
+                .filter-dropdown__content 2 спальни, 2 кровати...
+                .filter-dropdown__arrow keyboard_arrow_down
+            .filter-dropdown__list
+    else
+        .filter-dropdown
+            .filter-dropdown__value-line
+                .filter-dropdown__content 2 спальни, 2 кровати...
+                .filter-dropdown__arrow keyboard_arrow_down
+            .filter-dropdown__list
