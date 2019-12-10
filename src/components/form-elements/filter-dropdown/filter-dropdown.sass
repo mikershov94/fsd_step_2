@@ -1,9 +1,10 @@
-.filter-dropdown,
-.filter-dropdown_expanded
+.filter-dropdown
 	position: relative
 	width: 14.4rem
+	height: 2.3rem
 	border: 1px solid $dark-shade-25
 	border-radius: 0.2rem
+	cursor: pointer
 
 	&__content
 		height: 2.3rem
@@ -27,8 +28,16 @@
 		padding-top: 0.5rem
 		padding-left: 3rem
 
-.filter-dropdown
-	height: 2.3rem
+	&__list
+		position: absolute
+		top: 2.15rem
+		left: -0.05rem
+		display: none
+		width: 14.4rem
+		height: 10rem
+		border: 1px solid $dark-shade-25
+		border-radius: 0 0 0.2rem 0.2rem
+		background-color: white
 
-.filter-dropdown_expanded
-	height: 8.8rem
+		&_expanded
+			display: block

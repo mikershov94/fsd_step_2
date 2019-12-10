@@ -1,13 +1,13 @@
 mixin filter-dropdown(expanded=false)
     label Dropdown
     if expanded
-        .filter-dropdown.filter-dropdown_expanded
+        div(class="filter-dropdown" data-expand="expanded")
             .filter-dropdown__value-line
                 .filter-dropdown__content 2 спальни, 2 кровати...
                 .filter-dropdown__arrow keyboard_arrow_down
-            .filter-dropdown__list
+            .filter-dropdown__list.filter-dropdown__list_expanded
     else
-        .filter-dropdown
+        div(class="filter-dropdown" data-expand="")
             .filter-dropdown__value-line
                 .filter-dropdown__content 2 спальни, 2 кровати...
                 .filter-dropdown__arrow keyboard_arrow_down
