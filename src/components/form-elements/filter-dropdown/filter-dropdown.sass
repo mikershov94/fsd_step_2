@@ -42,3 +42,43 @@
 
 		&_expanded
 			display: block
+
+		ul
+			margin: 0
+			padding: 0
+
+	&__counter
+		list-style: none
+		display: flex
+		align-items: baseline
+		padding: 0.4rem 0.4rem 0rem 0.7rem
+
+	&__name-counter
+		flex-grow: 2
+		+font-type($type-h3)
+
+	&__panel
+		flex-grow: 1
+		display: flex
+		justify-content: flex-end
+		align-items: baseline
+
+	&__btn
+		width: 1.65rem
+		height: 1.65rem
+		-webkit-appearance: none
+		-moz-appearance: none
+		background: none
+		border: 1px solid $dark-shade-25
+		border-radius: 70%
+		color: $dark-shade-25
+
+		&_inc
+			margin-left: 0.7rem
+
+		&_dec
+			margin-right: 0.7rem
+
+	&__count
+		margin: 0
+		+font-type($type-h3)
