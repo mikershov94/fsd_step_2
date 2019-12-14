@@ -1,25 +1,25 @@
 mixin filter-dropdown(expanded=false)
-    mixin item-counter(value='')
-        li.filter-dropdown__counter
+    mixin item-counter(value='', identity='')
+        li(class="filter-dropdown__counter" id=identity)
             .filter-dropdown__name-counter= value
             .filter-dropdown__panel
                 button.filter-dropdown__btn.filter-dropdown__btn_dec -
-                .filter-dropdown__count 0
+                div(class="filter-dropdown__count" data-value="0") 0
                 button.filter-dropdown__btn.filter-dropdown__btn_inc +
 
     label Dropdown
     if expanded
-        div(class="filter-dropdown" data-expand="expanded")
+        .filter-dropdown
             .filter-dropdown__value-line
                 .filter-dropdown__content 2 спальни, 2 кровати...
                 .filter-dropdown__arrow keyboard_arrow_down
             .filter-dropdown__list.filter-dropdown__list_expanded
                 ul
-                  +item-counter('Спальни')  
-                  +item-counter('Кровати')
-                  +item-counter('Ванные комнаты')
+                  +item-counter('Спальни', 'bedrooms')  
+                  +item-counter('Кровати', 'beds')
+                  +item-counter('Ванные комнаты', 'bathrooms')
     else
-        div(class="filter-dropdown" data-expand="")
+        .filter-dropdown
             .filter-dropdown__value-line
                 .filter-dropdown__content 2 спальни, 2 кровати...
                 .filter-dropdown__arrow keyboard_arrow_down
