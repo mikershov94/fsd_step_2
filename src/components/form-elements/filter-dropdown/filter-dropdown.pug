@@ -4,14 +4,14 @@ mixin filter-dropdown(expanded=false)
             .filter-dropdown__name-counter= value
             .filter-dropdown__panel
                 button.filter-dropdown__btn.filter-dropdown__btn_dec -
-                div(class="filter-dropdown__count" data-value="0") 0
+                div(class="filter-dropdown__count" data-value="0" data-string="") 0
                 button.filter-dropdown__btn.filter-dropdown__btn_inc +
 
     label Dropdown
     if expanded
         .filter-dropdown
             .filter-dropdown__value-line
-                .filter-dropdown__content 2 спальни, 2 кровати...
+                .filter-dropdown__content
                 .filter-dropdown__arrow keyboard_arrow_down
             .filter-dropdown__list.filter-dropdown__list_expanded
                 ul
@@ -21,7 +21,7 @@ mixin filter-dropdown(expanded=false)
     else
         .filter-dropdown
             .filter-dropdown__value-line
-                .filter-dropdown__content 2 спальни, 2 кровати...
+                .filter-dropdown__content
                 .filter-dropdown__arrow keyboard_arrow_down
             .filter-dropdown__list
                 ul
