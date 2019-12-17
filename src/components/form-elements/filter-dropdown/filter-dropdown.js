@@ -2,6 +2,7 @@
 
     $.fn.filterDropdown = function() {
 
+        //функция, обновляющая строку дропдауна
         const updateDropdownContent = (i, value, str) => {
             filterState[i] = value + ' ' + str;
             if (value === 0) {
@@ -26,6 +27,7 @@
             
         };
 
+        //функция, обрезающая результирующую строку, которая длинее 20 символов
         const cuttingString = (str) => {
 
             if (str.length > 20) {
@@ -35,6 +37,45 @@
             }
 
         }
+
+        //функция, которая вставляет значение в HTML-блок
+        const insertValToHtml = (val, block) => {
+            block.empty()
+            block.html(val);
+        };
+
+        //функция, склоняющая слово "Спальни"
+        const leadBedroomsStr = (val) => {
+            if (val === 1) {
+                return 'спальня'
+            } else if (val > 1 && val < 5) {
+                return 'спальни'
+            } else {
+                return 'спален'
+            }
+        };
+
+        //функция, склоняющая слово "Кровати"
+        const leadBedsStr = (val) => {
+            if (val === 1) {
+                return 'кровать'
+            } else if (val > 1 && val < 5) {
+                return 'кровати'
+            } else {
+                return 'кроватей'
+            }
+        };
+
+        //функция, склоняющая слово "Ванные комнаты"
+        const leadBathroomsStr = (val) => {
+            if (val === 1) {
+                return 'ванная комната'
+            } else if (val > 1 && val < 5) {
+                return 'ванные комнаты'
+            } else {
+                return 'ванных комнат'
+            }
+        };
         
         const bedroomsPanel = $(this).find('#bedrooms .filter-dropdown__count');
         const bedsPanel = $(this).find('#beds .filter-dropdown__count');
@@ -57,42 +98,28 @@
         $(this).on('click', '#bedrooms .filter-dropdown__btn_inc', function() {
             bedrooms++;
             bedroomsPanel.attr('data-value', bedrooms);
-            //склоняем "Спальни"
-            if (bedrooms === 1) {
-                bedroomsStr = 'спальня'
-            } else if (bedrooms > 1 && bedrooms < 5) {
-                bedroomsStr = 'спальни'
-            } else {
-                bedroomsStr = 'спален'
-            }
+            
+            const units = leadBedroomsStr(bedrooms);
 
-            updateDropdownContent(0, bedrooms, bedroomsStr);
+            updateDropdownContent(0, bedrooms, units);
             cutString = cuttingString(filterString);
 
-            bedroomsPanel.empty()
-            bedroomsPanel.html(bedrooms);
+            insertValToHtml(bedrooms, bedroomsPanel);
             $(this).closest('.filter-dropdown').find('.filter-dropdown__content').empty();
             $(this).closest('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
-        })
+        });
 
         //обработчик клика Bedrooms Decrement
         $(this).on('click', '#bedrooms .filter-dropdown__btn_dec', function() {
             bedrooms--;
             bedroomsPanel.attr('data-value', bedrooms);
-            //склоняем "Спальни"
-            if (bedrooms === 1) {
-                bedroomsStr = 'спальня'
-            } else if (bedrooms > 1 && bedrooms < 5) {
-                bedroomsStr = 'спальни'
-            } else {
-                bedroomsStr = 'спален'
-            }
+            
+            const units = leadBedroomsStr(bedrooms);
 
-            updateDropdownContent(0, bedrooms, bedroomsStr);
+            updateDropdownContent(0, bedrooms, units);
             cutString = cuttingString(filterString);
 
-            bedroomsPanel.empty()
-            bedroomsPanel.html(bedrooms);
+            insertValToHtml(bedrooms, bedroomsPanel);
             $(this).closest('.filter-dropdown').find('.filter-dropdown__content').empty();
             $(this).closest('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
         })
@@ -101,20 +128,13 @@
         $(this).on('click', '#beds .filter-dropdown__btn_inc', function() {
             beds++;
             bedsPanel.attr('data-value', beds);
-            //склоняем "Кровати"
-            if (beds === 1) {
-                bedsStr = 'кровать'
-            } else if (beds > 1 && beds < 5) {
-                bedsStr = 'кровати'
-            } else {
-                bedsStr = 'кроватей'
-            }
+            
+            const units = leadBedsStr(beds);
 
-            updateDropdownContent(1, beds, bedsStr);
+            updateDropdownContent(1, beds, units);
             cutString = cuttingString(filterString);
 
-            bedsPanel.empty()
-            bedsPanel.html(beds);
+            insertValToHtml(beds, bedsPanel);
             $(this).closest('.filter-dropdown').find('.filter-dropdown__content').empty();
             $(this).closest('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
         })
@@ -123,20 +143,13 @@
         $(this).on('click', '#beds .filter-dropdown__btn_dec', function() {
             beds--;
             bedsPanel.attr('data-value', beds);
-            //склоняем "Кровати"
-            if (beds === 1) {
-                bedsStr = 'кровать'
-            } else if (beds > 1 && beds < 5) {
-                bedsStr = 'кровати'
-            } else {
-                bedsStr = 'кроватей'
-            }
+            
+            const units = leadBedsStr(beds);
 
-            updateDropdownContent(1, beds, bedsStr);
+            updateDropdownContent(1, beds, units);
             cutString = cuttingString(filterString);
 
-            bedsPanel.empty()
-            bedsPanel.html(beds);
+            insertValToHtml(beds, bedsPanel);
             $(this).closest('.filter-dropdown').find('.filter-dropdown__content').empty();
             $(this).closest('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
         })
@@ -144,23 +157,14 @@
         //обработчик клика Bathrooms Increment
         $(this).on('click', '#bathrooms .filter-dropdown__btn_inc', function() {
             bathrooms++;
-            let bathroomsStr = bathroomsPanel.attr('data-string');
             bathroomsPanel.attr('data-value', bathrooms);
-            //склоняем "Ванные комнаты"
-            if (bathrooms === 1) {
-                bathroomsStr = 'ванная комната'
-            } else if (bathrooms > 1 && bathrooms < 5) {
-                bathroomsStr = 'ванные комнаты'
-            } else {
-                bathroomsStr = 'ванных комнат'
-            }
+            
+            const units = leadBathroomsStr(bathrooms);
 
-            updateDropdownContent(2, bathrooms, bathroomsStr);
+            updateDropdownContent(2, bathrooms, units);
             cutString = cuttingString(filterString);
 
-            bathroomsPanel.attr('data-string', bathroomsStr);
-            bathroomsPanel.empty()
-            bathroomsPanel.html(bathrooms);
+            insertValToHtml(bathrooms, bathroomsPanel);
             $(this).closest('.filter-dropdown').find('.filter-dropdown__content').empty();
             $(this).closest('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
         })
@@ -169,20 +173,13 @@
         $(this).on('click', '#bathrooms .filter-dropdown__btn_dec', function() {
             bathrooms--;
             bathroomsPanel.attr('data-value', bathrooms);
-            //склоняем "Ванные комнаты"
-            if (bathrooms === 1) {
-                bathroomsStr = 'ванная комната'
-            } else if (bathrooms > 1 && bathrooms < 5) {
-                bathroomsStr = 'ванные комнаты'
-            } else {
-                bathroomsStr = 'ванных комнат'
-            }
+            
+            const units = leadBathroomsStr(bathrooms);
 
-            updateDropdownContent(2, bathrooms, bathroomsStr);
+            updateDropdownContent(2, bathrooms, units);
             cutString = cuttingString(filterString);
 
-            bathroomsPanel.empty()
-            bathroomsPanel.html(bathrooms);
+            insertValToHtml(bathrooms, bathroomsPanel);
             $(this).closest('.filter-dropdown').find('.filter-dropdown__content').empty();
             $(this).closest('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
         })
