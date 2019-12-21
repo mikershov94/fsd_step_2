@@ -76,14 +76,12 @@
                 return 'ванных комнат'
             }
         };
-        
-        const bedroomsPanel = $(this).find('#bedrooms .filter-dropdown__count');
-        const bedsPanel = $(this).find('#beds .filter-dropdown__count');
-        const bathroomsPanel = $(this).find('#bathrooms .filter-dropdown__count');
-        
-        let bedrooms = bedroomsPanel.attr('data-value');
-        let beds = bedsPanel.attr('data-value');
-        let bathrooms = bathroomsPanel.attr('data-value');
+
+        //функция, вставляющая строку
+        const clearAndInsert = (block) => {
+            block.parent('.filter-dropdown__panel').parent('.filter-dropdown__counter').parent('ul').parent('.filter-dropdown__list').parent('.filter-dropdown').find('.filter-dropdown__content').empty();
+            block.parent('.filter-dropdown__panel').parent('.filter-dropdown__counter').parent('ul').parent('.filter-dropdown__list').parent('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
+        };
 
         //инициализируем строку дропдауна
         let filterString = '';
@@ -93,105 +91,115 @@
 
         const filterState = ['', '', ''];
 
-        
         //обработчик клика Bedrooms Increment
-        $(this).on('click', '#bedrooms .filter-dropdown__btn_inc', function() {
+        $(this).on('click', '#bedrooms .filter-dropdown__btn_inc', function(e) {
+            const bedroomsPanel = $(this).parent('.filter-dropdown__panel');
+            let bedrooms = bedroomsPanel.children('.filter-dropdown__count').attr('data-value');
             bedrooms++;
-            bedroomsPanel.attr('data-value', bedrooms);
+            bedroomsPanel.children('.filter-dropdown__count').attr('data-value', bedrooms);
             
             const units = leadBedroomsStr(bedrooms);
 
             updateDropdownContent(0, bedrooms, units);
             cutString = cuttingString(filterString);
 
-            insertValToHtml(bedrooms, bedroomsPanel);
-            $(this).closest('.filter-dropdown').find('.filter-dropdown__content').empty();
-            $(this).closest('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
+            insertValToHtml(bedrooms, bedroomsPanel.children('.filter-dropdown__count'));
+            clearAndInsert($(this));
+            e.stopPropagation();
         });
 
         //обработчик клика Bedrooms Decrement
-        $(this).on('click', '#bedrooms .filter-dropdown__btn_dec', function() {
+        $(this).on('click', '#bedrooms .filter-dropdown__btn_dec', function(e) {
+            const bedroomsPanel = $(this).parent('.filter-dropdown__panel');
+            let bedrooms = bedroomsPanel.children('.filter-dropdown__count').attr('data-value');
             bedrooms--;
-            bedroomsPanel.attr('data-value', bedrooms);
+            bedroomsPanel.children('.filter-dropdown__count').attr('data-value', bedrooms);
             
             const units = leadBedroomsStr(bedrooms);
 
             updateDropdownContent(0, bedrooms, units);
             cutString = cuttingString(filterString);
 
-            insertValToHtml(bedrooms, bedroomsPanel);
-            $(this).closest('.filter-dropdown').find('.filter-dropdown__content').empty();
-            $(this).closest('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
+            insertValToHtml(bedrooms, bedroomsPanel.children('.filter-dropdown__count'));
+            clearAndInsert($(this))
+            e.stopPropagation();
         })
 
         //обработчик клика Beds Increment
-        $(this).on('click', '#beds .filter-dropdown__btn_inc', function() {
+        $(this).on('click', '#beds .filter-dropdown__btn_inc', function(e) {
+            const bedsPanel = $(this).parent('.filter-dropdown__panel');
+            let beds = bedsPanel.children('.filter-dropdown__count').attr('data-value');
             beds++;
-            bedsPanel.attr('data-value', beds);
-            
+            bedsPanel.children('.filter-dropdown__count').attr('data-value', beds);
+
             const units = leadBedsStr(beds);
 
             updateDropdownContent(1, beds, units);
             cutString = cuttingString(filterString);
 
-            insertValToHtml(beds, bedsPanel);
-            $(this).closest('.filter-dropdown').find('.filter-dropdown__content').empty();
-            $(this).closest('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
+            insertValToHtml(beds, bedsPanel.children('.filter-dropdown__count'));
+            clearAndInsert($(this));
+            e.stopPropagation();
         })
 
         //обработчик клика Beds Decrement
-        $(this).on('click', '#beds .filter-dropdown__btn_dec', function() {
+        $(this).on('click', '#beds .filter-dropdown__btn_dec', function(e) {
+            const bedsPanel = $(this).parent('.filter-dropdown__panel');
+            let beds = bedsPanel.children('.filter-dropdown__count').attr('data-value');
             beds--;
-            bedsPanel.attr('data-value', beds);
+            bedsPanel.children('.filter-dropdown__count').attr('data-value', beds);
             
             const units = leadBedsStr(beds);
 
             updateDropdownContent(1, beds, units);
             cutString = cuttingString(filterString);
 
-            insertValToHtml(beds, bedsPanel);
-            $(this).closest('.filter-dropdown').find('.filter-dropdown__content').empty();
-            $(this).closest('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
+            insertValToHtml(beds, bedsPanel.children('.filter-dropdown__count'));
+            clearAndInsert($(this));
+            e.stopPropagation()
         })
 
         //обработчик клика Bathrooms Increment
-        $(this).on('click', '#bathrooms .filter-dropdown__btn_inc', function() {
+        $(this).on('click', '#bathrooms .filter-dropdown__btn_inc', function(e) {
+            const bathroomsPanel = $(this).parent('.filter-dropdown__panel');
+            let bathrooms = bathroomsPanel.children('.filter-dropdown__count').attr('data-value');
             bathrooms++;
-            bathroomsPanel.attr('data-value', bathrooms);
+            bathroomsPanel.children('.filter-dropdown__count').attr('data-value', bathrooms);
             
             const units = leadBathroomsStr(bathrooms);
 
             updateDropdownContent(2, bathrooms, units);
             cutString = cuttingString(filterString);
 
-            insertValToHtml(bathrooms, bathroomsPanel);
-            $(this).closest('.filter-dropdown').find('.filter-dropdown__content').empty();
-            $(this).closest('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
+            insertValToHtml(bathrooms, bathroomsPanel.children('.filter-dropdown__count'));
+            clearAndInsert($(this));
+            e.stopPropagation()
         })
 
         //обработчик клика Bathrooms Decrement
-        $(this).on('click', '#bathrooms .filter-dropdown__btn_dec', function() {
+        $(this).on('click', '#bathrooms .filter-dropdown__btn_dec', function(e) {
+            const bathroomsPanel = $(this).parent('.filter-dropdown__panel');
+            let bathrooms = bathroomsPanel.children('.filter-dropdown__count').attr('data-value');
             bathrooms--;
-            bathroomsPanel.attr('data-value', bathrooms);
+            bathroomsPanel.children('.filter-dropdown__count').attr('data-value', bathrooms);
             
             const units = leadBathroomsStr(bathrooms);
 
             updateDropdownContent(2, bathrooms, units);
             cutString = cuttingString(filterString);
 
-            insertValToHtml(bathrooms, bathroomsPanel);
-            $(this).closest('.filter-dropdown').find('.filter-dropdown__content').empty();
-            $(this).closest('.filter-dropdown').find('.filter-dropdown__content').html(cutString);
+            insertValToHtml(bathrooms, bathroomsPanel.children('.filter-dropdown__count'));
+            clearAndInsert($(this));
+            e.stopPropagation()
         })
-    
-        
+
         //обработчик клика по Dropdown
-        $(this).on('click', function(e) {
-
-            $('.filter-dropdown').children('.filter-dropdown__list').removeClass('filter-dropdown__list_expanded');
-            $(this).children('.filter-dropdown__list').addClass('filter-dropdown__list_expanded');
-
+        $(this).on('click', '.filter-dropdown__value-line', function(e) {
+            $('.filter-dropdown').find('.filter-dropdown__list').removeClass('filter-dropdown__list_expanded');
+            $(this).closest('.filter-dropdown').find('.filter-dropdown__list').addClass('filter-dropdown__list_expanded');
+            e.stopPropagation()
         })
+
 
         //обработчик клика за пределами Dropdown
         $(document).click(function(e) {
