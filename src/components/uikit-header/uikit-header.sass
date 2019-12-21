@@ -1,6 +1,26 @@
 .uikit-header
+	display: flex
 	height: 5.7rem
 	img
 		height: 2.7rem
 		width: 2.7rem
 		padding: 1.6rem
+
+.uikit-header ul
+	display: flex
+	list-style: none
+	padding-top: 1.85rem
+	+font-type($type-h3)
+
+	li
+		margin-right: 2rem
+
+	a
+		color: $dark-shade-50
+		text-decoration: none
+
+	a:hover
+		color: $dark-shade-100
+
+	a:active
+		color: $green
