@@ -12,12 +12,16 @@ block content
     .wrapper-form-kit
         .col-formkit-start
             .form-input-field
+                .inscription default
                 +textfield('Email')
             .form-input-field
+                .inscription hover / focus
                 +textfield('', 'This is a pretty awesome', true)
             .form-input-field
+                .inscription default
                 +dropdown('Сколько гостей')
             .form-input-field
+                .inscription default
                 +textfield-masked()
             .dropdown-wrapper
                 .form-input-field
@@ -32,6 +36,8 @@ block content
     .wrapper-form-kit
         .col-formkit-start
             .form-input-field
+                .inscription default
                 +filter-dropdown()
             .form-input-field
+                .inscription expanded
                 +filter-dropdown(true)
