@@ -93,10 +93,19 @@
 
         //обработчик клика Bedrooms Increment
         $(this).on('click', '#bedrooms .filter-dropdown__btn_inc', function(e) {
+            if ($(this).hasClass('filter-dropdown__btn_disabled')) return;
+
             const bedroomsPanel = $(this).parent('.filter-dropdown__panel');
             let bedrooms = bedroomsPanel.children('.filter-dropdown__count').attr('data-value');
             bedrooms++;
             bedroomsPanel.children('.filter-dropdown__count').attr('data-value', bedrooms);
+
+            if (bedrooms === 1) {
+                $(this).parent('.filter-dropdown__panel').children('.filter-dropdown__btn_dec').removeClass('filter-dropdown__btn_disabled');
+            } 
+            if (bedrooms === 10) {
+                $(this).addClass('filter-dropdown__btn_disabled');
+            }
             
             const units = leadBedroomsStr(bedrooms);
 
@@ -110,10 +119,19 @@
 
         //обработчик клика Bedrooms Decrement
         $(this).on('click', '#bedrooms .filter-dropdown__btn_dec', function(e) {
+            if ($(this).hasClass('filter-dropdown__btn_disabled')) return;
+
             const bedroomsPanel = $(this).parent('.filter-dropdown__panel');
             let bedrooms = bedroomsPanel.children('.filter-dropdown__count').attr('data-value');
             bedrooms--;
             bedroomsPanel.children('.filter-dropdown__count').attr('data-value', bedrooms);
+
+            if (bedrooms === 9) {
+                $(this).parent('.filter-dropdown__panel').children('.filter-dropdown__btn_inc').removeClass('filter-dropdown__btn_disabled');
+            } 
+            if (bedrooms === 0) {
+                $(this).addClass('filter-dropdown__btn_disabled');
+            }
             
             const units = leadBedroomsStr(bedrooms);
 
@@ -127,10 +145,19 @@
 
         //обработчик клика Beds Increment
         $(this).on('click', '#beds .filter-dropdown__btn_inc', function(e) {
+            if ($(this).hasClass('filter-dropdown__btn_disabled')) return;
+
             const bedsPanel = $(this).parent('.filter-dropdown__panel');
             let beds = bedsPanel.children('.filter-dropdown__count').attr('data-value');
             beds++;
             bedsPanel.children('.filter-dropdown__count').attr('data-value', beds);
+
+            if (beds === 1) {
+                $(this).parent('.filter-dropdown__panel').children('.filter-dropdown__btn_dec').removeClass('filter-dropdown__btn_disabled');
+            } 
+            if (beds === 20) {
+                $(this).addClass('filter-dropdown__btn_disabled');
+            }
 
             const units = leadBedsStr(beds);
 
@@ -144,10 +171,19 @@
 
         //обработчик клика Beds Decrement
         $(this).on('click', '#beds .filter-dropdown__btn_dec', function(e) {
+            if ($(this).hasClass('filter-dropdown__btn_disabled')) return;
+
             const bedsPanel = $(this).parent('.filter-dropdown__panel');
             let beds = bedsPanel.children('.filter-dropdown__count').attr('data-value');
             beds--;
             bedsPanel.children('.filter-dropdown__count').attr('data-value', beds);
+
+            if (beds === 19) {
+                $(this).parent('.filter-dropdown__panel').children('.filter-dropdown__btn_inc').removeClass('filter-dropdown__btn_disabled');
+            } 
+            if (beds === 0) {
+                $(this).addClass('filter-dropdown__btn_disabled');
+            }
             
             const units = leadBedsStr(beds);
 
@@ -161,10 +197,19 @@
 
         //обработчик клика Bathrooms Increment
         $(this).on('click', '#bathrooms .filter-dropdown__btn_inc', function(e) {
+            if ($(this).hasClass('filter-dropdown__btn_disabled')) return;
+
             const bathroomsPanel = $(this).parent('.filter-dropdown__panel');
             let bathrooms = bathroomsPanel.children('.filter-dropdown__count').attr('data-value');
             bathrooms++;
             bathroomsPanel.children('.filter-dropdown__count').attr('data-value', bathrooms);
+
+            if (bathrooms === 1) {
+                $(this).parent('.filter-dropdown__panel').children('.filter-dropdown__btn_dec').removeClass('filter-dropdown__btn_disabled');
+            } 
+            if (bathrooms === 5) {
+                $(this).addClass('filter-dropdown__btn_disabled');
+            }
             
             const units = leadBathroomsStr(bathrooms);
 
@@ -178,10 +223,19 @@
 
         //обработчик клика Bathrooms Decrement
         $(this).on('click', '#bathrooms .filter-dropdown__btn_dec', function(e) {
+            if ($(this).hasClass('filter-dropdown__btn_disabled')) return;
+
             const bathroomsPanel = $(this).parent('.filter-dropdown__panel');
             let bathrooms = bathroomsPanel.children('.filter-dropdown__count').attr('data-value');
             bathrooms--;
             bathroomsPanel.children('.filter-dropdown__count').attr('data-value', bathrooms);
+
+            if (bathrooms === 4) {
+                $(this).parent('.filter-dropdown__panel').children('.filter-dropdown__btn_inc').removeClass('filter-dropdown__btn_disabled');
+            } 
+            if (bathrooms === 0) {
+                $(this).addClass('filter-dropdown__btn_disabled');
+            }
             
             const units = leadBathroomsStr(bathrooms);
 
