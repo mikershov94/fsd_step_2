@@ -40,11 +40,21 @@ block content
                         input(type="checkbox" id="checkbox-1")
                         label(for="checkbox-1") Можно курить
                     li
-                        input(type="checkbox" id="checkbox-2")
+                        input(type="checkbox" id="checkbox-2" checked)
                         label(for="checkbox-2") Можно c питомцами
                     li
-                        input(type="checkbox" id="checkbox-3")
-                        label(for="checkbox-3") Можно пригласить гостей (до 10 человек) 
+                        input(type="checkbox" id="checkbox-3" checked)
+                        label(for="checkbox-3") Можно пригласить гостей (до 10 человек)
+            .form-input-field
+                label Radio buttons
+                ul
+                    li
+                        input(type="radio" name="sex" id="radioMen" checked)
+                        label(for="radioMen") Мужчина
+                            
+                    li
+                        input(type="radio" name="sex" id="radioWomen")
+                        label(for="radioWomen") Женщина
 
     .wrapper-form-kit
         .col-formkit-start

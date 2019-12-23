@@ -104,43 +104,92 @@ body
 		padding-left: 6rem
 		width: 15%
 
-		label
-			+font-type($type-h3)
-	
-		ul
-			list-style: none
-			padding: 0
+		.form-input-field:nth-child(1)
+			margin-bottom: 2.6rem
 
-			li
-				position: relative
-				margin-bottom: 0.45rem
+			label
+				+font-type($type-h3)
+		
+			ul
+				list-style: none
+				padding: 0
 
-				input
-					opacity: 0
+				li
+					position: relative
+					margin-bottom: 0.45rem
 
-				input + label
-					+font-type($type-body)
-					line-height: 1rem
-					color: $dark-shade-50
-					position: absolute
-					top: -0.1rem
-					left: 1.7rem
+					input
+						opacity: 0
 
-					&:hover:before
+					input + label
+						+font-type($type-body)
+						line-height: 1rem
+						color: $dark-shade-50
+						position: absolute
+						top: -0.1rem
+						left: 1.7rem
+
+						&:hover:before
+							border-color: $purple
+
+					input + label::before
+						content: ''
+						position: absolute
+						top: -0.1rem
+						left: -1.7rem
+						width: 1rem
+						height: 1rem
+						border: 1px solid $dark-shade-25
+						border-radius: 0.2rem
+
+					input:checked + label::before
+						background: url('/static/icons/checkmark.svg') no-repeat center
+
+		.form-input-field:nth-child(2)
+
+			label
+				+font-type($type-h3)
+
+			ul
+				list-style: none
+				padding: 0
+				margin: 0
+				margin-top: 0.6rem
+				display: flex
+
+				li
+					flex-grow: 1
+					position: relative
+					margin-right: 1rem
+
+					input
+						position: absolute
+						-webkit-appearance: none
+						-moz-appearance: none
+						appearance: none
+
+					input + label
+						+font-type($type-body)
+						color: $dark-shade-50
+						margin-left: 1.7rem
+
+					input + label::before
+						content: ''
+						width: 1rem
+						height: 1rem
+						border: 1px solid $dark-shade-50
+						border-radius: 50%
+						position: absolute
+						top: 0.15rem
+						left: 0
+
+					input + label:hover::before
 						border-color: $purple
 
-				input + label::before
-					content: ''
-					position: absolute
-					top: -0.1rem
-					left: -1.7rem
-					width: 1rem
-					height: 1rem
-					border: 1px solid $dark-shade-25
-					border-radius: 0.2rem
+					input:checked + label::before
+						border-color: $purple
+						background: url('/static/icons/radiomark.svg') no-repeat center
 
-				input:checked + label::before
-					background: url('/static/icons/checkmark.svg') no-repeat center
 
 .wrapper-form-kit:nth-child(3)
 		.col-formkit-start
