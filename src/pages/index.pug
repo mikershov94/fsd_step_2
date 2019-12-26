@@ -55,6 +55,21 @@ block content
                     li
                         input(type="radio" name="sex" id="radioWomen")
                         label(for="radioWomen") Женщина
+            .form-input-field
+                h3 Toggle
+                ul
+                    li
+                        label(for="subscribe")
+                            input(type="checkbox" id="subscribe" checked)
+                            span.toggle__switch
+                                span.toggle__slider
+                            span.toggle__label Получать спецпредложения
+                    li
+                        label(for="notSubscribe")
+                            input(type="checkbox" id="notSubscribe")
+                            span.toggle__switch
+                                span.toggle__slider
+                            span.toggle__label Получать спецпредложения
 
     .wrapper-form-kit
         .col-formkit-start

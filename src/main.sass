@@ -102,10 +102,11 @@ body
 
 	.col-formkit-middle
 		padding-left: 6rem
-		width: 15%
+		width: 25%
 
 		.form-input-field:nth-child(1)
 			margin-bottom: 2.6rem
+			padding-right: 8rem
 
 			label
 				+font-type($type-h3)
@@ -146,7 +147,8 @@ body
 						background: url('/static/icons/checkmark.svg') no-repeat center
 
 		.form-input-field:nth-child(2)
-
+			margin-bottom: 2.3rem
+			
 			label
 				+font-type($type-h3)
 
@@ -158,7 +160,6 @@ body
 				display: flex
 
 				li
-					flex-grow: 1
 					position: relative
 					margin-right: 1rem
 
@@ -190,6 +191,59 @@ body
 						border-color: $purple
 						background: url('/static/icons/radiomark.svg') no-repeat center
 
+		.form-input-field:nth-child(3)
+			h3
+				+font-type($type-h3)
+
+			ul
+				list-style: none
+				padding: 0
+				margin: 0
+				padding-top: 0.2rem
+
+				li
+					margin-bottom: 0.5rem
+
+					label
+						position: relative
+	
+					input
+						-webkit-appearance: none
+						-moz-appearance: none
+						position: absolute
+
+					.toggle__label
+						+font-type($type-body)
+						color: $dark-shade-75
+						margin-left: 2.6rem
+
+					.toggle__switch
+						display: inline-block
+						position: absolute
+						top: 0.1rem
+						width: 2rem
+						height: 1rem
+						border: 1px solid $dark-shade-25
+						border-radius: 1rem
+
+					.toggle__slider
+						display: inline-block
+						width: 0.65rem
+						height: 0.65rem
+						position: relative
+						bottom: 0.075rem
+						left: 0.15rem
+						background-color: $dark-shade-25
+						border-radius: 50%
+
+					input:checked + .toggle__switch
+						border-color: $purple
+
+						.toggle__slider
+							background-color: $purple
+							transform: translateX(1rem)
+						
+						
 
 .wrapper-form-kit:nth-child(3)
 		.col-formkit-start
