@@ -5,7 +5,17 @@ include ../components/form-elements/date-dropdown/date-dropdown
 include ../components/form-elements/textfield-masked/textfield-masked
 include ../components/form-elements/filter-date-dropdown/filter-date-dropdown
 include ../components/form-elements/textfield-subscription/textfield-subscription
-include ../components/form-elements/filter-dropdown/filter-dropdown 
+include ../components/form-elements/filter-dropdown/filter-dropdown
+
+mixin rate-button(rating)
+    - var count = 0
+    div(class="rate-button" data-rating=rating)
+        while count < 5
+            if count < rating
+                i.material-icons.rate-button__icon star
+            else
+                i.material-icons.rate-button__icon star_border
+            -count++
 
 block content
     include ../components/uikit-header/uikit-header
@@ -82,6 +92,13 @@ block content
                         div(class="like-button" data-state="liked" data-count="2")
                             i(class="material-icons like-button__icon") favorite_border
                             span.like-button__count 2
+            .form-input-field
+                h3 Rate button
+                .wrapper-rating
+                    - var rating1 = 4
+                    - var rating2 = 5
+                    +rate-button(rating1)
+                    +rate-button(rating2)
 
     .wrapper-form-kit
         .col-formkit-start
