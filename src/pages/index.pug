@@ -7,6 +7,8 @@ include ../components/form-elements/filter-date-dropdown/filter-date-dropdown
 include ../components/form-elements/textfield-subscription/textfield-subscription
 include ../components/form-elements/filter-dropdown/filter-dropdown
 
+include ../components/form-elements/checkbox/checkbox
+
 mixin rate-button(rating)
     - var count = 0
     div(class="rate-button" data-rating=rating)
@@ -16,11 +18,6 @@ mixin rate-button(rating)
             else
                 i.material-icons.rate-button__icon star_border
             -count++
-
-mixin checkbox-button(id, text, checked=false)
-    li
-        input(type="checkbox" id=id checked=checked)
-        label(for=id)= text
 
 block content
     include ../components/uikit-header/uikit-header
@@ -50,10 +47,10 @@ block content
         .col-formkit-middle
             .form-input-field
                 label Checkbox buttons
-                ul
+                .demo-buttons-wrapper
                     +checkbox-button('checkbox-1', 'Можно курить')
-                    +checkbox-button('checkbox-1', 'Можно с питомцами', true)
-                    +checkbox-button('checkbox-1', 'Можно пригласить гостей (до 10 человек)', true)
+                    +checkbox-button('checkbox-2', 'Можно с питомцами', true)
+                    +checkbox-button('checkbox-3', 'Можно пригласить гостей (до 10 человек)', true)
             .form-input-field
                 label Radio buttons
                 ul
