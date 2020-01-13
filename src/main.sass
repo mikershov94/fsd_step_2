@@ -14,7 +14,7 @@
 @import "./components/form-elements/filter-dropdown/filter-dropdown.sass";
 
 @import "./components/form-elements/checkbox/checkbox.sass";
-
+@import "./components/form-elements/radiobutton/radiobutton.sass";
 
 body
 	color: $dark-shade-100
@@ -113,7 +113,7 @@ body
 			label
 				+font-type($type-h3)
 
-			.demo-buttons-wrapper
+			.demo-checkbox-wrapper
 				margin-top: 1rem
 				+checkbox-button()
 
@@ -123,44 +123,10 @@ body
 			label
 				+font-type($type-h3)
 
-			ul
-				list-style: none
-				padding: 0
-				margin: 0
+			.demo-radio-wrapper
 				margin-top: 0.6rem
 				display: flex
-
-				li
-					position: relative
-					margin-right: 1rem
-
-					input
-						position: absolute
-						-webkit-appearance: none
-						-moz-appearance: none
-						appearance: none
-
-					input + label
-						+font-type($type-body)
-						color: $dark-shade-50
-						margin-left: 1.7rem
-
-					input + label::before
-						content: ''
-						width: 1rem
-						height: 1rem
-						border: 1px solid $dark-shade-50
-						border-radius: 50%
-						position: absolute
-						top: 0.15rem
-						left: 0
-
-					input + label:hover::before
-						border-color: $purple
-
-					input:checked + label::before
-						border-color: $purple
-						background: url('/static/icons/radiomark.svg') no-repeat center
+				+radio-button()
 
 		.form-input-field:nth-child(3)
 			h3

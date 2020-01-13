@@ -8,6 +8,7 @@ include ../components/form-elements/textfield-subscription/textfield-subscriptio
 include ../components/form-elements/filter-dropdown/filter-dropdown
 
 include ../components/form-elements/checkbox/checkbox
+include ../components/form-elements/radiobutton/radiobutton
 
 mixin rate-button(rating)
     - var count = 0
@@ -47,20 +48,15 @@ block content
         .col-formkit-middle
             .form-input-field
                 label Checkbox buttons
-                .demo-buttons-wrapper
+                .demo-checkbox-wrapper
                     +checkbox-button('checkbox-1', 'Можно курить')
                     +checkbox-button('checkbox-2', 'Можно с питомцами', true)
                     +checkbox-button('checkbox-3', 'Можно пригласить гостей (до 10 человек)', true)
             .form-input-field
                 label Radio buttons
-                ul
-                    li
-                        input(type="radio" name="sex" id="radioMen" checked)
-                        label(for="radioMen") Мужчина
-                            
-                    li
-                        input(type="radio" name="sex" id="radioWomen")
-                        label(for="radioWomen") Женщина
+                .demo-radio-wrapper
+                    +radio-button('Мужчина', 'sex', 'men', true)              
+                    +radio-button('Женщина', 'sex', 'women')
             .form-input-field
                 h3 Toggle
                 ul
