@@ -1,0 +1,8 @@
+mixin like-button(count, liked=false)
+    - var state = ""
+    if (liked)
+        - state = "liked"
+
+    div(class="like-button" data-state=state data-count=count)                    
+        i(class="material-icons like-button__icon") favorite_border
+        span.like-button__count= count

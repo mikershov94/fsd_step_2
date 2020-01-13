@@ -16,7 +16,7 @@
 @import "./components/form-elements/checkbox/checkbox.sass";
 @import "./components/form-elements/radiobutton/radiobutton.sass";
 @import "./components/form-elements/toggle/toggle.sass";
-
+@import "./components/form-elements/like-button/like-button.sass";
 
 body
 	color: $dark-shade-100
@@ -144,48 +144,11 @@ body
 			h3
 				+font-type($type-h3)
 
-			ul
-				list-style: none
-				padding: 0
-				margin: 0
+			.demo-like-wrapper
 				margin-top: 0.95rem
 				margin-bottom: 2.3rem
 				display: flex
-
-				li
-					position: relative
-					margin-right: 0.5rem
-
-					.like-button
-						position: relative
-						width: 2rem
-						height: 1rem
-						border: 1px solid $dark-shade-25
-						border-radius: 1rem	
-
-						&__icon
-							position: absolute
-							top: 0.225rem
-							left: 0.2rem
-							color: $dark-shade-25
-							font-size: 0.6em
-
-							&_liked
-								color: $purple
-
-						&__count
-							position: absolute
-							top: -0.05rem
-							right: 0.6rem
-							+font-type($type-body)
-							color: $dark-shade-25
-							font-size: 0.6em
-
-							&_liked
-								color: $purple
-
-						&_liked
-							border-color: $purple
+				+like-button()
 		
 		.form-input-field:nth-child(5)
 			h3

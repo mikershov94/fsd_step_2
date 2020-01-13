@@ -1,0 +1,32 @@
+=like-button ()
+	.like-button
+		position: relative
+		width: 2rem
+		height: 1rem
+		border: 1px solid $dark-shade-25
+		border-radius: 1rem
+		margin-right: 0.5rem	
+
+		&__icon
+			position: absolute
+			top: 0.225rem
+			left: 0.2rem
+			color: $dark-shade-25
+			font-size: 0.6em
+
+			&_liked
+				color: $purple
+
+		&__count
+			position: absolute
+			top: -0.05rem
+			right: 0.6rem
+			+font-type($type-body)
+			color: $dark-shade-25
+			font-size: 0.6em
+
+			&_liked
+				color: $purple
+
+		&_liked
+			border-color: $purple
