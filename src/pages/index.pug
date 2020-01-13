@@ -17,6 +17,11 @@ mixin rate-button(rating)
                 i.material-icons.rate-button__icon star_border
             -count++
 
+mixin checkbox-button(id, text, checked=false)
+    li
+        input(type="checkbox" id=id checked=checked)
+        label(for=id)= text
+
 block content
     include ../components/uikit-header/uikit-header
     .wrapper-form-kit
@@ -46,15 +51,9 @@ block content
             .form-input-field
                 label Checkbox buttons
                 ul
-                    li
-                        input(type="checkbox" id="checkbox-1")
-                        label(for="checkbox-1") Можно курить
-                    li
-                        input(type="checkbox" id="checkbox-2" checked)
-                        label(for="checkbox-2") Можно c питомцами
-                    li
-                        input(type="checkbox" id="checkbox-3" checked)
-                        label(for="checkbox-3") Можно пригласить гостей (до 10 человек)
+                    +checkbox-button('checkbox-1', 'Можно курить')
+                    +checkbox-button('checkbox-1', 'Можно с питомцами', true)
+                    +checkbox-button('checkbox-1', 'Можно пригласить гостей (до 10 человек)', true)
             .form-input-field
                 label Radio buttons
                 ul
