@@ -9,6 +9,7 @@ include ../components/form-elements/filter-dropdown/filter-dropdown
 
 include ../components/form-elements/checkbox/checkbox
 include ../components/form-elements/radiobutton/radiobutton
+include ../components/form-elements/toggle/toggle
 
 mixin rate-button(rating)
     - var count = 0
@@ -59,19 +60,9 @@ block content
                     +radio-button('Женщина', 'sex', 'women')
             .form-input-field
                 h3 Toggle
-                ul
-                    li
-                        label(for="subscribe")
-                            input(type="checkbox" id="subscribe" checked)
-                            span.toggle__switch
-                                span.toggle__slider
-                            span.toggle__label Получать спецпредложения
-                    li
-                        label(for="notSubscribe")
-                            input(type="checkbox" id="notSubscribe")
-                            span.toggle__switch
-                                span.toggle__slider
-                            span.toggle__label Получать спецпредложения
+                .demo-toggle-wrapper
+                    +toggle('Получать спецпредложения', 'subscribe', true)
+                    +toggle('Получать спецпредложения', 'notSubscribe')
             .form-input-field
                 h3 Like button
                 ul
