@@ -21,6 +21,8 @@
 @import "./components/form-elements/like-button/like-button.sass";
 @import "./components/form-elements/rate-button/rate-button.sass";
 
+@import "./components/form-elements/range-slider/range-slider.sass";
+
 body
 	color: $dark-shade-100
 	margin: 0
@@ -171,53 +173,7 @@ body
 		margin: 0
 		padding-left: 0.4rem
 		width: 36%
-
-		.range-slider
-			width: 14.5rem
-			position: relative
-
-			label
-				+font-type($type-h3)
-
-			.values
-				+font-type($type-h3-normal)
-				color: $dark-shade-50
-				position: absolute
-				right: 0rem
-				top: 0.3rem
-
-			#slider
-				margin-top: 1.2rem
-
-			.noUi-horizontal
-				height: 0.35rem
-				width: 14.5rem
-
-			.noUi-target
-				background: #FFFFFF
-				border-radius: 0.15rem
-
-			.noUi-connects
-				z-index: 1
-				top: -0.08rem
-				height: 160%
-
-			.noUi-connect
-				background: linear-gradient(180deg, $green 0%, $white-green 100%)
-				right: 0.3rem
-
-			.noUi-handle
-				width: 0.9rem
-				height: 0.9rem
-				border: 2px solid white
-				border-radius: 50%
-				box-shadow: none
-				left: 0.6rem
-				background: linear-gradient(180deg, $green 0%, $white-green 100%)
-			
-			.noUi-handle:before,
-			.noUi-handle:after
-				display: none				
+		+range-slider()				
 				
 
 			

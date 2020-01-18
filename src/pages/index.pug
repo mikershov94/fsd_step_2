@@ -13,6 +13,8 @@ include ../components/form-elements/toggle/toggle
 include ../components/form-elements/like-button/like-button
 include ../components/form-elements/rate-button/rate-button
 
+include ../components/form-elements/range-slider/range-slider
+
 block content
     include ../components/uikit-header/uikit-header
     .wrapper-form-kit
@@ -66,13 +68,7 @@ block content
                     +rate-button(4)
                     +rate-button(5)
         .col-formkit-end
-            .range-slider
-                label Range slider
-                span(class="values")
-                    span(class="values__low" id="values__low")
-                    span(class="values__separ")= " - "
-                    span(class="values__high" id="values__high")
-                div(id="slider")
+            +range-slider('Range slider')
 
     .wrapper-form-kit
         .col-formkit-start
