@@ -198,7 +198,15 @@ body
 					background: linear-gradient(180deg, $purple 0%, $blue 100%)
 					z-index: 0
 
+					&_primary
+						+font-type($type-h3)
+						color: white
+						&:disabled
+							opacity: 0.5
+
 					&_outline
+						&:disabled
+							opacity: 0.5
 
 						&__background
 							position: absolute
