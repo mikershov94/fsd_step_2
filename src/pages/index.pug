@@ -16,6 +16,7 @@ include ../components/form-elements/rate-button/rate-button
 include ../components/form-elements/range-slider/range-slider
 include ../components/form-elements/buttons/primary/button-primary
 include ../components/form-elements/buttons/outline/button-outline
+include ../components/form-elements/buttons/link/button-link
 
 block content
     include ../components/uikit-header/uikit-header
@@ -80,6 +81,9 @@ block content
                 .buttons-kit-container
                     +btn-outline('Click me')
                     +btn-outline('Click me', true)
+                .buttons-kit-container
+                    +btn-link('Click me')
+                    +btn-link('Click me', true)
 
 
     .wrapper-form-kit
