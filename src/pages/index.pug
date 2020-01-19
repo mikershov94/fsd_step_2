@@ -14,6 +14,8 @@ include ../components/form-elements/like-button/like-button
 include ../components/form-elements/rate-button/rate-button
 
 include ../components/form-elements/range-slider/range-slider
+include ../components/form-elements/buttons/primary/button-primary
+include ../components/form-elements/buttons/outline/button-outline
 
 block content
     include ../components/uikit-header/uikit-header
@@ -73,13 +75,11 @@ block content
             .form-input-field
                 h3 Buttons
                 .buttons-kit-container
-                    button(class="btn btn_primary") Click me
-                    button(class="btn btn_primary" disabled) Click me
+                    +btn-primary('Click me')
+                    +btn-primary('Click me', true)
                 .buttons-kit-container
-                    button(class="btn btn_outline") Click me
-                        .btn_outline__background Click me
-                    button(class="btn btn_outline" disabled) Click me
-                        .btn_outline__background Click me
+                    +btn-outline('Click me')
+                    +btn-outline('Click me', true)
 
 
     .wrapper-form-kit

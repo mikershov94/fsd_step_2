@@ -22,6 +22,8 @@
 @import "./components/form-elements/rate-button/rate-button.sass";
 
 @import "./components/form-elements/range-slider/range-slider.sass";
+@import "./components/form-elements/buttons/primary/button-primary.sass";
+@import "./components/form-elements/buttons/outline/button-outline.sass";
 
 body
 	color: $dark-shade-100
@@ -183,52 +185,8 @@ body
 			.buttons-kit-container
 				margin-top: 1rem
 				margin-bottom: 1.65rem
-
-				.btn
-					position: relative
-					-webkit-appearance: none
-					-moz-appearance: none
-					appearance: none
-					display: inline-block
-					width: 5.4rem
-					height: 2.4rem
-					margin-right: 1.1rem
-					border-radius: 2rem
-					border: none
-					background: linear-gradient(180deg, $purple 0%, $blue 100%)
-					z-index: 0
-
-					&_primary
-						+font-type($type-h3)
-						color: white
-						&:disabled
-							opacity: 0.5
-
-					&_outline
-						&:disabled
-							opacity: 0.5
-
-						&__background
-							position: absolute
-							background: white
-							width: 5.2rem
-							height: 2.2rem
-							border-radius: 2rem
-							top: 0.1rem
-							left: 0.1rem
-							z-index: 1
-							display: flex
-							align-items: center
-							justify-content: center
-							+font-type($type-h3)
-							color: $purple
-
-							&:hover
-								background: linear-gradient(180deg, $purple 0%, $blue 100%)
-								color: white
-
-							&:active
-								background: $green
+				+btn-primary()
+				+btn-outline()
 
 
 			
