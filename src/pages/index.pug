@@ -68,7 +68,19 @@ block content
                     +rate-button(4)
                     +rate-button(5)
         .col-formkit-end
-            +range-slider('Range slider')
+            .form-input-field
+                +range-slider('Range slider')
+            .form-input-field
+                h3 Buttons
+                .buttons-kit-container
+                    button(class="btn btn_primary") Click me
+                    button(class="btn btn_primary" disabled) Click me
+                .buttons-kit-container
+                    button(class="btn btn_outline") Click me
+                        .btn_outline__background Click me
+                    button(class="btn btn_outline" disabled) Click me
+                        .btn_outline__background Click me
+
 
     .wrapper-form-kit
         .col-formkit-start

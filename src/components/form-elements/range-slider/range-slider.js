@@ -16,6 +16,7 @@ noUiSlider.create(slider, {
     },
     format: wNumb({
         decimals: 0,
+        thousand: ' ',
         suffix: '₽'
     })
 });

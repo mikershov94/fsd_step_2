@@ -173,8 +173,55 @@ body
 		margin: 0
 		padding-left: 0.4rem
 		width: 36%
-		+range-slider()				
-				
+		
+		.form-input-field:nth-child(1)
+			+range-slider()	
+
+		.form-input-field:nth-child(2)
+			margin-top: 2.5rem
+
+			.buttons-kit-container
+				margin-top: 1rem
+				margin-bottom: 1.65rem
+
+				.btn
+					position: relative
+					-webkit-appearance: none
+					-moz-appearance: none
+					appearance: none
+					display: inline-block
+					width: 5.4rem
+					height: 2.4rem
+					margin-right: 1.1rem
+					border-radius: 2rem
+					border: none
+					background: linear-gradient(180deg, $purple 0%, $blue 100%)
+					z-index: 0
+
+					&_outline
+
+						&__background
+							position: absolute
+							background: white
+							width: 5.2rem
+							height: 2.2rem
+							border-radius: 2rem
+							top: 0.1rem
+							left: 0.1rem
+							z-index: 1
+							display: flex
+							align-items: center
+							justify-content: center
+							+font-type($type-h3)
+							color: $purple
+
+							&:hover
+								background: linear-gradient(180deg, $purple 0%, $blue 100%)
+								color: white
+
+							&:active
+								background: $green
+
 
 			
 .wrapper-form-kit:nth-child(3)
