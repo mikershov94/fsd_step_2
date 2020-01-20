@@ -261,7 +261,7 @@
 
 			// Generate Next link (unless option is set for at front)
 			if (o.nextText && !o.nextAtFront) {
-				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next'});
+				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next material-icons'});
 			}
 
 			if (o.ellipsePageSet && !o.disabled) {
