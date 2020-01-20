@@ -26,6 +26,8 @@
 @import "./components/form-elements/buttons/outline/button-outline.sass";
 @import "./components/form-elements/buttons/link/button-link.sass";
 @import "./components/form-elements/buttons/submit/button-submit.sass";
+@import "./components/form-elements/pagination/pagination.sass";
+@import "./components/form-elements/pagination/simplePagination.css";
 
 body
 	color: $dark-shade-100
@@ -197,6 +199,10 @@ body
 			.buttons-kit-container:nth-child(5)
 				margin-top: -0.2rem
 				+btn-submit()
+		
+		.form-input-field:nth-child(3)
+			margin-top: 2.3rem
+			+pagination()
 
 
 			

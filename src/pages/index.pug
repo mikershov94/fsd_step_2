@@ -18,6 +18,7 @@ include ../components/form-elements/buttons/primary/button-primary
 include ../components/form-elements/buttons/outline/button-outline
 include ../components/form-elements/buttons/link/button-link
 include ../components/form-elements/buttons/submit/button-submit
+include ../components/form-elements/pagination/pagination
 
 block content
     include ../components/uikit-header/uikit-header
@@ -87,6 +88,8 @@ block content
                     +btn-link('Click me', true)
                 .buttons-kit-container
                     +btn-submit('Перейти к оплате')
+            .form-input-field
+                +pagination()
 
 
 
