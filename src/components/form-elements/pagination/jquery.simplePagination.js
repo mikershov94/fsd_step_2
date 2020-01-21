@@ -167,12 +167,12 @@
 				interval = methods._getInterval(o),
 				i,
 				tagName;
-
+			console.log(this)
 			methods.destroy.call(this);
 
 			tagName = (typeof this.prop === 'function') ? this.prop('tagName') : this.attr('tagName');
 
-			var $panel = tagName === 'UL' ? this : $('<ul' + (o.listStyle ? ' class="' + o.listStyle + '"' : '') + '></ul>').appendTo(this);
+			var $panel = tagName === 'UL' ? this : $('<ul' + (o.listStyle ? ' class="' + o.listStyle + '"' : '') + '></ul>').appendTo(this); 
 
 			// Generate Prev link
 			if (o.prevText) {
@@ -267,6 +267,9 @@
 			if (o.ellipsePageSet && !o.disabled) {
 				methods._ellipseClick.call(this, $panel);
 			}
+
+			//Custom text for TOXIN project
+			var $underText = $('<div class="under-text">' + ((o.itemsOnPage * o.currentPage) + 1) + ' - '+ o.itemsOnPage * (o.currentPage + 1) +' из ' + (o.items >= 100 ? '100+' : o.items) + ' вариантов аренды</div>').appendTo(this);
 
 		},
 
