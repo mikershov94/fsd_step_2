@@ -30,6 +30,8 @@
 @import "./components/form-elements/pagination/simplePagination.css";
 @import "./components/form-elements/pagination/custom-theme.sass";
 
+@import "./components/form-elements/guest-dropdown/guest-dropdown.sass";
+
 body
 	color: $dark-shade-100
 	margin: 0
@@ -208,8 +210,8 @@ body
 
 			
 .wrapper-form-kit:nth-child(3)
-		.col-formkit-start
-			width: 18.5%
+	.col-formkit-start
+		width: 18.5%
 		
 		.form-input-field:nth-child(1)
 			margin-bottom: 0.9rem
@@ -220,5 +222,8 @@ body
 		.form-input-field:nth-child(2)
 			margin-bottom: 0.78rem
 
-
+	.col-formkit-middle,
+	.col-formkit-end
+		.form-input-field
+			+guest-dropdown()
 		

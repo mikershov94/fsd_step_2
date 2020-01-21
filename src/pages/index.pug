@@ -20,6 +20,8 @@ include ../components/form-elements/buttons/link/button-link
 include ../components/form-elements/buttons/submit/button-submit
 include ../components/form-elements/pagination/pagination
 
+include ../components/form-elements/guest-dropdown/guest-dropdown
+
 block content
     include ../components/uikit-header/uikit-header
     .wrapper-form-kit
@@ -101,3 +103,9 @@ block content
             .form-input-field
                 .inscription expanded
                 +filter-dropdown(true)
+        .col-formkit-middle
+            .form-input-field
+                +guest-dropdown(true)
+        .col-formkit-end
+            .form-input-field
+                +guest-dropdown(true)
