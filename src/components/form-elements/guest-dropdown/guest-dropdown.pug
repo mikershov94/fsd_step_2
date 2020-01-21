@@ -18,6 +18,9 @@ mixin guest-dropdown(expanded=false)
                   +item-counter('Взрослые', 'adults')  
                   +item-counter('Дети', 'kids')
                   +item-counter('Младенцы', 'babies')
+                .guest-dropdown__buttons
+                    .guest-dropdown__clear Очистить
+                    .guest-dropdown__apply Применить
     else
         .guest-dropdown
             .guest-dropdown__value-line
