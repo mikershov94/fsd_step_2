@@ -3,7 +3,7 @@ mixin guest-dropdown(expanded=false)
         li(class="guest-dropdown__counter" id=identity)
             .guest-dropdown__name-counter= value
             .guest-dropdown__panel
-                button.guest-dropdown__btn.guest-dropdown__btn_dec -
+                button.guest-dropdown__btn.guest-dropdown__btn_dec.guest-dropdown__btn_disabled -
                 div(class="guest-dropdown__count" data-value="0") 0
                 button.guest-dropdown__btn.guest-dropdown__btn_inc +
 

@@ -71,9 +71,9 @@
                 adultsPanel.children('.guest-dropdown__count').attr('data-value', adults);
 
                 if (adults === 9) {
-                    $(this).parent('.guest-dropdown__panel').children('.filter-dropdown__btn_inc').removeClass('guest-dropdown__btn_disabled');
+                    $(this).parent('.guest-dropdown__panel').children('.guest-dropdown__btn_inc').removeClass('guest-dropdown__btn_disabled');
                 } 
-                if (bedrooms === 0) {
+                if (adults === 0) {
                     $(this).addClass('guest-dropdown__btn_disabled');
                 }
                 
@@ -119,10 +119,10 @@
                 kidsPanel.children('.guest-dropdown__count').attr('data-value', kids);
 
                 if (kids === 9) {
-                    $(this).parent('.filter-dropdown__panel').children('.filter-dropdown__btn_inc').removeClass('filter-dropdown__btn_disabled');
+                    $(this).parent('.guest-dropdown__panel').children('.guest-dropdown__btn_inc').removeClass('guest-dropdown__btn_disabled');
                 } 
                 if (kids === 0) {
-                    $(this).addClass('filter-dropdown__btn_disabled');
+                    $(this).addClass('guest-dropdown__btn_disabled');
                 }
                 
                 cutString = updateDropdownContent(guestSum);
@@ -197,7 +197,20 @@
 
             //обработчик кнопки Очистить
             $(this).on('click', '.guest-dropdown__clear', function(e) {
+                const list = $(this).parent('.guest-dropdown__buttons').parent('.guest-dropdown__list');
+                const valueLine = list.parent('.guest-dropdown').children('.guest-dropdown__value-line')
+
                 guestSum = 0;
+
+                list.children('ul').children('li').children('.guest-dropdown__panel').children('.guest-dropdown__count').attr('data-value', 0);
+                valueLine.children('.guest-dropdown__content').attr('data-sum', 0);
+                list.children('ul').children('li').children('.guest-dropdown__panel').children('.guest-dropdown__btn_dec').addClass('guest-dropdown__btn_disabled');
+                list.children('ul').children('li').children('.guest-dropdown__panel').children('.guest-dropdown__btn_inc').removeClass('guest-dropdown__btn_disabled')
+
+                cutString = 'Сколько гостей';
+
+                insertValToHtml(guestSum, list.children('ul').children('li').children('.guest-dropdown__panel').children('.guest-dropdown__count'));
+                insertValToHtml(cutString, valueLine.children('.guest-dropdown__content'))
             })
         });
     }
