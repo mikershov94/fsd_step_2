@@ -11,7 +11,7 @@ mixin guest-dropdown(expanded=false)
     if expanded
         .guest-dropdown
             .guest-dropdown__value-line
-                .guest-dropdown__content
+                div(class="guest-dropdown__content" data-sum="0")
                 .guest-dropdown__arrow keyboard_arrow_down
             .guest-dropdown__list.guest-dropdown__list_expanded
                 ul
@@ -24,7 +24,7 @@ mixin guest-dropdown(expanded=false)
     else
         .guest-dropdown
             .guest-dropdown__value-line
-                .guest-dropdown__content
+                div(class="guest-dropdown__content" data-sum="0")
                 .guest-dropdown__arrow keyboard_arrow_down
             .guest-dropdown__list
                 ul

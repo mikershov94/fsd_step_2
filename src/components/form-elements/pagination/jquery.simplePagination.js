@@ -167,7 +167,6 @@
 				interval = methods._getInterval(o),
 				i,
 				tagName;
-			console.log(this)
 			methods.destroy.call(this);
 
 			tagName = (typeof this.prop === 'function') ? this.prop('tagName') : this.attr('tagName');

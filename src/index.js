@@ -8,6 +8,8 @@ import './components/form-elements/date-dropdown/date-dropdown.js';
 import './components/form-elements/range-slider/range-slider.js';
 import './components/form-elements/pagination/pagination.js';
 
+import './components/form-elements/guest-dropdown/guest-dropdown.js'
+
 $(document).ready(function() {
     $('.like-button').each(function() {
         if ($(this).attr('data-state') === 'liked') {
