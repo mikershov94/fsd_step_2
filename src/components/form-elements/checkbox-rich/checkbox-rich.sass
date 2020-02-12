@@ -1,0 +1,23 @@
+=checkbox-rich()
+    .checkbox-rich
+        margin-bottom: 0.8rem
+
+        &__button
+            +checkbox-button()
+            .checkbox-button
+                margin: 0
+
+                input + label
+                    margin: 0
+                    +font-type($type-h3)
+                    text-transform: none
+                    font-size: 0.65em
+                    line-height: 1.15rem
+                    color: $dark-shade-100 
+
+        &__description
+            +font-type($type-body)
+            max-width: 13rem
+            color: $dark-shade-50 
+            line-height: 0.8rem
+            padding-left: 1.7rem  

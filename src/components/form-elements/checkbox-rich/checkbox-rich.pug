@@ -1,7 +1,7 @@
 include ../checkbox/checkbox
 
-mixin checkbox-rich(id, text, checked=false)
+mixin checkbox-rich(id, text, description, checked=false)
     .checkbox-rich
         .checkbox-rich__button
             +checkbox-button(id, text, checked)
-        .checkbox-rich__description
+        .checkbox-rich__description= description
