@@ -8,7 +8,9 @@ import './components/form-elements/date-dropdown/date-dropdown.js';
 import './components/form-elements/range-slider/range-slider.js';
 import './components/form-elements/pagination/pagination.js';
 
-import './components/form-elements/guest-dropdown/guest-dropdown.js'
+import './components/form-elements/guest-dropdown/guest-dropdown.js';
+
+import './components/form-elements/checkbox-expandable/checkbox-expandable.js'
 
 $(document).ready(function() {
     $('.like-button').each(function() {
@@ -27,4 +29,7 @@ $(document).ready(function() {
         $(this).children('i').text('favorite');
         $(this).children('.like-button__count').addClass('like-button__count_liked')
     })
+
+    $('.checkbox-expandable').checkboxExpandable();
+
 });
