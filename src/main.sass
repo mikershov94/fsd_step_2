@@ -34,6 +34,8 @@
 
 @import "./components/form-elements/checkbox-expandable/checkbox-expandable.sass";
 
+@import "./components/form-elements/checkbox-rich/checkbox-rich.sass";
+
 body
 	color: $dark-shade-100
 	margin: 0
@@ -236,3 +238,6 @@ body
 	.col-formkit-start
 		+checkbox-expandable()
 		+checkbox-button()
+	.col-formkit-middle
+		.form-input-field
+			+checkbox-rich()

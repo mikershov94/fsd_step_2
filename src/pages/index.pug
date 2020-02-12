@@ -24,6 +24,8 @@ include ../components/form-elements/guest-dropdown/guest-dropdown
 
 include ../components/form-elements/checkbox-expandable/checkbox-expandable
 
+include ../components/form-elements/checkbox-rich/checkbox-rich
+
 block content
     include ../components/uikit-header/uikit-header
     .wrapper-form-kit
@@ -114,3 +116,8 @@ block content
         .col-formkit-start
             +checkbox-expandable()
             +checkbox-expandable(true)
+        .col-formkit-middle
+            .form-input-field
+                label Rich checkbox buttons
+                +checkbox-rich('hall', 'Широкий коридор')
+                +checkbox-rich('helper', 'Помощник для инвалидов')
