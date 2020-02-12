@@ -5,7 +5,6 @@ include ../components/form-elements/date-dropdown/date-dropdown
 include ../components/form-elements/textfield-masked/textfield-masked
 include ../components/form-elements/filter-date-dropdown/filter-date-dropdown
 include ../components/form-elements/textfield-subscription/textfield-subscription
-include ../components/form-elements/filter-dropdown/filter-dropdown
 
 include ../components/form-elements/checkbox/checkbox
 include ../components/form-elements/radiobutton/radiobutton
@@ -20,7 +19,10 @@ include ../components/form-elements/buttons/link/button-link
 include ../components/form-elements/buttons/submit/button-submit
 include ../components/form-elements/pagination/pagination
 
+include ../components/form-elements/filter-dropdown/filter-dropdown
 include ../components/form-elements/guest-dropdown/guest-dropdown
+
+include ../components/form-elements/checkbox-expandable/checkbox-expandable
 
 block content
     include ../components/uikit-header/uikit-header
@@ -93,8 +95,6 @@ block content
             .form-input-field
                 +pagination()
 
-
-
     .wrapper-form-kit
         .col-formkit-start
             .form-input-field
@@ -109,3 +109,8 @@ block content
         .col-formkit-end
             .form-input-field
                 +guest-dropdown(true)
+
+    .wrapper-form-kit
+        .col-formkit-start
+            +checkbox-expandable()
+            +checkbox-expandable(true)
