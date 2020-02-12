@@ -13,7 +13,6 @@
 @import "./components/form-elements/date-dropdown/date-dropdown.sass";
 @import "./components/form-elements/filter-date-dropdown/filter-date-dropdown.sass";
 @import "./components/form-elements/textfield-subscription/textfield-subscription.sass";
-@import "./components/form-elements/filter-dropdown/filter-dropdown.sass";
 
 @import "./components/form-elements/checkbox/checkbox.sass";
 @import "./components/form-elements/radiobutton/radiobutton.sass";
@@ -30,7 +29,10 @@
 @import "./components/form-elements/pagination/simplePagination.css";
 @import "./components/form-elements/pagination/custom-theme.sass";
 
+@import "./components/form-elements/filter-dropdown/filter-dropdown.sass";
 @import "./components/form-elements/guest-dropdown/guest-dropdown.sass";
+
+@import "./components/form-elements/checkbox-expandable/checkbox-expandable.sass";
 
 body
 	color: $dark-shade-100
@@ -229,5 +231,8 @@ body
 			+guest-dropdown()
 		
 .wrapper-form-kit:nth-child(4)
+	padding-top: 3rem
+
 	.col-formkit-start
+		+checkbox-expandable()
 		+checkbox-button()

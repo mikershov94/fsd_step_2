@@ -2,18 +2,20 @@ include ../checkbox/checkbox
 
 mixin checkbox-expandable(expand=false)
     - var listClass = 'checkbox-expandable__list'
+    - var arrow = 'expand_more'
     if (expand)
         - listClass = 'checkbox-expandable__list checkbox-expandable__list_expanded'
+        - arrow = 'expand_less'
 
     .checkbox-expandable
         .checkbox-expandable__string
             label(class=".checkbox-expandable__label") Expandable checkbox list
-            .checkbox-expandable__arrow
+            .material-icons.checkbox-expandable__arrow= arrow
         div(class= listClass)
             +checkbox-button('breakfast', 'Завтрак')
-            +checkbox-button('office-table', 'Письменный стол', checked)
-            +checkbox-button('baby-chair', 'Стул для кормления', checked)
-            +checkbox-button('crib', 'Кроватка', checked)
+            +checkbox-button('office-table', 'Письменный стол', true)
+            +checkbox-button('baby-chair', 'Стул для кормления', true)
+            +checkbox-button('crib', 'Кроватка', true)
             +checkbox-button('tv-1', 'Телевиор')
             +checkbox-button('shampoo-1', 'Шампунь')
             +checkbox-button('tv-2', 'Телевизор')
