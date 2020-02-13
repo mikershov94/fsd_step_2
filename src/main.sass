@@ -36,6 +36,8 @@
 
 @import "./components/form-elements/checkbox-rich/checkbox-rich.sass";
 
+@import "./components/form-elements/bullet-list/bullet-list.sass";
+
 body
 	color: $dark-shade-100
 	margin: 0
@@ -240,7 +242,7 @@ body
 		+checkbox-button()
 	.col-formkit-middle
 		padding-left: 6rem
-		width: 30%
+		width: 25%
 
 		.form-input-field
 			margin-top: 2rem
@@ -250,3 +252,14 @@ body
 				margin-bottom: 1rem
 
 			+checkbox-rich()
+
+	.col-formkit-end
+
+		.form-input-field
+			margin-top: 2rem
+
+			label
+				+font-type($type-h3)
+				display: inline-block
+
+			+bullet-list()

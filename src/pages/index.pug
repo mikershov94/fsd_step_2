@@ -26,6 +26,8 @@ include ../components/form-elements/checkbox-expandable/checkbox-expandable
 
 include ../components/form-elements/checkbox-rich/checkbox-rich
 
+include ../components/form-elements/bullet-list/bullet-list
+
 block content
     include ../components/uikit-header/uikit-header
     .wrapper-form-kit
@@ -121,3 +123,7 @@ block content
                 label Rich checkbox buttons
                 +checkbox-rich('hall', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
                 +checkbox-rich('helper', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит в номер')
+        .col-formkit-end
+            .form-input-field
+                label Bullet list
+                +bullet-list()

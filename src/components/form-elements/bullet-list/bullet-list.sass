@@ -1,0 +1,24 @@
+=bullet-list()
+    .bullet-list
+        list-style: none
+        padding: 0
+        margin: 0
+        +font-type($type-body)
+        color: $dark-shade-50
+        max-width: 14rem
+
+        &__item
+            position: relative
+            padding-left: 1rem
+            margin: 0.55rem 0
+
+            &::before
+                content: ''
+                width: 0.5rem
+                height: 0.5rem
+                background: $dark-shade-25
+                border-radius: 50%
+                position: absolute
+                top: 0.45rem
+                left: 0
+            
