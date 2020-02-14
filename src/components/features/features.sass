@@ -1,2 +1,25 @@
 =features()
     .features
+        max-width: 15.4rem
+
+        &__item
+            display: flex
+            align-items: center
+            padding: 1.15rem 0
+            border-bottom: 1px solid $dark-shade-5
+
+        &__img
+            +gradient-text($blue, $purple)
+            font-size: 2.4rem
+            margin-right: 0.8rem
+
+        &__label
+            margin: 0
+            text-transform: none
+            font-size: 0.65rem
+            line-height: 1.15rem
+            color: $dark-shade-100
+
+        &__text
+            +font-type($type-body)
+            color: $dark-shade-75

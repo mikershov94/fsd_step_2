@@ -10,3 +10,12 @@ $white-green: #66D2EA
 
 =gradient-color($low, $high)
     background: linear-gradient(180deg, $high 0%, $low 100%)
+
+=gradient-text($low, $high)
+    background: linear-gradient(180deg, $high 0%, $low 100%)
+    background: -webkit-gradient(180deg, $high 0%, $low 100%)
+    background: -moz-gradient(180deg, $high 0%, $low 100%)
+    background-clip: text
+    -webkit-background-clip: text
+    -moz-background-clip: text
+    -webkit-text-fill-color: transparent

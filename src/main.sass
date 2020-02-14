@@ -234,10 +234,19 @@ body
 		
 .wrapper-form-kit:nth-child(4)
 	padding-top: 3rem
+	padding-bottom: 0
 
 	.col-formkit-start
-		+checkbox-expandable()
-		+checkbox-button()
+		.form-input-field
+			+checkbox-expandable()
+			+checkbox-button()
+		.form-input-field:nth-child(1)
+			margin-top: 2rem
+			margin-bottom: 1rem
+		.form-input-field:nth-child(2)
+			margin-top: 2rem
+			margin-bottom: 0rem
+		max-height: 21.2rem
 	.col-formkit-middle
 		padding-left: 6rem
 		width: 25%
@@ -263,5 +272,7 @@ body
 			+bullet-list()
 
 .wrapper-form-kit:nth-child(5)
+	padding: 0
+
 	.col-formkit-start
 		+features()
