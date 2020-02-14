@@ -33,10 +33,10 @@
 @import "./components/form-elements/guest-dropdown/guest-dropdown.sass";
 
 @import "./components/form-elements/checkbox-expandable/checkbox-expandable.sass";
-
 @import "./components/form-elements/checkbox-rich/checkbox-rich.sass";
-
 @import "./components/form-elements/bullet-list/bullet-list.sass";
+
+@import "./components/features/features.sass";
 
 body
 	color: $dark-shade-100
@@ -212,8 +212,6 @@ body
 		.form-input-field:nth-child(3)
 			margin-top: 2.3rem
 			+pagination()
-
-
 			
 .wrapper-form-kit:nth-child(3)
 	.col-formkit-start
@@ -263,3 +261,7 @@ body
 				display: inline-block
 
 			+bullet-list()
+
+.wrapper-form-kit:nth-child(5)
+	.col-formkit-start
+		+features()
