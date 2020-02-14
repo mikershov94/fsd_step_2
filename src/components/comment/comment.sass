@@ -1,2 +1,46 @@
+@import "../form-elements/like-button/like-button";
+
 =comment()
     .comment
+        padding: 1rem 0
+        width: 45rem
+
+        &__user
+            display: flex
+            position: relative
+
+        &__img
+            margin: 0
+            padding: 0
+            position: absolute
+            left: -1.6rem
+            top: -0.3rem
+            z-index: 0
+
+        &__userinfo
+            margin: 0.75rem 3.2rem
+            z-index: 1
+
+        &__name
+            +font-type($type-h3)
+            text-transform: none
+            font-size: 0.65rem
+            line-height: 1.15rem
+            color: $dark-shade-100
+
+        &__date
+            +font-type($type-body)
+
+        &__body
+            display: flex
+            margin: 0
+
+        &__like
+            +like-button()
+            z-index: 2
+            margin: 0.2rem 0
+
+        &__text
+            +font-type($type-body)
+            z-index: 3
+            margin: 0 0.5rem
