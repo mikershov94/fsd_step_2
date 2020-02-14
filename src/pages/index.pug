@@ -27,6 +27,7 @@ include ../components/form-elements/checkbox-rich/checkbox-rich
 include ../components/form-elements/bullet-list/bullet-list
 
 include ../components/features/features
+include ../components/comment/comment
 
 block content
     include ../components/uikit-header/uikit-header
@@ -133,3 +134,6 @@ block content
     .wrapper-form-kit
         .col-formkit-start
             +features()
+        .col-formkit-middle
+            +comment()
+        
