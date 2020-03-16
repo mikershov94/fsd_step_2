@@ -1,5 +1,6 @@
-mixin textfield-subscription()
-    label Subscription Textfield
-    .text-field.text-field_subcription
-        input(type="email" placeholder="Email")
-        .text-field_subcription__arrow arrow_forward
+mixin textfield-subscription(label="Subscription Textfield")
+    .text-field_subscription
+        label(class="text-field_subscription__label")= label
+        .text-field_subscription__box
+            input(type="email" class="text-field_subscription__input" placeholder="Email")
+            .text-field_subscription__arrow arrow_forward

@@ -1,4 +1,4 @@
-mixin textfield-masked()
-    label Masked Textfield
+mixin textfield-masked(label="Masked Textfield")
     .text-field.text-field_masked
-        input(type="text" id="date")
+        label(class="text-field__label")= label
+        input(type="text" class="text-field__input" id="date")

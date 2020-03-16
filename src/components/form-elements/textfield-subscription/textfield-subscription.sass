@@ -1,21 +1,34 @@
-.text-field.text-field_subcription
-	position: relative
-	background-color: transparent
-	height: 2.3rem
-	width: 14.4rem
-	border: 1px solid $dark-shade-25
-	border-radius: 0.2rem
+=textfield-subscription()
+	
+	.text-field_subscription
 
-	input
-		border: none
-		width: 10.1rem
+		&__box
+			position: relative
+			background-color: transparent
+			height: 2.3rem
+			width: 14.4rem
+			border: 1px solid $dark-shade-25
+			border-radius: 0.2rem
 
-.text-field_subcription__arrow
-	position: absolute
-	height: 2.3rem
-	width: 2.3rem
-	font-family: 'MaterialIcons'
-	color: $dark-shade-50
-	font-size: 1.3rem
-	top: 0.5rem
-	left: 12.6rem
+		&__input
+			position: absolute
+			top: 0.6rem
+			left: 0.5rem
+			background-color: transparent
+			border: none
+			width: 11.5rem
+			+font-type($type-body)
+			color: $dark-shade-100
+			line-height: 0.6rem
+			outline: none
+
+		&__arrow
+			position: absolute
+			height: 2.3rem
+			width: 2.3rem
+			font-family: 'MaterialIcons'
+			color: $dark-shade-50
+			font-size: 1.3rem
+			top: 0.5rem
+			left: 12.6rem
+			cursor: pointer

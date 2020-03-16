@@ -1,7 +1,7 @@
-mixin textfield(placeholder="", value="", focus=false)
-    label Text field
+mixin textfield(label="Text field", placeholder="", value="", focus=false)
     .text-field
+        label(class="text-field__label")= label
         if !focus
-            input(type="text" placeholder=placeholder value=value)
+            input(type="text" class="text-field__input" placeholder=placeholder value=value)
         else
-            input(type="text" placeholder=placeholder value=value autofocus)
+            input(type="text" class="text-field__input" placeholder=placeholder value=value autofocus)
