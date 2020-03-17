@@ -1,4 +1,4 @@
-mixin guest-dropdown(expanded=false)
+mixin guest-dropdown(label="Dropdown", expanded=false)
     mixin item-counter(value='', identity='')
         li(class="guest-dropdown__counter" id=identity)
             .guest-dropdown__name-counter= value
@@ -6,28 +6,28 @@ mixin guest-dropdown(expanded=false)
                 button.guest-dropdown__btn.guest-dropdown__btn_dec.guest-dropdown__btn_disabled -
                 div(class="guest-dropdown__count" data-value="0") 0
                 button.guest-dropdown__btn.guest-dropdown__btn_inc +
-
-    label Dropdown
-    if expanded
-        .guest-dropdown
-            .guest-dropdown__value-line
-                div(class="guest-dropdown__content" data-sum="0")
-                .guest-dropdown__arrow keyboard_arrow_down
-            .guest-dropdown__list.guest-dropdown__list_expanded
-                ul
-                  +item-counter('Взрослые', 'adults')  
-                  +item-counter('Дети', 'kids')
-                  +item-counter('Младенцы', 'babies')
-                .guest-dropdown__buttons
-                    .guest-dropdown__clear Очистить
-                    .guest-dropdown__apply Применить
-    else
-        .guest-dropdown
-            .guest-dropdown__value-line
-                div(class="guest-dropdown__content" data-sum="0")
-                .guest-dropdown__arrow keyboard_arrow_down
-            .guest-dropdown__list
-                ul
-                  +item-counter('Взрослые', 'adults')  
-                  +item-counter('Дети', 'kids')
-                  +item-counter('Младенцы', 'babies')
+    .guest-dropdown
+        label(class="guest-dropdown__label")= label
+        if expanded
+            .guest-dropdown__box
+                .guest-dropdown__value-line
+                    div(class="guest-dropdown__content" data-sum="0")
+                    .guest-dropdown__arrow keyboard_arrow_down
+                .guest-dropdown__list.guest-dropdown__list_expanded
+                    ul
+                    +item-counter('Взрослые', 'adults')  
+                    +item-counter('Дети', 'kids')
+                    +item-counter('Младенцы', 'babies')
+                    .guest-dropdown__buttons
+                        .guest-dropdown__clear Очистить
+                        .guest-dropdown__apply Применить
+        else
+            .guest-dropdown__box
+                .guest-dropdown__value-line
+                    div(class="guest-dropdown__content" data-sum="0")
+                    .guest-dropdown__arrow keyboard_arrow_down
+                .guest-dropdown__list
+                    ul
+                    +item-counter('Взрослые', 'adults')  
+                    +item-counter('Дети', 'kids')
+                    +item-counter('Младенцы', 'babies')

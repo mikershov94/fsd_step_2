@@ -23,8 +23,8 @@
 
             //функция, вставляющая строку
             const clearAndInsert = (block) => {
-                block.parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('ul').parent('.guest-dropdown__list').parent('.guest-dropdown').find('.guest-dropdown__content').empty();
-                block.parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('ul').parent('.guest-dropdown__list').parent('.guest-dropdown').find('.guest-dropdown__content').html(cutString);
+                block.parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').parent('.guest-dropdown__box').find('.guest-dropdown__content').empty();
+                block.parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').parent('.guest-dropdown__box').find('.guest-dropdown__content').html(cutString);
             };
 
             //инициализируем строку дропдауна
@@ -218,5 +218,5 @@
 })(jQuery)
 
 $(document).ready(() => {
-    $('.guest-dropdown').guestDropdown();
+    $('.guest-dropdown').children('.guest-dropdown__box').guestDropdown();
 })

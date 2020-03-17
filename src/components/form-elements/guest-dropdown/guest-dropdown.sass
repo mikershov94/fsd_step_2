@@ -1,15 +1,17 @@
 =guest-dropdown()
-    label
-        display: inline-block
-        +font-type($type-h3)
-        margin-bottom: 0.35rem
+    
     .guest-dropdown
-        position: relative
-        width: 17.5rem
-        height: 2.3rem
-        border: 1px solid $dark-shade-25
-        border-radius: 0.2rem
-        cursor: pointer
+
+        &__label
+            +label()
+
+        &__box
+            position: relative
+            width: 17.5rem
+            height: 2.3rem
+            border: 1px solid $dark-shade-25
+            border-radius: 0.2rem
+            cursor: pointer
 
         &__content
             height: 2.3rem

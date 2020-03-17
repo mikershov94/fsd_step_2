@@ -1,93 +1,100 @@
-.filter-dropdown
-	position: relative
-	width: 14.4rem
-	height: 2.3rem
-	border: 1px solid $dark-shade-25
-	border-radius: 0.2rem
-	cursor: pointer
+=filter-dropdown()
 
-	&__content
-		height: 2.3rem
-		width: 12.1rem
-		+font-type($type-body)
-		color: $dark-shade-75
-		font-size: 0.76rem
-		padding-top: 0.4rem
-		padding-left: 0.7rem
-				
+	.filter-dropdown
 
-	&__arrow
-		position: absolute
-		top: 0rem
-		left: 9.6rem
-		height: 2.3rem
-		width: 2.3rem
-		font-family: 'MaterialIcons'
-		color: $dark-shade-50
-		font-size: 1.3rem
-		padding-top: 0.5rem
-		padding-left: 3rem
+		&__label
+			+label()
 
-	&__list
-		position: absolute
-		z-index: 9
-		top: 2.15rem
-		left: -0.05rem
-		display: none
-		width: 14.4rem
-		height: 6.5rem
-		border: 1px solid $dark-shade-25
-		border-radius: 0 0 0.2rem 0.2rem
-		background-color: white
-		box-shadow: 0rem 0.7rem 2rem 0.1rem $dark-shade-5
+		&__box
+			position: relative
+			width: 14.4rem
+			height: 2.3rem
+			border: 1px solid $dark-shade-25
+			border-radius: 0.2rem
+			cursor: pointer
 
-		&_expanded
-			display: block
+		&__content
+			height: 2.3rem
+			width: 12.1rem
+			+font-type($type-body)
+			color: $dark-shade-75
+			font-size: 0.76rem
+			padding-top: 0.4rem
+			padding-left: 0.7rem
+					
 
-		ul
+		&__arrow
+			position: absolute
+			top: 0rem
+			left: 9.6rem
+			height: 2.3rem
+			width: 2.3rem
+			font-family: 'MaterialIcons'
+			color: $dark-shade-50
+			font-size: 1.3rem
+			padding-top: 0.5rem
+			padding-left: 3rem
+
+		&__list
+			position: absolute
+			z-index: 9
+			top: 2.15rem
+			left: -0.05rem
+			display: none
+			width: 14.4rem
+			height: 6.5rem
+			border: 1px solid $dark-shade-25
+			border-radius: 0 0 0.2rem 0.2rem
+			background-color: white
+			box-shadow: 0rem 0.7rem 2rem 0.1rem $dark-shade-5
+
+			&_expanded
+				display: block
+
+			ul
+				margin: 0
+				padding: 0
+
+		&__counter
+			list-style: none
+			display: flex
+			align-items: baseline
+			padding: 0.4rem 0.4rem 0rem 0.7rem
+
+		&__name-counter
+			flex-grow: 2
+			+font-type($type-h3)
+
+		&__panel
+			flex-grow: 1
+			display: flex
+			justify-content: flex-end
+			align-items: baseline
+
+		&__btn
+			width: 1.65rem
+			height: 1.65rem
+			-webkit-appearance: none
+			-moz-appearance: none
+			background: none
+			border: 1px solid $dark-shade-25
+			border-radius: 70%
+			color: $dark-shade-25
+			cursor: pointer
+
+
+			&_inc
+				margin-left: 0.7rem
+			
+			&_dec
+				margin-right: 0.7rem
+
+			&_disabled
+				color: $dark-shade-5
+				border-color: $dark-shade-5
+
+		&__count
 			margin: 0
-			padding: 0
-
-	&__counter
-		list-style: none
-		display: flex
-		align-items: baseline
-		padding: 0.4rem 0.4rem 0rem 0.7rem
-
-	&__name-counter
-		flex-grow: 2
-		+font-type($type-h3)
-
-	&__panel
-		flex-grow: 1
-		display: flex
-		justify-content: flex-end
-		align-items: baseline
-
-	&__btn
-		width: 1.65rem
-		height: 1.65rem
-		-webkit-appearance: none
-		-moz-appearance: none
-		background: none
-		border: 1px solid $dark-shade-25
-		border-radius: 70%
-		color: $dark-shade-25
-		cursor: pointer
-
-
-		&_inc
-			margin-left: 0.7rem
-		
-		&_dec
-			margin-right: 0.7rem
-
-		&_disabled
-			color: $dark-shade-5
-			border-color: $dark-shade-5
-
-	&__count
-		margin: 0
-		width: 0.3rem
-		text-align: center
-		+font-type($type-h3)
+			width: 0.3rem
+			text-align: center
+			+font-type($type-h3)

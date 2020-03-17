@@ -1,5 +1,6 @@
 mixin date-dropdown(content, icon='keyboard_arrow_down')
-    label Date dropdown
     .date-dropdown
-        div(class="date-dropdown__content")= content
-        div(class="date-dropdown__arrow")= icon
+        label(class="date-dropdown__label") Date dropdown
+        .date-dropdown__box
+            .date-dropdown__input= content
+            .date-dropdown__arrow= icon

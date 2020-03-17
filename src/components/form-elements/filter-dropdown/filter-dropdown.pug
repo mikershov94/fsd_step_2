@@ -1,30 +1,30 @@
-mixin filter-dropdown(expanded=false)
+mixin filter-dropdown(label='Dropdown', expanded=false)
     mixin item-counter(value='', identity='')
         li(class="filter-dropdown__counter" id=identity)
             .filter-dropdown__name-counter= value
             .filter-dropdown__panel
-                button.filter-dropdown__btn.filter-dropdown__btn_dec -
+                button.filter-dropdown__btn.filter-dropdown__btn_dec.filter-dropdown__btn_disabled -
                 div(class="filter-dropdown__count" data-value="0") 0
                 button.filter-dropdown__btn.filter-dropdown__btn_inc +
-
-    label Dropdown
-    if expanded
-        .filter-dropdown
-            .filter-dropdown__value-line
-                .filter-dropdown__content
-                .filter-dropdown__arrow keyboard_arrow_down
-            .filter-dropdown__list.filter-dropdown__list_expanded
-                ul
-                  +item-counter('Спальни', 'bedrooms')  
-                  +item-counter('Кровати', 'beds')
-                  +item-counter('Ванные комнаты', 'bathrooms')
-    else
-        .filter-dropdown
-            .filter-dropdown__value-line
-                .filter-dropdown__content
-                .filter-dropdown__arrow keyboard_arrow_down
-            .filter-dropdown__list
-                ul
-                  +item-counter('Спальни', 'bedrooms')  
-                  +item-counter('Кровати', 'beds')
-                  +item-counter('Ванные комнаты', 'bathrooms')
+    .filter-dropdown
+        label(class="filter-dropdown__label")= label
+        if expanded
+            .filter-dropdown__box
+                .filter-dropdown__value-line
+                    .filter-dropdown__content
+                    .filter-dropdown__arrow keyboard_arrow_down
+                .filter-dropdown__list.filter-dropdown__list_expanded
+                    ul
+                    +item-counter('Спальни', 'bedrooms')  
+                    +item-counter('Кровати', 'beds')
+                    +item-counter('Ванные комнаты', 'bathrooms')
+        else
+            .filter-dropdown__box
+                .filter-dropdown__value-line
+                    .filter-dropdown__content
+                    .filter-dropdown__arrow keyboard_arrow_down
+                .filter-dropdown__list
+                    ul
+                    +item-counter('Спальни', 'bedrooms')  
+                    +item-counter('Кровати', 'beds')
+                    +item-counter('Ванные комнаты', 'bathrooms')
