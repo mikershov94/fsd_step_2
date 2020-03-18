@@ -47,6 +47,8 @@
 
                 if (adults === 1) {
                     $(this).parent('.guest-dropdown__panel').children('.guest-dropdown__btn_dec').removeClass('guest-dropdown__btn_disabled');
+                    $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__panel').parent('.guest-dropdown__list').children('.guest-dropdown__clear').removeClass('guest-dropdown__clear_disabled');
+                    $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').children('.guest-dropdown__buttons').children('.guest-dropdown__clear').removeClass('guest-dropdown__clear_disabled');
                 } 
                 if (adults === 10) {
                     $(this).addClass('guest-dropdown__btn_disabled');
@@ -75,6 +77,12 @@
                 } 
                 if (adults === 0) {
                     $(this).addClass('guest-dropdown__btn_disabled');
+
+                    const kids = $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').children('#kids').children('.guest-dropdown__panel').children('.guest-dropdown__count').attr('data-value')
+                    const babies = $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').children('#babies').children('.guest-dropdown__panel').children('.guest-dropdown__count').attr('data-value')
+                    if ((babies == 0) && (kids == 0)) {
+                        $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').children('.guest-dropdown__buttons').children('.guest-dropdown__clear').addClass('guest-dropdown__clear_disabled');
+                    }
                 }
                 
                 cutString = updateDropdownContent(guestSum);
@@ -96,6 +104,8 @@
 
                 if (kids === 1) {
                     $(this).parent('.guest-dropdown__panel').children('.guest-dropdown__btn_dec').removeClass('guest-dropdown__btn_disabled');
+                    $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__panel').parent('.guest-dropdown__list').children('.guest-dropdown__clear').removeClass('.guest-dropdown__clear_disabled');
+                    $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').children('.guest-dropdown__buttons').children('.guest-dropdown__clear').removeClass('guest-dropdown__clear_disabled');
                 } 
                 if (kids === 10) {
                     $(this).addClass('guest-dropdown__btn_disabled');
@@ -123,6 +133,12 @@
                 } 
                 if (kids === 0) {
                     $(this).addClass('guest-dropdown__btn_disabled');
+
+                    const babies = $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').children('#babies').children('.guest-dropdown__panel').children('.guest-dropdown__count').attr('data-value')
+                    const adults = $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').children('#adults').children('.guest-dropdown__panel').children('.guest-dropdown__count').attr('data-value')
+                    if ((adults == 0) && (babies == 0)) {
+                        $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').children('.guest-dropdown__buttons').children('.guest-dropdown__clear').addClass('guest-dropdown__clear_disabled');
+                    }
                 }
                 
                 cutString = updateDropdownContent(guestSum);
@@ -144,6 +160,8 @@
 
                 if (babies === 1) {
                     $(this).parent('.guest-dropdown__panel').children('.guest-dropdown__btn_dec').removeClass('guest-dropdown__btn_disabled');
+                    $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__panel').parent('.guest-dropdown__list').children('.guest-dropdown__clear').removeClass('.guest-dropdown__clear_disabled');
+                    $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').children('.guest-dropdown__buttons').children('.guest-dropdown__clear').removeClass('guest-dropdown__clear_disabled');
                 } 
                 if (babies === 5) {
                     $(this).addClass('guest-dropdown__btn_disabled');
@@ -171,6 +189,12 @@
                 } 
                 if (babies === 0) {
                     $(this).addClass('guest-dropdown__btn_disabled');
+
+                    const kids = $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').children('#kids').children('.guest-dropdown__panel').children('.guest-dropdown__count').attr('data-value')
+                    const adults = $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').children('#adults').children('.guest-dropdown__panel').children('.guest-dropdown__count').attr('data-value')
+                    if ((adults == 0) && (kids == 0)) {
+                        $(this).parent('.guest-dropdown__panel').parent('.guest-dropdown__counter').parent('.guest-dropdown__list').children('.guest-dropdown__buttons').children('.guest-dropdown__clear').addClass('guest-dropdown__clear_disabled');
+                    }
                 }
                 
                 cutString = updateDropdownContent(guestSum);
@@ -206,11 +230,27 @@
                 valueLine.children('.guest-dropdown__content').attr('data-sum', 0);
                 list.children('ul').children('li').children('.guest-dropdown__panel').children('.guest-dropdown__btn_dec').addClass('guest-dropdown__btn_disabled');
                 list.children('ul').children('li').children('.guest-dropdown__panel').children('.guest-dropdown__btn_inc').removeClass('guest-dropdown__btn_disabled')
+                list.children('.guest-dropdown__buttons').children('.guest-dropdown__clear').addClass('guest-dropdown__clear_disabled');
 
                 cutString = 'Сколько гостей';
 
-                insertValToHtml(guestSum, list.children('ul').children('li').children('.guest-dropdown__panel').children('.guest-dropdown__count'));
-                insertValToHtml(cutString, valueLine.children('.guest-dropdown__content'))
+                const kids = $(this).parent('.guest-dropdown__buttons').parent('.guest-dropdown__list').find('li#kids')
+                const adults = $(this).parent('.guest-dropdown__buttons').parent('.guest-dropdown__list').find('li#adults')
+                const babies = $(this).parent('.guest-dropdown__buttons').parent('.guest-dropdown__list').find('li#babies')
+
+                kids.children('.guest-dropdown__panel').children('.guest-dropdown__count').attr('data-value', 0);
+                adults.children('.guest-dropdown__panel').children('.guest-dropdown__count').attr('data-value', 0);
+                babies.children('.guest-dropdown__panel').children('.guest-dropdown__count').attr('data-value', 0);
+            
+                kids.children('.guest-dropdown__panel').children('.guest-dropdown__btn_dec').addClass('guest-dropdown__btn_disabled');
+                adults.children('.guest-dropdown__panel').children('.guest-dropdown__btn_dec').addClass('guest-dropdown__btn_disabled');
+                babies.children('.guest-dropdown__panel').children('.guest-dropdown__btn_dec').addClass('guest-dropdown__btn_disabled');
+
+                insertValToHtml(guestSum, kids.children('.guest-dropdown__panel').children('.guest-dropdown__count'));
+                insertValToHtml(guestSum, adults.children('.guest-dropdown__panel').children('.guest-dropdown__count'));
+                insertValToHtml(guestSum, babies.children('.guest-dropdown__panel').children('.guest-dropdown__count'));
+                $(this).parent('.guest-dropdown__buttons').parent('.guest-dropdown__list').parent('.guest-dropdown__box').find('.guest-dropdown__content').empty();
+                $(this).parent('.guest-dropdown__buttons').parent('.guest-dropdown__list').parent('.guest-dropdown__box').find('.guest-dropdown__content').html(cutString);
             })
         });
     }
