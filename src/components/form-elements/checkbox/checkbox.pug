@@ -1,4 +1,9 @@
-mixin checkbox-button(id, text, checked=false)
-    .checkbox-button
-        input(type="checkbox" class="checkbox-button__input" id=id checked=checked)
-        label(for=id class="checkbox-button__label")= text
+include ../checkbox-button/checkbox-button
+
+mixin checkbox()
+    .checkbox
+        label(class="checkbox__label") Checkbox buttons
+        .checkbox__buttons
+            +checkbox-button('checkbox-1', 'Можно курить')
+            +checkbox-button('checkbox-2', 'Можно с питомцами', true)
+            +checkbox-button('checkbox-3', 'Можно пригласить гостей (до 10 человек)', true)
