@@ -3,18 +3,18 @@
 		position: relative
 		margin-right: 1rem
 
-		input
+		&__input
 			position: absolute
 			-webkit-appearance: none
 			-moz-appearance: none
 			appearance: none
 
-		input + label
+		&__label
 			+font-type($type-body)
 			color: $dark-shade-50
 			margin-left: 1.7rem
 
-		input + label::before
+		&__label::before
 			content: ''
 			width: 1rem
 			height: 1rem
@@ -24,9 +24,9 @@
 			top: 0.15rem
 			left: 0
 
-		input + label:hover::before
-			border-color: $purple
+			&:hover::before
+				border-color: $purple
 
-		input:checked + label::before
+		&__input:checked + label::before
 			border-color: $purple
 			background: url('/static/icons/radiomark.svg') no-repeat center

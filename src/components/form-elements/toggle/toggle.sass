@@ -2,20 +2,20 @@
 	.toggle
 		margin-bottom: 0.5rem
 
-		label
+		&__label
 			position: relative
 	
-		input
+		&__input
 			-webkit-appearance: none
 			-moz-appearance: none
 			position: absolute
 
-		.toggle__label
+		&__text
 			+font-type($type-body)
 			color: $dark-shade-75
 			margin-left: 2.6rem
 
-		.toggle__switch
+		&__switch
 			display: inline-block
 			position: absolute
 			top: 0.1rem
@@ -24,17 +24,17 @@
 			border: 1px solid $dark-shade-25
 			border-radius: 1rem
 
-		.toggle__slider
+		&__slider
 			display: inline-block
 			width: 0.65rem
 			height: 0.65rem
 			position: relative
-			bottom: 0.075rem
+			bottom: 0.025rem
 			left: 0.15rem
 			background-color: $dark-shade-25
 			border-radius: 50%
 
-		input:checked + .toggle__switch
+		&__input:checked + .toggle__switch
 			border-color: $purple
 
 			.toggle__slider

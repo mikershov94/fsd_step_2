@@ -1,4 +1,4 @@
 mixin radio-button(text, name, id, checked=false)
     .radio-button
-        input(type="radio" name=name id=id checked=checked)
-        label(for=id)= text
+        input(type="radio" class="radio-button__input" name=name id=id checked=checked)
+        label(for=id class="radio-button__label")= text
