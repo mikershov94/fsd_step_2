@@ -7,7 +7,7 @@ include ../components/form-elements/filter-date-dropdown/filter-date-dropdown
 include ../components/form-elements/textfield-subscription/textfield-subscription
 
 include ../components/form-elements/checkbox/checkbox
-include ../components/form-elements/radiobutton/radiobutton
+include ../components/form-elements/sex-select/sex-select
 include ../components/form-elements/toggle/toggle
 include ../components/form-elements/like-button/like-button
 include ../components/form-elements/rate-button/rate-button
@@ -58,10 +58,7 @@ block content
             .form-input-field
                 +checkbox()
             .form-input-field
-                label Radio buttons
-                .demo-radio-wrapper
-                    +radio-button('Мужчина', 'sex', 'men', true)              
-                    +radio-button('Женщина', 'sex', 'women')
+                +sex-select()
             .form-input-field
                 h3 Toggle
                 .demo-toggle-wrapper
