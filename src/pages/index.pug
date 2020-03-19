@@ -31,53 +31,51 @@ include ../components/comment/comment
 
 block content
     include ../components/uikit-header/uikit-header
-    .wrapper-form-kit
-        .col-formkit-start
-            .form-input-field
-                .inscription default
-                +textfield('Text field', 'Email')
-            .form-input-field
-                .inscription hover / focus
-                +textfield('Text field','', 'This is a pretty awesome', true)
-            .form-input-field
-                .inscription default
-                +dropdown('Сколько гостей')
-            .form-input-field
-                .inscription default
-                +textfield-masked()
-            .dropdown-wrapper
-                .form-input-field
+    .form-elements__row_1
+        .form-elements__col_1
+            .form-elements__cell.form-elements__cell_text-default
+                +textfield('Text field', 'default', 'Email')
+            .form-elements__cell.form-elements__cell_text-hover
+                +textfield('Text field', 'hover/focus','', 'This is a pretty awesome', true)
+            .form-elements__cell.form-elements__cell_dropdown
+                +dropdown('Сколько гостей', 'deafult')
+            .form-elements__cell.form-elements__cell_mask
+                +textfield-masked('Masked Textfield', 'default')
+            .form-elements__cell.form-elements__cell_date
+                .form-elements__cell
                     +date-dropdown('ДД.ММ.ГГ')
-                .form-input-field
+                .form-elements__cell
                     +date-dropdown('19.08.2019')
-            .form-input-field
+            .form-elements__cell.form-elements__cell_filter-date
                 +filter-date-dropdown()
-            .form-input-field
-                +textfield-subscription() 
-        .col-formkit-middle
-            .form-input-field
+            .form-elements__cell.form-elements__cell_subscription
+                +textfield-subscription()
+
+        .form-elements__col_2
+            .form-elements__cell
                 +checkbox()
-            .form-input-field
+            .form-elements__cell
                 +sex-select()
-            .form-input-field
+            .form-elements__cell
                 h3 Toggle
                 .demo-toggle-wrapper
                     +toggle('Получать спецпредложения', 'subscribe', true)
                     +toggle('Получать спецпредложения', 'notSubscribe')
-            .form-input-field
+            .form-elements__cell
                 h3 Like button
                 .demo-like-wrapper
                     +like-button('2')
                     +like-button('2', true)
-            .form-input-field
+            .form-elements__cell
                 h3 Rate button
                 .wrapper-rating
                     +rate-button(4)
                     +rate-button(5)
-        .col-formkit-end
-            .form-input-field
+
+        .form-elements__col_3
+            .form-elements__cell
                 +range-slider('Range slider')
-            .form-input-field
+            .form-elements__cell
                 h3 Buttons
                 .buttons-kit-container
                     +btn-primary('Click me')
@@ -90,43 +88,43 @@ block content
                     +btn-link('Click me', true)
                 .buttons-kit-container
                     +btn-submit('Перейти к оплате')
-            .form-input-field
+            .form-elements__cell
                 +pagination()
 
-    .wrapper-form-kit
-        .col-formkit-start
-            .form-input-field
+    .form-elements__row_2
+        .form-elements__col_1
+            .form-elements__cell
                 .inscription default
                 +filter-dropdown()
-            .form-input-field
+            .form-elements__cell
                 .inscription expanded
                 +filter-dropdown("Dropdown", true)
-        .col-formkit-middle
-            .form-input-field
+        .form-elements__col_2
+            .form-elements__cell
                 +guest-dropdown("Dropdown", true)
-        .col-formkit-end
-            .form-input-field
+        .form-elements__col_3
+            .form-elements__cell
                 +guest-dropdown("Dropdown", true)
 
-    .wrapper-form-kit
-        .col-formkit-start
-            .form-input-field
+    .form-elements__row_3
+        .form-elements__col_1
+            .form-elements__cell
                 +checkbox-expandable()
-            .form-input-field
+            .form-elements__cell
                 +checkbox-expandable(true)
-        .col-formkit-middle
-            .form-input-field
+        .form-elements__col_2
+            .form-elements__cell
                 label Rich checkbox buttons
                 +checkbox-rich('hall', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
                 +checkbox-rich('helper', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит в номер')
-        .col-formkit-end
-            .form-input-field
+        .form-elements__col_3
+            .form-elements__cell
                 label Bullet list
                 +bullet-list()
     
-    .wrapper-form-kit
-        .col-formkit-start
+    .form-elements__row_4
+        .form-elements__col_1
             +features()
-        .col-formkit-middle
+        .form-elements__col_2
             +comment()
         

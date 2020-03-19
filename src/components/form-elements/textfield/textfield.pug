@@ -1,6 +1,7 @@
-mixin textfield(label="Text field", placeholder="", value="", focus=false)
+mixin textfield(label="Text field", inscription="", placeholder="", value="", focus=false)
     .text-field
         label(class="text-field__label")= label
+        .text-field__inscription= inscription
         if !focus
             input(type="text" class="text-field__input" placeholder=placeholder value=value)
         else

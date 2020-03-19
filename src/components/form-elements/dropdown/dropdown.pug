@@ -1,6 +1,7 @@
-mixin dropdown(content='', icon='keyboard_arrow_down')
+mixin dropdown(content='', inscription='', icon='keyboard_arrow_down')
     .dropdown
         label(class="dropdown__label") Dropdown
+        .dropdown__inscription= inscription
         .dropdown__box
             .dropdown__input= content 
             .dropdown__arrow keyboard_arrow_down
