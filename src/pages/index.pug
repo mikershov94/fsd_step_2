@@ -62,7 +62,7 @@ block content
                     +toggle('Получать спецпредложения', 'subscribe', true)
                     +toggle('Получать спецпредложения', 'notSubscribe')
             .form-elements__cell.form-elements__cell_like-button
-                h3 Like button
+                h3() Like button
                 .demo-like-wrapper
                     +like-button('2')
                     +like-button('2', true)
@@ -73,22 +73,22 @@ block content
                     +rate-button(5)
 
         .form-elements__col_3
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_range-slider
                 +range-slider('Range slider')
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_buttons
                 h3 Buttons
-                .buttons-kit-container
+                .primary-container
                     +btn-primary('Click me')
                     +btn-primary('Click me', true)
-                .buttons-kit-container
+                .outline-container
                     +btn-outline('Click me')
                     +btn-outline('Click me', true)
-                .buttons-kit-container
+                .links-container
                     +btn-link('Click me')
                     +btn-link('Click me', true)
-                .buttons-kit-container
+                .submit-container
                     +btn-submit('Перейти к оплате')
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_pagination
                 +pagination()
 
     .form-elements__row_2

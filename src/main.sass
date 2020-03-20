@@ -80,34 +80,19 @@ body
 			+row()
 
 			.col-formkit-end
-				padding: 0
-				margin: 0
+				
 				padding-left: 0.4rem
 				width: 36%
 				
 				.form-input-field:nth-child(1)
-					+range-slider()	
+						
 
 				.form-input-field:nth-child(2)
-					margin-top: 2.5rem
-
-					.buttons-kit-container
-						margin-top: 1rem
-						margin-bottom: 1.65rem
-						+btn-primary()
-						+btn-outline()
-
-					.buttons-kit-container:nth-child(4)
-						margin-top: -0.2rem
-						+btn-link()
-
-					.buttons-kit-container:nth-child(5)
-						margin-top: -0.2rem
-						+btn-submit()
+					
+						
 				
 				.form-input-field:nth-child(3)
-					margin-top: 2.3rem
-					+pagination()
+					
 			
 		&_2
 			+row()
@@ -196,7 +181,9 @@ body
 
 		&_2
 			width: 280px
+			padding: 0
 			padding-left: 9.3%
+			margin: 0
 
 		&_3
 			width: 280px
@@ -262,6 +249,35 @@ body
 			.wrapper-rating
 				display: flex
 
+		&_range-slider
+			margin-top: 0
+
+		&_buttons
+			margin-top: 2.48rem
+
+			.primary-container
+				margin-top: 1rem
+				margin-bottom: 1.65rem
+				+btn-primary()
+
+			.outline-container
+				margin-top: -0.2rem
+				margin-bottom: 1.65rem
+				+btn-outline()
+
+			.links-container
+				margin-top: -0.2rem
+				margin-bottom: 1.65rem
+				+btn-link()
+
+			.submit-container
+				+btn-submit()
+
+
+		&_pagination
+			margin-top: 2.3rem
+			+pagination()
+
 +textfield()
 +textfield-subscription()
 +dropdown()
@@ -273,5 +289,7 @@ body
 +toggle()
 +like-button()
 +rate-button()
++range-slider()
+
 
 +filter-dropdown()
