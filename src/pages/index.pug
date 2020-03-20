@@ -52,21 +52,21 @@ block content
                 +textfield-subscription()
 
         .form-elements__col_2
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_checkbox
                 +checkbox()
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_radio
                 +sex-select()
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_toggle
                 h3 Toggle
                 .demo-toggle-wrapper
                     +toggle('Получать спецпредложения', 'subscribe', true)
                     +toggle('Получать спецпредложения', 'notSubscribe')
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_like-button
                 h3 Like button
                 .demo-like-wrapper
                     +like-button('2')
                     +like-button('2', true)
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_rate-button
                 h3 Rate button
                 .wrapper-rating
                     +rate-button(4)

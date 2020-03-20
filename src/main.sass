@@ -78,49 +78,6 @@ body
 
 		&_1
 			+row()
-			padding-left: 9.3%
-
-			.col-formkit-middle
-				padding-left: 6rem
-				width: 25%
-
-				.form-input-field:nth-child(1)
-					margin-bottom: 2.6rem
-					padding-right: 8rem
-					+checkbox()
-
-				.form-input-field:nth-child(2)
-					margin-bottom: 2.3rem
-					+sex-select()
-
-				.form-input-field:nth-child(3)
-					h3
-						+font-type($type-h3)
-
-					.demo-toggle-wrapper
-						padding-top: 0.2rem
-						margin-bottom: 2.5rem
-						+toggle()
-								
-				.form-input-field:nth-child(4)
-
-					h3
-						+font-type($type-h3)
-
-					.demo-like-wrapper
-						margin-top: 0.95rem
-						margin-bottom: 2.3rem
-						display: flex
-						+like-button()
-				
-				.form-input-field:nth-child(5)
-					h3
-						+font-type($type-h3)
-
-					.wrapper-rating
-						display: flex
-
-					+rate-button()
 
 			.col-formkit-end
 				padding: 0
@@ -160,14 +117,14 @@ body
 				padding-right: 2.9rem
 				
 				.form-input-field:nth-child(1)
-					margin-bottom: 0.9rem
+					
 
 					label
 						margin-bottom: 0.35rem
 
 					
 					
-					+filter-dropdown()
+					
 
 				.form-input-field:nth-child(2)
 					margin-bottom: 0.78rem
@@ -234,13 +191,16 @@ body
 	&__col
 
 		&_1
-			width: 280px	
+			width: 280px
+			padding-left: 9.3%	
 
 		&_2
-			width: 33%
+			width: 280px
+			padding-left: 9.3%
 
 		&_3
-			width: 34%
+			width: 280px
+			padding-left: 9.3%
 
 	&__cell
 		position: relative
@@ -249,19 +209,15 @@ body
 		&_text-default
 			margin-bottom: 1.2rem
 			
-
 		&_text-hover
 			margin-bottom: 1.2rem
 			
-
 		&_dropdown
 			margin-bottom: 1.2rem
 			
-
 		&_mask
 			margin-bottom: 2rem
 			
-
 		&_date
 			display: flex
 			margin-bottom: 2.2rem
@@ -273,9 +229,49 @@ body
 		&_subscription
 			margin-bottom: 2.3rem
 
+		&_checkbox
+			margin-bottom: 2.6rem
+
+		&_radio
+			margin-bottom: 2.3rem
+
+		&_toggle
+
+			h3
+				+font-type($type-h3)
+
+			.demo-toggle-wrapper
+				padding-top: 0.2rem
+				margin-bottom: 2.5rem
+
+		&_like-button
+
+			h3
+				+font-type($type-h3)
+
+			.demo-like-wrapper
+				margin-top: 0.95rem
+				margin-bottom: 2.3rem
+				display: flex
+
+		&_rate-button
+			
+			h3
+				+font-type($type-h3)
+
+			.wrapper-rating
+				display: flex
+
 +textfield()
 +textfield-subscription()
 +dropdown()
 +date-dropdown()
 +filter-dropdown()
 +filter-date-dropdown()
++checkbox()
++sex-select()
++toggle()
++like-button()
++rate-button()
+
++filter-dropdown()
