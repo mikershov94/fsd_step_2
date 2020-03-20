@@ -106,16 +106,16 @@ block content
 
     .form-elements__row_3
         .form-elements__col_1
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_checkbox-closed
                 +checkbox-expandable()
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_checkbox-opened
                 +checkbox-expandable(true)
         .form-elements__col_2
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_checkbox-rich
                 label Rich checkbox buttons
                 +checkbox-rich('hall', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
                 +checkbox-rich('helper', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит в номер')
-        .form-elements__col_3
+        .form-elements__col_3.form-elements__cell_bullet-list
             .form-elements__cell
                 label Bullet list
                 +bullet-list()

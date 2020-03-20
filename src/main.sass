@@ -81,74 +81,19 @@ body
 			padding-top: 1.9rem
 	
 		&_2
-			+row()
-
-			.col-formkit-start
-				width: 18.5%
-				padding-right: 2.9rem
-				
-				.form-input-field:nth-child(1)
-					
-
-					label
-						margin-bottom: 0.35rem
-
-					
-					
-					
-
-				.form-input-field:nth-child(2)
-					
-
-
-					
-					+filter-dropdown()
-
-			.col-formkit-middle,
-			.col-formkit-end
-				.form-input-field
-					+guest-dropdown()
+			+row()				
 				
 		&_3
 			+row()
-
-			padding-top: 3rem
-			padding-bottom: 0
-
-			.col-formkit-start
-				.form-input-field
-					+checkbox-expandable()
-					+checkbox-button()
-				.form-input-field:nth-child(1)
-					margin-top: 2rem
-					margin-bottom: 1rem
-				.form-input-field:nth-child(2)
-					margin-top: 2rem
-					margin-bottom: 0rem
-				max-height: 21.2rem
-			.col-formkit-middle
-				padding-left: 6rem
-				width: 25%
-
-				.form-input-field
-					margin-top: 2rem
-
-					label
-						+label()
-						margin-bottom: 1rem
-
-					+checkbox-rich()
-
+			min-height: 21.2rem
+			padding-top: 3.5rem
+		
 			.col-formkit-end
 
 				.form-input-field
-					margin-top: 2rem
+					
 
-					label
-						+font-type($type-h3)
-						display: inline-block
-
-					+bullet-list()
+					
 
 		&_4
 			+row()
@@ -269,6 +214,29 @@ body
 			width: 233px
 			margin-bottom: 1.1rem
 
+		&_checkbox-closed
+			margin-top: 2rem
+			margin-bottom: 0rem
+
+		&_checkbox-opened
+			margin-top: 2.8rem
+			margin-bottom: 0rem
+		
+		&_checkbox-rich
+			margin-top: 2rem
+
+			label
+				+label()
+				margin-bottom: 1rem
+
+		&_bullet-list
+			margin-top: 1.35rem
+
+			label
+				+font-type($type-h3)
+				display: inline-block
+
+
 
 
 +textfield()
@@ -283,6 +251,9 @@ body
 +like-button()
 +rate-button()
 +range-slider()
-
-
 +filter-dropdown()
++guest-dropdown()
++checkbox-expandable()
++checkbox-button()
++checkbox-rich()
++bullet-list()
