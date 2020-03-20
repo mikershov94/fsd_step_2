@@ -9,6 +9,7 @@ mixin filter-dropdown(label='Dropdown', expanded=false)
     .filter-dropdown
         label(class="filter-dropdown__label")= label
         if expanded
+            .filter-dropdown__inscription Expanded
             .filter-dropdown__box
                 .filter-dropdown__value-line
                     .filter-dropdown__content
@@ -19,6 +20,7 @@ mixin filter-dropdown(label='Dropdown', expanded=false)
                     +item-counter('Кровати', 'beds')
                     +item-counter('Ванные комнаты', 'bathrooms')
         else
+            .filter-dropdown__inscription Default
             .filter-dropdown__box
                 .filter-dropdown__value-line
                     .filter-dropdown__content

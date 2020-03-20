@@ -68,8 +68,8 @@ body
 		display: flex
 		flex-wrap: wrap
 		width: 100%
-		padding-top: 1.9rem
-		padding-bottom: 3.4rem
+		
+		padding-bottom: 3rem
 		//padding-left: 7.8rem
 		
 	
@@ -78,22 +78,8 @@ body
 
 		&_1
 			+row()
-
-			.col-formkit-end
-				
-				padding-left: 0.4rem
-				width: 36%
-				
-				.form-input-field:nth-child(1)
-						
-
-				.form-input-field:nth-child(2)
-					
-						
-				
-				.form-input-field:nth-child(3)
-					
-			
+			padding-top: 1.9rem
+	
 		&_2
 			+row()
 
@@ -112,7 +98,8 @@ body
 					
 
 				.form-input-field:nth-child(2)
-					margin-bottom: 0.78rem
+					
+
 
 					
 					+filter-dropdown()
@@ -277,6 +264,12 @@ body
 		&_pagination
 			margin-top: 2.3rem
 			+pagination()
+
+		&_filter-dropdown
+			width: 233px
+			margin-bottom: 1.1rem
+
+
 
 +textfield()
 +textfield-subscription()
