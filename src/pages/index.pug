@@ -93,15 +93,15 @@ block content
 
     .form-elements__row_2
         .form-elements__col_1
-            .form-elements__cell.form-elements__cell_filter-dropdown
+            .form-elements__cell.form-elements__cell_filter-dropdown.form-elements__cell.form-elements__cell_filter-dropdown_1
                 +filter-dropdown()
-            .form-elements__cell.form-elements__cell_filter-dropdown
+            .form-elements__cell.form-elements__cell_filter-dropdown.form-elements__cell.form-elements__cell_filter-dropdown_2
                 +filter-dropdown("Dropdown", true)
         .form-elements__col_2
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_guest-dropdown.form-elements__cell_guest-dropdown_1
                 +guest-dropdown("Dropdown", true)
         .form-elements__col_3
-            .form-elements__cell
+            .form-elements__cell.form-elements__cell_guest-dropdown.form-elements__cell_guest-dropdown_2
                 +guest-dropdown("Dropdown", true)
 
     .form-elements__row_3
@@ -124,5 +124,6 @@ block content
         .form-elements__col_1
             +features()
         .form-elements__col_2
-            +comment()
+            .form-elements__cell.form-elements__cell_comment
+                +comment()
         

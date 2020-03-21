@@ -215,7 +215,7 @@
             //обработчик клика за пределами Dropdown
             $(document).click(function(e) {
                 if ($(e.target).closest('.guest-dropdown').length) return;
-                $('.guest-dropdown').children('.guest-dropdown__list').removeClass('guest-dropdown__list_expanded');
+                $('.guest-dropdown').children('.guest-dropdown__box').children('.guest-dropdown__list').removeClass('guest-dropdown__list_expanded');
                 e.stopPropagation()
             })
 

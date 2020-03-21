@@ -3,21 +3,21 @@
 		display: flex
 		flex-wrap: wrap
 		width: 100%
-		padding-bottom: 3rem
 			
 	&__row
 
 		&_1
 			+row()
-			padding-top: 1.9rem
+			padding-top: 2.2rem
+			padding-bottom: 3.3rem
 	
 		&_2
-			+row()				
+			+row()
+			padding-bottom: 2.8rem				
 				
 		&_3
-			+row()
-			min-height: 21.2rem
-			padding-top: 3.5rem
+			+row()	
+			padding-top: 3.4rem
 
 		&_4
 			+row()
@@ -25,22 +25,22 @@
 	&__col
 
 		&_1
-			width: 280px
+			width: 320px
 			padding-left: 9.3%	
 
 		&_2
-			width: 280px
+			width: 320px
 			padding: 0
-			padding-left: 9.3%
+			padding-left: 8.2%
 			margin: 0
 
 		&_3
-			width: 280px
-			padding-left: 9.3%
+			width: 320px
+			padding-left: 4.9%
 
 	&__cell
 		position: relative
-		margin-top: 0.35rem
+		
 
 		&_text-default
 			margin-bottom: 1.2rem
@@ -52,7 +52,7 @@
 			margin-bottom: 1.2rem
 			
 		&_mask
-			margin-bottom: 2rem
+			margin-bottom: 2.4rem
 			
 		&_date
 			display: flex
@@ -66,7 +66,7 @@
 			margin-bottom: 2.3rem
 
 		&_checkbox
-			margin-bottom: 2.6rem
+			margin-bottom: 3.1rem
 
 		&_radio
 			margin-bottom: 2.3rem
@@ -102,7 +102,7 @@
 			margin-top: 0
 
 		&_buttons
-			margin-top: 2.48rem
+			margin-top: 2.3rem
 
 			.primary-container
 				margin-top: 1rem
@@ -129,7 +129,20 @@
 
 		&_filter-dropdown
 			width: 233px
-			margin-bottom: 1.1rem
+			margin-bottom: 1.2rem
+
+			&_1
+				z-index: 9
+
+			&_2
+				z-index: 8
+
+		&_guest-dropdown
+			&_1
+				z-index: 7
+
+			&_2
+				z-index: 6
 
 		&_checkbox-closed
 			margin-top: 2rem
@@ -147,11 +160,14 @@
 				margin-bottom: 1rem
 
 		&_bullet-list
-			margin-top: 1.35rem
+			margin-top: 1.7rem
 
 			label
 				+font-type($type-h3)
 				display: inline-block
+
+		&_comment
+			margin-left: 0.2rem
 
 +textfield()
 +textfield-subscription()
