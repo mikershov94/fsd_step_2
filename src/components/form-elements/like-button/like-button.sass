@@ -1,29 +1,30 @@
 =like-button ()
 	.like-button
 		position: relative
-		width: 2rem
-		height: 1rem
+		width: 3.2rem
+		height: 1.5rem
 		border: 1px solid $dark-shade-25
 		border-radius: 1rem
-		margin-right: 0.5rem	
+		margin-right: 0.9rem
+		cursor: pointer	
 
 		&__icon
 			position: absolute
-			top: 0.225rem
-			left: 0.2rem
+			top: 0.38rem
+			left: 0.35rem
 			color: $dark-shade-25
-			font-size: 0.6em
+			font-size: 0.85rem
 
 			&_liked
 				color: $purple
 
 		&__count
 			position: absolute
-			top: -0.05rem
-			right: 0.6rem
+			top: 0.01rem
+			right: 0.9rem
 			+font-type($type-body)
 			color: $dark-shade-25
-			font-size: 0.6em
+			font-size: 0.86rem
 
 			&_liked
 				color: $purple

@@ -13,6 +13,7 @@
 			+font-type($type-body)
 			color: $dark-shade-50
 			margin-left: 2.5rem
+			cursor: pointer
 
 		&__label::before
 			content: ''
@@ -23,9 +24,13 @@
 			position: absolute
 			top: 0.35rem
 			left: 0.05rem
+			cursor: pointer
 
 			&:hover::before
 				border-color: $purple
+
+		&__input:checked + label
+			color: $dark-shade-75
 
 		&__input:checked + label::before
 			border-color: $purple
