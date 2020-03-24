@@ -35,8 +35,9 @@
 			margin: 0
 
 		&_3
-			width: 320px
-			padding-left: 4.9%
+			width: 426px
+			padding-left: 5.1%
+
 
 	&__cell
 		position: relative
@@ -69,7 +70,7 @@
 			margin-bottom: 5.1rem
 
 		&_radio
-			margin-bottom: 3.4rem
+			margin-bottom: 3.5rem
 
 		&_toggle
 
@@ -104,11 +105,12 @@
 			margin-top: 0
 
 		&_buttons
-			margin-top: 2.3rem
+			margin-top: 3.8rem
 
 			.primary-container
-				margin-top: 1rem
-				margin-bottom: 1.65rem
+				margin-top: 1.18rem
+				margin-left: 0.1rem
+				margin-bottom: 2.6rem
 				+btn-primary()
 
 			.outline-container
@@ -117,8 +119,8 @@
 				+btn-outline()
 
 			.links-container
-				margin-top: -0.2rem
-				margin-bottom: 1.65rem
+				margin-top: 2.3rem
+				margin-bottom: 2rem
 				+btn-link()
 
 			.submit-container
@@ -126,7 +128,7 @@
 
 
 		&_pagination
-			margin-top: 2.3rem
+			margin-top: 3.5rem
 			+pagination()
 
 		&_filter-dropdown
@@ -191,3 +193,14 @@
 +bullet-list()
 +features()
 +comment()
+
+@media (max-width: 1518px)
+	.form-elements__col_3
+		padding-top: 5rem
+		padding-left: 9.9%
+
+@media (max-width: 1061px)
+	.form-elements__col_2
+		padding-top: 3rem
+		padding-left: 9.9%
+	

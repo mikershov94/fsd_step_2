@@ -4,6 +4,7 @@
     +btn()
 
     .btn_outline
+        position: relative
         &:disabled
             opacity: 0.5
 
@@ -14,16 +15,17 @@
         &__background
             position: absolute
             background: white
-            width: 5.2rem
-            height: 2.2rem
+            width: 7.9rem
+            height: 3.3rem
             border-radius: 2rem
-            top: 0.12rem
-            left: 0.11rem
+            top: 0.2rem
+            left: 0.15rem
             z-index: 1
             display: flex
             align-items: center
             justify-content: center
             +font-type($type-h3)
+            font-size: 0.96rem
             color: $purple
 
             &:hover

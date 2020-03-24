@@ -1,6 +1,6 @@
 =range-slider()
 	.range-slider
-		width: 14.5rem
+		width: 22.2rem
 		position: relative
 
 		label
@@ -11,14 +11,14 @@
 			color: $dark-shade-50
 			position: absolute
 			right: 0rem
-			top: 0.3rem
+			top: 0rem
 
 		#slider
-			margin-top: 1.2rem
+			margin-top: 1.9rem
 
 		.noUi-horizontal
-			height: 0.35rem
-			width: 14.5rem
+			height: 0.45rem
+			width: 22.1rem
 
 		.noUi-target
 			background: #FFFFFF
@@ -34,13 +34,24 @@
 			right: 0.3rem
 
 		.noUi-handle
-			width: 0.9rem
-			height: 0.9rem
+			width: 1.25rem
+			height: 1.25rem
 			border: 2px solid white
 			border-radius: 50%
 			box-shadow: none
-			left: 0.6rem
+			left: 1rem
 			background: linear-gradient(180deg, $green 0%, $white-green 100%)
+
+			&-lower
+				top: -0.45rem
+				left: 1.15rem
+				outline: none
+
+			&-upper
+				top: -0.45rem
+				left: 0.9rem
+				outline: none
+			
 			
 		.noUi-handle:before,
 		.noUi-handle:after
@@ -48,3 +59,4 @@
 
 		.noUi-touch-area
 			cursor: pointer
+			top: -0.5rem
