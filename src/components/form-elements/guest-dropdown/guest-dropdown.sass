@@ -7,42 +7,42 @@
 
         &__box
             position: relative
-            width: 17.5rem
-            height: 2.3rem
+            width: 26.5rem
+            height: 3.5rem
             border: 1px solid $dark-shade-25
             border-radius: 0.2rem
             cursor: pointer
 
         &__content
             height: 2.3rem
-            width: 14.4rem
+            width: 23rem
             +font-type($type-body)
             color: $dark-shade-75
-            font-size: 0.76rem
-            padding-top: 0.4rem
-            padding-left: 0.7rem
+            font-size: 1.2rem
+            padding-top: 0.6rem
+            padding-left: 1rem
                     
 
         &__arrow
             position: absolute
-            top: 0rem
-            left: 12.6rem
+            top: 0.3rem
+            right: 0.6rem
             height: 2.3rem
             width: 2.3rem
             font-family: 'MaterialIcons'
             color: $dark-shade-50
-            font-size: 1.3rem
+            font-size: 2rem
             padding-top: 0.5rem
             padding-left: 3rem
 
         &__list
             position: absolute
             z-index: 5
-            top: 2.15rem
+            top: 3.5rem
             left: -0.05rem
             display: none
-            width: 17.5rem
-            height: 8.6rem
+            width: 26.5rem
+            height: 13rem
             border: 1px solid $dark-shade-25
             border-radius: 0 0 0.2rem 0.2rem
             background-color: white
@@ -59,7 +59,7 @@
             list-style: none
             display: flex
             align-items: baseline
-            padding: 0.4rem 0.4rem 0rem 0.7rem
+            padding: 0.5rem 0.55rem 0.1rem 1.2rem
 
         &__name-counter
             flex-grow: 2
@@ -72,22 +72,23 @@
             align-items: baseline
 
         &__btn
-            width: 1.65rem
-            height: 1.65rem
+            width: 2.5rem
+            height: 2.5rem
             -webkit-appearance: none
             -moz-appearance: none
             background: none
             border: 1px solid $dark-shade-25
             border-radius: 70%
             color: $dark-shade-25
+            font-size: 1.3rem
             cursor: pointer
 
 
             &_inc
-                margin-left: 0.7rem
+                margin-left: 1.4rem
             
             &_dec
-                margin-right: 0.7rem
+                margin-right: 0.8rem
 
             &_disabled
                 color: $dark-shade-5
@@ -102,7 +103,7 @@
         &__buttons
             display: flex
             +font-type($type-h3)
-            padding-top: 1.2rem
+            padding-top: 1.6rem
         
         &__clear
             flex-grow: 1
