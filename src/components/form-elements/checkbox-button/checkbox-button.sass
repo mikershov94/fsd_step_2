@@ -1,0 +1,35 @@
+=checkbox-button ()
+    .checkbox-button
+        position: relative
+        margin-bottom: 1.25rem
+
+        &__input
+            opacity: 0
+
+        &__label
+            +font-type($type-body)
+            line-height: 1.5rem
+            color: $dark-shade-50
+            position: absolute
+            top: 0rem
+            left: 2.5rem
+            cursor: pointer
+
+            &:hover:before
+                border-color: $purple
+
+            &::before
+                content: ''
+                position: absolute
+                top: -0.1rem
+                left: -2.5rem
+                width: 1.5rem
+                height: 1.5rem
+                border: 1px solid $dark-shade-25
+                border-radius: 0.3rem
+                cursor: pointer
+
+        &__input:checked + .checkbox-button__label::before
+            background: url('/static/icons/checkmark.svg') no-repeat center
+            background-size: 0.85rem 0.85rem
+            border-color: $purple

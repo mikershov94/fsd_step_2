@@ -1,0 +1,7 @@
+mixin toggle(text, id, checked=false)
+    .toggle
+        label(for=id class="toggle__label")
+            input(type="checkbox" class="toggle__input" id=id checked=checked)
+            span.toggle__switch
+                span.toggle__slider
+            span.toggle__text= text

@@ -1,0 +1,224 @@
+.form-elements
+	=row()
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+			
+	&__row
+
+		&_1
+			+row()
+			padding-top: 1.7rem
+			padding-bottom: 6.1rem
+	
+		&_2
+			+row()
+			padding-bottom: 2.8rem				
+				
+		&_3
+			+row()	
+			padding-top: 7.8rem
+
+		&_4
+			+row()
+			padding-top: 1.2rem
+
+				
+	&__col
+
+		&_1
+			width: 426px
+			padding-left: 9.9%	
+
+		&_2
+			width: 426px
+			padding: 0
+			padding-left: 8.8%
+			margin: 0
+
+		&_3
+			width: 426px
+			padding-left: 5.1%
+
+		&_comment
+			width: 950px
+			padding: 0
+			padding-left: 8.8%
+			margin: 0
+
+	&__cell
+		position: relative
+		
+
+		&_text-default
+			margin-bottom: 1.75rem
+			
+		&_text-hover
+			margin-bottom: 1.7rem
+			
+		&_dropdown
+			margin-bottom: 2rem
+			
+		&_mask
+			margin-bottom: 3.5rem
+			
+		&_date
+			display: flex
+			margin-bottom: 3.5rem
+			justify-content: space-between
+
+		&_filter-date
+			margin-bottom: 3.4rem
+
+		&_subscription
+			margin-bottom: 2.3rem
+
+		&_checkbox
+			margin-bottom: 5.1rem
+
+		&_radio
+			margin-bottom: 3.5rem
+
+		&_toggle
+
+			h3
+				+font-type($type-h3)
+				margin-bottom: 0.8rem
+
+			.demo-toggle-wrapper
+				padding-top: 0.2rem
+				margin-bottom: 3.8rem
+
+		&_like-button
+
+			h3
+				+font-type($type-h3)
+				margin-bottom: 1.23rem
+
+			.demo-like-wrapper
+				margin-top: 0.95rem
+				margin-bottom: 3.5rem
+				display: flex
+
+		&_rate-button
+			
+			h3
+				+font-type($type-h3)
+
+			.wrapper-rating
+				display: flex
+
+		&_range-slider
+			margin-top: 0
+
+		&_buttons
+			margin-top: 3.8rem
+
+			.primary-container
+				margin-top: 1.18rem
+				margin-left: 0.1rem
+				margin-bottom: 2.6rem
+				+btn-primary()
+
+			.outline-container
+				margin-top: -0.2rem
+				margin-bottom: 1.65rem
+				+btn-outline()
+
+			.links-container
+				margin-top: 2.3rem
+				margin-bottom: 2rem
+				+btn-link()
+
+			.submit-container
+				+btn-submit()
+
+
+		&_pagination
+			margin-top: 3.5rem
+			+pagination()
+
+		&_filter-dropdown
+			width: 350px
+			margin-bottom: 1.8rem
+
+			&_1
+				z-index: 9
+
+			&_2
+				z-index: 8
+
+		&_guest-dropdown
+			&_1
+				z-index: 7
+
+			&_2
+				z-index: 6
+
+		&_checkbox-closed
+			margin-top: 2rem
+			margin-bottom: 0rem
+
+		&_checkbox-opened
+			margin-top: 4rem
+			margin-bottom: 0rem
+		
+		&_checkbox-rich
+			margin-top: 2rem
+
+			label
+				+label()
+				margin-bottom: 1.35rem
+
+		&_bullet-list
+			margin-top: 2rem
+
+			label
+				+font-type($type-h3)
+				display: inline-block
+
+		&_comment
+			margin-left: 0.2rem
+	
++textfield()
++textfield-subscription()
++date-dropdown()
++filter-dropdown()
++filter-date-dropdown()
++checkbox()
++sex-select()
++toggle()
++like-button()
++rate-button()
++range-slider()
++filter-dropdown()
++guest-dropdown()
++checkbox-expandable()
++checkbox-button()
++checkbox-rich()
++bullet-list()
++features()
++comment()
+
+@media (max-width: 1518px)
+	.form-elements__col_1
+		padding-left: 9.9%
+
+	.form-elements__col_2
+		padding-left: 9.9%
+
+	.form-elements__row_2
+		padding-top: 5rem
+
+	.form-elements__row_3
+		padding-top: 10rem
+
+	.form-elements__col_3
+		padding-top: 5rem
+		padding-left: 9.9%
+
+@media (max-width: 1061px)
+	.form-elements__col_2
+		padding-top: 3rem
+		padding-left: 9.9%
+	

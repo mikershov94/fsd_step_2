@@ -1,0 +1,8 @@
+include ../radiobutton/radiobutton
+
+mixin sex-select()
+    .sex-select
+        label(class="sex-select__label") Radio buttons
+        .sex-select__buttons
+            +radio-button('Мужчина', 'sex', 'men', true)              
+            +radio-button('Женщина', 'sex', 'women')

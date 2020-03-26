@@ -1,0 +1,44 @@
+=toggle ()
+	.toggle
+		margin-bottom: 0.9rem
+
+		&__label
+			position: relative
+	
+		&__input
+			-webkit-appearance: none
+			-moz-appearance: none
+			position: absolute
+
+		&__text
+			+font-type($type-body)
+			color: $dark-shade-75
+			margin-left: 4.2rem
+			cursor: pointer
+
+		&__switch
+			display: inline-block
+			position: absolute
+			top: -0.3rem
+			width: 3.2rem
+			height: 1.6rem
+			border: 1px solid $dark-shade-25
+			border-radius: 1rem
+			cursor: pointer
+
+		&__slider
+			display: inline-block
+			width: 1rem
+			height: 1rem
+			position: relative
+			top: 0.3rem
+			left: 0.3rem
+			background-color: $dark-shade-25
+			border-radius: 50%
+
+		&__input:checked + .toggle__switch
+			border-color: $purple
+
+			.toggle__slider
+				background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+				transform: translateX(1.6rem)

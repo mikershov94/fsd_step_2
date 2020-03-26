@@ -1,4 +1,16 @@
 @font-face {
+	font-family: 'Quicksand';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../static/fonts/quicksand/Quicksand-VariableFontwght.eot'); /* IE9 Compat Modes */
+	src: local('Quicksand Regular'), local('Quicksand-Regular'),
+		 url('../../static/fonts/quicksand/Quicksand-VariableFontwght.eot?#iefix') format('embedded-opentype'),
+		 url('../../static/fonts/quicksand/Quicksand-VariableFontwght.woff2') format('woff2'),
+		 url('../../static/fonts/quicksand/Quicksand-VariableFontwght.woff') format('woff'),
+		 url('../../static/fonts/quicksand/Quicksand-VariableFontwght.ttf') format('truetype');
+}
+
+@font-face {
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 400;
@@ -8,6 +20,18 @@
 		 url('../../static/fonts/open-sans/open-sans-v17-latin_cyrillic-regular.woff2') format('woff2'),
 		 url('../../static/fonts/open-sans/open-sans-v17-latin_cyrillic-regular.woff') format('woff'),
 		 url('../../static/fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: bold;
+	src: url('../../static/fonts/montserrat/Montserrat-Bold.eot'); /* IE9 Compat Modes */
+	src: local('Montserrat Bold'), local('Montserrat-Bold'),
+		 url('../../static/fonts/montserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../../static/fonts/montserrat/Montserrat-Bold.woff2') format('woff2'),
+		 url('../../static/fonts/montserrat/Montserrat-Bold.woff') format('woff'),
+		 url('../../static/fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
 }
 
 @font-face {

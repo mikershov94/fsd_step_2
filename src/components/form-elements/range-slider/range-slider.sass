@@ -1,0 +1,62 @@
+=range-slider()
+	.range-slider
+		width: 22.2rem
+		position: relative
+
+		label
+			+font-type($type-h3)
+
+		.values
+			+font-type($type-h3-normal)
+			color: $dark-shade-50
+			position: absolute
+			right: 0rem
+			top: 0rem
+
+		#slider
+			margin-top: 1.9rem
+
+		.noUi-horizontal
+			height: 0.45rem
+			width: 22.1rem
+
+		.noUi-target
+			background: #FFFFFF
+			border-radius: 0.15rem
+
+		.noUi-connects
+			z-index: 1
+			top: -0.08rem
+			height: 160%
+
+		.noUi-connect
+			background: linear-gradient(180deg, $green 0%, $white-green 100%)
+			right: 0.3rem
+
+		.noUi-handle
+			width: 1.25rem
+			height: 1.25rem
+			border: 2px solid white
+			border-radius: 50%
+			box-shadow: none
+			left: 1rem
+			background: linear-gradient(180deg, $green 0%, $white-green 100%)
+
+			&-lower
+				top: -0.45rem
+				left: 1.15rem
+				outline: none
+
+			&-upper
+				top: -0.45rem
+				left: 0.9rem
+				outline: none
+			
+			
+		.noUi-handle:before,
+		.noUi-handle:after
+			display: none
+
+		.noUi-touch-area
+			cursor: pointer
+			top: -0.5rem

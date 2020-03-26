@@ -1,0 +1,42 @@
+.pagination_toxin
+    +font-type($type-h3-normal)
+    margin: 0.8rem 0 0.9rem 0
+
+    ul
+        margin-bottom: 4.25rem
+        
+        .active
+            +gradient-color($blue, $purple)
+            color: white
+
+        li
+            width: 3.35rem
+            height: 3.35rem
+            justify-content: center
+            margin: 0.2rem 0rem 0.2rem 0
+            display: flex
+            align-items: center
+            border-radius: 50%
+            cursor: pointer
+
+            a
+                color: $dark-shade-50
+                text-decoration: none
+                margin: 0
+                padding: 0
+
+            
+            &:last-child
+                +gradient-color($white-green, $green)
+
+                .next
+                    color: white
+
+    .under-text
+        display: block
+        position: relative
+        +font-type($type-body)
+        margin-left: 0.5rem
+        color: $dark-shade-75
+                
+        

@@ -7,18 +7,18 @@ mixin color-box(color, opacity, code)
 
     case opacity
         when '100'
-            - shadeClass = ' color-box__pallete_theme_dark_shade_100'
+            - shadeClass = ' color-box__pallete_theme-dark_shade-100'
         when '75'
-            - shadeClass = ' color-box__pallete_theme_dark_shade_75'
+            - shadeClass = ' color-box__pallete_theme-dark_shade-75'
         when '50'
-            - shadeClass = ' color-box__pallete_theme_dark_shade_50'
+            - shadeClass = ' color-box__pallete_theme-dark_shade-50'
         when '25'
-            - shadeClass = ' color-box__pallete_theme_dark_shade_25'
+            - shadeClass = ' color-box__pallete_theme-dark_shade-25'
         when '5'
-            - shadeClass = ' color-box__pallete_theme_dark_shade_5'
+            - shadeClass = ' color-box__pallete_theme-dark_shade-5'
 
     .color-box
-            - var colorClass = 'color-box__pallete_theme_' + color.toLowerCase()
+            - var colorClass = 'color-box__pallete_theme-' + color.toLowerCase()
             div(class= 'color-box__pallete ' + colorClass + shadeClass)
             .color-box__info
                 .color-box__name= color + shade

@@ -1,0 +1,8 @@
+mixin range-slider(label)
+    .range-slider
+        label= label
+        span(class="values")
+            span(class="values__low" id="values__low")
+            span(class="values__separ")= " - "
+            span(class="values__high" id="values__high")
+        div(id="slider")

@@ -1,0 +1,27 @@
+@import "../buttons.sass";
+
+=btn-link()
+    +btn()
+    .btn_link
+        display: inline
+        margin: 0
+        margin-right: 1.7rem 
+        padding: 0
+        background: none
+        border: none
+        text-align: start
+        +font-type($type-h3)
+        color: $purple
+        height: 2em
+        width: auto
+
+        &:active
+            color: $green
+
+        &:focus
+            border: none
+            outline: none
+
+        &:disabled
+            color: $dark-shade-50
+        

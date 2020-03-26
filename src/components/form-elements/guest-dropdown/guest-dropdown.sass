@@ -1,0 +1,128 @@
+=guest-dropdown()
+    
+    .guest-dropdown
+
+        &__label
+            +label()
+            
+        &__inscription
+            position: absolute
+            +font-type($type-h3-normal)
+            font-size: 1rem
+            color: $dark-shade-50
+            top: 0rem
+            right: -0.2rem
+
+        &__box
+            position: relative
+            width: 26.5rem
+            height: 3.5rem
+            border: 1px solid $dark-shade-25
+            border-radius: 0.3rem
+            cursor: pointer
+
+        &__content
+            height: 2.3rem
+            width: 23rem
+            +font-type($type-body)
+            color: $dark-shade-75
+            font-size: 1.2rem
+            padding-top: 0.6rem
+            padding-left: 1rem
+                    
+
+        &__arrow
+            position: absolute
+            top: 0.3rem
+            right: 0.6rem
+            height: 2.3rem
+            width: 2.3rem
+            font-family: 'MaterialIcons'
+            color: $dark-shade-50
+            font-size: 2rem
+            padding-top: 0.5rem
+            padding-left: 3rem
+
+        &__list
+            position: absolute
+            z-index: 5
+            top: 3.5rem
+            left: -0.1rem
+            display: none
+            width: 26.5rem
+            height: 13rem
+            border: 1px solid $dark-shade-25
+            border-radius: 0 0 0.3rem 0.3rem
+            background-color: white
+            box-shadow: 0rem 0.7rem 2rem 0.1rem $dark-shade-5
+
+            &_expanded
+                display: block
+
+            ul
+                margin: 0
+                padding: 0
+
+        &__counter
+            list-style: none
+            display: flex
+            align-items: baseline
+            padding: 0.5rem 0.55rem 0.1rem 1.2rem
+
+        &__name-counter
+            flex-grow: 2
+            +font-type($type-h3)
+
+        &__panel
+            flex-grow: 1
+            display: flex
+            justify-content: flex-end
+            align-items: baseline
+
+        &__btn
+            width: 2.5rem
+            height: 2.5rem
+            -webkit-appearance: none
+            -moz-appearance: none
+            background: none
+            border: 1px solid $dark-shade-25
+            border-radius: 70%
+            color: $dark-shade-25
+            font-size: 1.3rem
+            cursor: pointer
+
+
+            &_inc
+                margin-left: 1.4rem
+            
+            &_dec
+                margin-right: 0.8rem
+
+            &_disabled
+                color: $dark-shade-5
+                border-color: $dark-shade-5
+
+        &__count
+            margin: 0
+            width: 0.3rem
+            text-align: center
+            +font-type($type-h3)
+
+        &__buttons
+            display: flex
+            +font-type($type-h3)
+            padding-top: 1.6rem
+        
+        &__clear
+            flex-grow: 1
+            padding-left: 0.7rem
+            color: $dark-shade-50
+
+            &_disabled
+                display: none
+
+        &__apply
+            flex-grow: 1
+            text-align: end
+            padding-right: 0.5rem
+            color: $purple

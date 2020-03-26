@@ -1,0 +1,9 @@
+mixin rate-button(rating)
+    - var count = 0
+    div(class="rate-button" data-rating=rating)
+        while count < 5
+            if count < rating
+                i.material-icons.rate-button__icon star
+            else
+                i.material-icons.rate-button__icon star_border
+            -count++

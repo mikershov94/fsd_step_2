@@ -1,0 +1,38 @@
+=radio-button ()
+	.radio-button
+		position: relative
+		margin-right: 1.7rem
+
+		&__input
+			position: absolute
+			-webkit-appearance: none
+			-moz-appearance: none
+			appearance: none
+
+		&__label
+			+font-type($type-body)
+			color: $dark-shade-50
+			margin-left: 2.5rem
+			cursor: pointer
+
+		&__label::before
+			content: ''
+			width: 1.5rem
+			height: 1.5rem
+			border: 1px solid $dark-shade-50
+			border-radius: 50%
+			position: absolute
+			top: 0.35rem
+			left: 0.05rem
+			cursor: pointer
+
+			&:hover::before
+				border-color: $purple
+
+		&__input:checked + label
+			color: $dark-shade-75
+
+		&__input:checked + label::before
+			border-color: $purple
+			background: url('/static/icons/radiomark.svg') no-repeat center
+			background-size: 1rem 1rem
