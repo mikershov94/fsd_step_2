@@ -2,5 +2,8 @@ mixin filter-date-dropdown()
     .filter-date-dropdown
         label(class="filter-date-dropdown__label") Filter date dropdown
         .filter-date-dropdown__box
-            .filter-date-dropdown__input 19 авг - 23 авг
+            input(type="text"
+                  class="filter-date-dropdown__input datepicker-here"
+                  data-range="true"
+                  data-multiple-dates-separator=" - ")
             .filter-date-dropdown__arrow keyboard_arrow_down
