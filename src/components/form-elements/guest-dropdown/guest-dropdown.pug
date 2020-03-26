@@ -22,6 +22,7 @@ mixin guest-dropdown(label="Dropdown", expanded=false)
                         .guest-dropdown__clear.guest-dropdown__clear_disabled Очистить
                         .guest-dropdown__apply Применить
         else
+            .filter-dropdown__inscription Default
             .guest-dropdown__box
                 .guest-dropdown__value-line
                     div(class="guest-dropdown__content" data-sum="0")
@@ -31,3 +32,6 @@ mixin guest-dropdown(label="Dropdown", expanded=false)
                     +item-counter('Взрослые', 'adults')  
                     +item-counter('Дети', 'kids')
                     +item-counter('Младенцы', 'babies')
+                    .guest-dropdown__buttons
+                        .guest-dropdown__clear.guest-dropdown__clear_disabled Очистить
+                        .guest-dropdown__apply Применить

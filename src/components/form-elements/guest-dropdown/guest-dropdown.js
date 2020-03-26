@@ -206,7 +206,7 @@
 
             //обработчик клика по Dropdown
             $(this).on('click', '.guest-dropdown__value-line', function(e) {
-                $('.filter-dropdown').find('.guest-dropdown__list').removeClass('guest-dropdown__list_expanded');
+                $('.guest-dropdown').find('.guest-dropdown__list').removeClass('guest-dropdown__list_expanded');
                 $(this).closest('.guest-dropdown').find('.guest-dropdown__list').addClass('guest-dropdown__list_expanded');
                 e.stopPropagation()
             })
