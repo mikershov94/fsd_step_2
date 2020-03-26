@@ -2,5 +2,5 @@ mixin date-dropdown(content, icon='keyboard_arrow_down')
     .date-dropdown
         label(class="date-dropdown__label") Date dropdown
         .date-dropdown__box
-            .date-dropdown__input= content
+            input(type="text" value=content class="date-dropdown__input datepicker-here")
             .date-dropdown__arrow= icon
