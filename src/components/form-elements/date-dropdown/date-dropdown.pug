@@ -1,6 +1,9 @@
-mixin date-dropdown(content, icon='keyboard_arrow_down')
+mixin date-dropdown(content="", icon='keyboard_arrow_down')
     .date-dropdown
         label(class="date-dropdown__label") Date dropdown
         .date-dropdown__box
-            input(type="text" value=content class="date-dropdown__input datepicker-here")
+            input(type="text"
+                  value= content
+                  class="date-dropdown__input datepicker-here"
+                  data-date-format="dd.mm.yyyy")
             .date-dropdown__arrow= icon
