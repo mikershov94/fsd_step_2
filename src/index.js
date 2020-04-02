@@ -18,7 +18,7 @@ $(document).ready(() => {
     $('.text-field_masked input').mask("99.99.9999", {placeholder: "ДД.ММ.ГГГГ"});
     $('.checkbox-expandable').checkboxExpandable();
 
-    const filterDateDropdown = $('.filter-date-dropdown').find('.filter-date-dropdown__input').datepicker().data('datepicker');
-    filterDateDropdown.selectDate([new Date(2020, 7, 19), new Date(2020, 7, 23)]);
+    //const filterDateDropdown = $('.filter-date-dropdown').find('.filter-date-dropdown__input').datepicker().data('datepicker');
+    //filterDateDropdown.selectDate([new Date(2020, 7, 19), new Date(2020, 7, 23)]);
 
 });

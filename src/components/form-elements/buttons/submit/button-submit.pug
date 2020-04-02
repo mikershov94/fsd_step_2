@@ -1,3 +1,3 @@
-mixin btn-submit(text)
-    button(class="btn btn_submit")= text
+mixin btn-submit(text, form="")
+    button(class="btn btn_submit" type="submit" form=form)= text
         span(class="btn_submit__icon material-icons") arrow_forward

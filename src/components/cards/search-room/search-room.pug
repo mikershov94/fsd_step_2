@@ -3,12 +3,12 @@ include ../../form-elements/guest-dropdown/guest-dropdown
 include ../../form-elements/buttons/submit/button-submit
 
 mixin search-room()
-    form(class="search-room")
+    div(class="search-room")
         .search-room__label Найдём номера под ваши пожелания
         .search-room__range
-            +date-dropdown()
-            +date-dropdown()
+            +date-dropdown('Прибытие')
+            +date-dropdown('Выезд')
         .search-room__guests
-            +guest-dropdown()
+            +guest-dropdown('Гости')
         .search-room__submit
             +btn-submit('Подобрать номер')

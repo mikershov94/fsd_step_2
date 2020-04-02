@@ -1,6 +1,6 @@
-mixin date-dropdown(content="", icon='keyboard_arrow_down')
+mixin date-dropdown(label="Date dropdown", content="", icon='keyboard_arrow_down')
     .date-dropdown
-        label(class="date-dropdown__label") Date dropdown
+        label(class="date-dropdown__label")= label
         .date-dropdown__box
             input(type="text"
                   value= content
