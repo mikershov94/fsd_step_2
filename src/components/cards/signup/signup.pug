@@ -1,0 +1,31 @@
+include ../../form-elements/textfield/textfield
+include ../../form-elements/sex-select/sex-select
+include ../../form-elements/textfield-masked/textfield-masked
+include ../../form-elements/toggle/toggle
+include ../../form-elements/buttons/submit/button-submit
+include ../../form-elements/buttons/outline/button-outline
+
+mixin signup()
+    .signup
+        .signup__label Регистрация аккаунта
+        .signup__firstname
+            +textfield()
+        .signup__lastname
+            +textfield()
+        .signup__sex
+            +sex-select()
+        .signup__birthday
+            +textfield-masked()
+        .signup__service-data
+            .signup__email
+                +textfield()
+            .signup__password
+                +textfield()
+        .signup__subscribe
+            +toggle('Получать спецпредложения', 'subscribe_sales')
+        .signup__submit
+            +btn-submit('Перейти к оплате')
+        .signup__to-signin
+            .signup__to-signin-label Уже есть аккаунт на Toxin
+            .signup__to-signin-button
+                +btn-outline('Войти')
