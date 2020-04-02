@@ -1,8 +1,8 @@
 include ../radiobutton/radiobutton
 
-mixin sex-select()
+mixin sex-select(label="Radio buttons")
     .sex-select
-        label(class="sex-select__label") Radio buttons
+        label(class="sex-select__label")= label
         .sex-select__buttons
             +radio-button('Мужчина', 'sex', 'men', true)              
             +radio-button('Женщина', 'sex', 'women')

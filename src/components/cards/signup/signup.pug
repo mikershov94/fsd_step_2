@@ -9,18 +9,17 @@ mixin signup()
     .signup
         .signup__label Регистрация аккаунта
         .signup__firstname
-            +textfield()
+            +textfield("", "", "Имя")
         .signup__lastname
-            +textfield()
+            +textfield("", "", "Фамилия")
         .signup__sex
-            +sex-select()
+            +sex-select("", false)
         .signup__birthday
-            +textfield-masked()
-        .signup__service-data
-            .signup__email
-                +textfield()
-            .signup__password
-                +textfield()
+            +textfield-masked("Дата рождения")
+        .signup__email
+            +textfield("Данные для входа в сервис", "", "Email")
+        .signup__password
+            +textfield("", "", "Пароль")
         .signup__subscribe
             +toggle('Получать спецпредложения', 'subscribe_sales')
         .signup__submit

@@ -8,3 +8,46 @@
         display: flex
         flex-direction: column
         align-items: center
+
+        &__label
+            align-self: start
+            +font-type($type-h1)
+            font-size: 1.9rem
+            line-height: 2.5rem
+            margin: 3.4rem 2.5rem 1.2rem
+
+        &__firstname
+            margin-bottom: 0.5rem
+
+        &__lastname
+            margin-bottom: -0.5rem
+
+        &__sex
+            margin: 0 2.4rem 2.1rem
+            align-self: start
+
+        &__birthday
+            margin-bottom: 1.8rem
+
+        &__email
+            margin-bottom: 0.5rem
+
+        &__password
+            margin-bottom: 0.5rem
+
+        &__subscribe
+            margin: 0 2.4rem 1.1rem
+            align-self: start
+
+        &__submit
+            margin-bottom: 2.45rem
+
+        &__to-signin
+            display: flex
+            align-items: center
+            justify-content: space-between
+            min-width: 26.5rem
+
+        &__to-signin-label
+            +font-type($type-body)
+            color: $dark-shade-100
