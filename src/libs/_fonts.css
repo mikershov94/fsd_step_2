@@ -12,6 +12,18 @@
 
 @font-face {
 	font-family: 'Open Sans';
+	font-style: bold;
+	font-weight: 800;
+	src: url('../../static/fonts/open-sans/OpenSans-Bold.eot'); /* IE9 Compat Modes */
+	src: local('Open Sans Bold'), local('OpenSans-Bold'),
+		 url('../../static/fonts/open-sans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../../static/fonts/open-sans/OpenSans-Bold.woff2') format('woff2'),
+		 url('../../static/fonts/open-sans/OpenSans-Bold.woff') format('woff'),
+		 url('../../static/fonts/open-sans/OpenSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 400;
 	src: url('../../static/fonts/open-sans/open-sans-v17-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
