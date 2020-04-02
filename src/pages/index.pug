@@ -4,6 +4,7 @@ include ../components/cards/search-room/search-room
 include ../components/cards/signup/signup
 
 include ../components/cards/order-room/order-room
+include ../components/cards/signin/signin
 
 
 block content
@@ -18,5 +19,7 @@ block content
             .cards__col
                 .cards__row
                     +order-room()
+                .cards__row
+                    +signin()
             .cards__col
 

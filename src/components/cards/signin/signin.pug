@@ -1,0 +1,17 @@
+include ../../form-elements/textfield/textfield
+include ../../form-elements/buttons/submit/button-submit
+include ../../form-elements/buttons/outline/button-outline
+
+mixin signin()
+    .signin
+        .signin__label Войти
+        .signin__email
+            +textfield("", "", "Email")
+        .signin__password
+            +textfield("", "", "Пароль")
+        .signin__submit
+            +btn-submit("Войти")
+        .signin__to-signup
+            .signin__to-signup_label Нет аккаунта на Toxin?
+            .signin__to-signup_btn
+                +btn-outline("Создать")
