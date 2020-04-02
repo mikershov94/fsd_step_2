@@ -8,3 +8,121 @@
         display: flex
         flex-direction: column
         align-items: center
+
+        &__label
+            margin-top: 3.3rem
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 26.5rem
+
+        &__symbol
+            +font-type($type-h1)
+            font-size: 1.2rem
+            line-height: 2.5rem
+
+        &__type
+            +font-type($type-h3)
+            color: $purple
+            font-size: 1rem
+            line-height: 2.5rem
+            margin-left: 0.6rem
+
+        &__number
+            +font-type($type-h1)
+            font-size: 1.9rem
+            line-height: 2.5rem
+
+        &__price
+            +font-type($type-h3)
+            font-size: 1.2rem
+            line-height: 3.2rem
+            color: $dark-shade-50
+            margin-right: 0.5rem
+
+        &__period
+            +font-type($type-body)
+            font-size: 0.9rem
+            line-height: 3.2rem
+            color: $dark-shade-50
+
+        &__guests
+            margin-top: 1.8rem
+            margin-bottom: 1.2rem
+
+        &__range
+            display: flex
+            justify-content: space-between
+            margin-top: 1rem
+            width: 26.5rem
+
+        &__wrapper
+            display: flex
+            justify-content: space-between
+            width: 26.5rem
+            margin: 0.5rem 0 0.85rem
+            +font-type($type-body)
+            color: $dark-shade-75
+            line-height: 1.5rem
+
+        &__count
+            min-width: 21.5rem
+
+        
+
+        &__fee-1
+
+            &__label
+                width: 20rem
+                position: relative
+
+            &_info
+                position: absolute
+                width: 1.6rem
+                height: 1.6rem
+                border: 1px solid $dark-shade-25
+                border-radius: 50%
+                text-align: center
+                padding-top: 0.09rem
+                color: $dark-shade-25
+                margin-left: 0.5rem
+                cursor: pointer
+
+        &__fee-2
+            
+            &_label
+                width: 18rem
+                position: relative
+
+            &_info
+                position: absolute
+                top: 0
+                left: 18.3rem
+                width: 1.6rem
+                height: 1.6rem
+                border: 1px solid $dark-shade-25
+                border-radius: 50%
+                text-align: center
+                padding-top: 0.09rem
+                color: $dark-shade-25
+                cursor: pointer
+
+            
+
+        &__cost
+            display: flex
+            width: 26.5rem
+            justify-content: space-between
+            margin-top: 1.8rem
+            margin-bottom: 1.7rem
+
+            &_label
+                +font-type($type-h2)
+
+            &_separator
+                width: 15rem
+                height: 1.5rem
+                border-bottom: 1px dotted $dark-shade-50
+
+            &_cost
+                +font-type($type-h2)

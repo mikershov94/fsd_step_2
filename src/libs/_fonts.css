@@ -1,19 +1,19 @@
 @font-face {
 	font-family: 'Quicksand';
 	font-style: normal;
-	font-weight: 400;
-	src: url('../../static/fonts/quicksand/Quicksand-VariableFontwght.eot'); /* IE9 Compat Modes */
-	src: local('Quicksand Regular'), local('Quicksand-Regular'),
-		 url('../../static/fonts/quicksand/Quicksand-VariableFontwght.eot?#iefix') format('embedded-opentype'),
-		 url('../../static/fonts/quicksand/Quicksand-VariableFontwght.woff2') format('woff2'),
-		 url('../../static/fonts/quicksand/Quicksand-VariableFontwght.woff') format('woff'),
-		 url('../../static/fonts/quicksand/Quicksand-VariableFontwght.ttf') format('truetype');
+	font-weight: bold;
+	src: url('../../static/fonts/quicksand/Quicksand-Bold.eot'); /* IE9 Compat Modes */
+	src: local('Quicksand Bold'), local('Quicksand-Bold'),
+		 url('../../static/fonts/quicksand/Quicksand-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../../static/fonts/quicksand/Quicksand-Bold.woff2') format('woff2'),
+		 url('../../static/fonts/quicksand/Quicksand-Bold.woff') format('woff'),
+		 url('../../static/fonts/quicksand/Quicksand-Bold.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: 'Open Sans';
-	font-style: bold;
-	font-weight: 800;
+	font-style: normal;
+	font-weight: bold;
 	src: url('../../static/fonts/open-sans/OpenSans-Bold.eot'); /* IE9 Compat Modes */
 	src: local('Open Sans Bold'), local('OpenSans-Bold'),
 		 url('../../static/fonts/open-sans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),

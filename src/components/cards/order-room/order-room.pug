@@ -5,25 +5,32 @@ include ../../form-elements/buttons/submit/button-submit
 mixin order-room()
     .order-room
         .order-room__label
-            .order-room__number № 888 люкс
-            .order-room__price 9 990Р в сутки
+            .order-room__left
+                span.order-room__symbol № 
+                span.order-room__number 888
+                span.order-room__type люкс
+            .order-room__right
+                span.order-room__price 9 990₽
+                span.order-room__period в сутки
         .order-room__range
-            +date-dropdown()
-            +date-dropdown()
+            +date-dropdown('Прибытие')
+            +date-dropdown('Выезд')
         .order-room__guests
-            +guest-dropdown()
+            +guest-dropdown('Гости')
         .order-room__wrapper
-            .order-room__count 9 990Р х 4 суток
-            .order-room__cost 39 960Р
+            .order-room__count 9 990₽ х 4 суток
+            .order-room__room-cost 39 960₽
         .order-room__wrapper
-            .order-room__fee1_label Сбор за услуги: скидка 2 179Р
-            .order-room__fee1_cost 0Р
+            .order-room__fee-1_label Сбор за услуги: скидка 2 179₽
+                span.order-room__fee-1_info i
+            .order-room__fee-1_cost 0₽
         .order-room__wrapper
             .order-room__fee-2_label Сбор за дополнительные услуги
-            .order-room__fee-2_cost 300Р
+                span.order-room__fee-2_info i
+            .order-room__fee-2_cost 300₽
         .order-room__cost
             .order-room__cost_label Итого
             .order-room__cost_separator
-            .order-room__cost_cost 38 081Р
+            .order-room__cost_cost 38 081₽
         .order-room__submit
             +btn-submit('Забронировать')
