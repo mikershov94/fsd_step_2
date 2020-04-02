@@ -1,4 +1,4 @@
-mixin guest-dropdown(label="Dropdown", expanded=false)
+mixin guest-dropdown(label="Dropdown", expanded=false, inscription="")
     mixin item-counter(value='', identity='')
         li(class="guest-dropdown__counter" id=identity)
             .guest-dropdown__name-counter= value
@@ -9,6 +9,7 @@ mixin guest-dropdown(label="Dropdown", expanded=false)
     .guest-dropdown
         label(class="guest-dropdown__label")= label
         if expanded
+            .filter-dropdown__inscription= inscription
             .guest-dropdown__box
                 .guest-dropdown__value-line
                     div(class="guest-dropdown__content" data-sum="0")
@@ -22,7 +23,7 @@ mixin guest-dropdown(label="Dropdown", expanded=false)
                         .guest-dropdown__clear.guest-dropdown__clear_disabled Очистить
                         .guest-dropdown__apply Применить
         else
-            .filter-dropdown__inscription Default
+            .filter-dropdown__inscription= inscription
             .guest-dropdown__box
                 .guest-dropdown__value-line
                     div(class="guest-dropdown__content" data-sum="0")
