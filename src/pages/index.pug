@@ -3,6 +3,8 @@ extends layouts/base
 include ../components/cards/search-room/search-room
 include ../components/cards/signup/signup
 
+include ../components/cards/order-room/order-room
+
 
 block content
     .cards
@@ -14,5 +16,7 @@ block content
                 .cards__row
                     +signup()
             .cards__col
+                .cards__row
+                    +order-room()
             .cards__col
 
