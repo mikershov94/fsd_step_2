@@ -6,6 +6,8 @@ include ../components/cards/signup/signup
 include ../components/cards/order-room/order-room
 include ../components/cards/signin/signin
 
+include ../components/cards/calendar/calendar
+
 
 block content
     .cards
@@ -22,4 +24,6 @@ block content
                 .cards__row
                     +signin()
             .cards__col
+                .cards__row
+                    +calendar()
 
