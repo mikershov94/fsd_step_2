@@ -5,13 +5,103 @@
 
         &--nav
             height: 4.5rem
+            padding: 0.3rem 1.8rem
+            border-bottom: none
 
             &-title
                 +font-type($type-h1)
                 color: $dark-shade-100
                 font-size: 1.5rem
+                
 
                 i
                     +font-type($type-h1)
                     color: $dark-shade-100
                     font-size: 1.5rem
+
+            &-action
+                color: $purple
+                width: 2rem
+
+                span
+                    font-size: 1.9rem
+
+        &--days
+            padding: 1.2rem 1.4rem
+
+            &-names
+                +font-type($type-h3)
+                font-size: 1.1rem
+        
+        &--day
+
+            &-name
+                text-transform: none
+                color: $purple
+
+        &--cells
+            +font-type($type-h3-normal)
+            color: $dark-shade-50
+            margin-top: 1rem
+
+        &--cell
+            height: 3.35rem
+            border-radius: 50%
+
+
+        .-selected-
+            +gradient-color($purple, $blue)
+            +font-type($type-h3)
+            position: relative
+
+        .-selected-.-focus-
+            +gradient-color($purple, $blue)
+
+        .-current-
+            +gradient-color($white-green, $green)
+            color: white
+            +font-type($type-h3)
+
+        .-range-from-.-selected-
+            border-radius: 50%
+            transform-style: preserve-3d
+
+            &::after
+               content: ''
+               position: absolute
+               left: 1.3rem
+               height: 3.35rem
+               width: 2rem
+               +gradient-color(rgba(139, 164, 249, 0.25), rgba(188, 156, 255, 0.25))
+               transform: translateZ(-1px)
+                
+
+        .-range-to-.-selected-
+            border-radius: 50%
+            transform-style: preserve-3d
+
+            &::before
+               content: ''
+               position: absolute
+               right: 1.32rem
+               height: 3.35rem
+               width: 2rem
+               +gradient-color(rgba(139, 164, 249, 0.25), rgba(188, 156, 255, 0.25))
+               transform: translateZ(-1px)
+
+        .-range-to-.-focus-,
+        .-range-from-.-focus-
+            +gradient-color(rgba(139, 164, 249, 0.25), rgba(188, 156, 255, 0.25))
+            border: $purple
+        
+        .-in-range-
+            +gradient-color(rgba(139, 164, 249, 0.25), rgba(188, 156, 255, 0.25))
+            color: $dark-shade-50
+
+        &--buttons
+            border-top: none
+
+        &--button
+            +font-type($type-h3)
+            color: $dark-shade-50
+            text-align: start

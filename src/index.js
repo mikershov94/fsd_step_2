@@ -13,6 +13,8 @@ import './components/form-elements/guest-dropdown/guest-dropdown.js';
 
 import './components/form-elements/checkbox-expandable/checkbox-expandable.js'
 
+import './components/cards/calendar/calendar.js'
+
 $(document).ready(() => {
 
     $('.text-field_masked input').mask("99.99.9999", {placeholder: "ДД.ММ.ГГГГ"});
