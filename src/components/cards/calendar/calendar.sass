@@ -74,6 +74,9 @@
                width: 2rem
                +gradient-color(rgba(139, 164, 249, 0.25), rgba(188, 156, 255, 0.25))
                transform: translateZ(-1px)
+
+        .-range-from-.-focus
+            +gradient-color(rgba(139, 164, 249, 0.25), rgba(188, 156, 255, 0.25))
                 
 
         .-range-to-.-selected-
@@ -100,8 +103,24 @@
 
         &--buttons
             border-top: none
+            flex-direction: row-reverse
+            justify-content: space-between
+            padding-left: 1.5rem
+            padding-right: 1.5rem
 
         &--button
             +font-type($type-h3)
             color: $dark-shade-50
-            text-align: start
+            flex-grow: 0
+            font-size: 1rem
+            height: 1rem
+
+            &:hover
+                background: none
+                color: $dark-shade-50
+
+            &-apply
+                color: $purple
+
+                &:hover
+                    color: $purple

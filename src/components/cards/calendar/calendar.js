@@ -5,9 +5,15 @@ $(() => {
         language: {
             daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
         },
-        todayButton: true,
         clearButton: true,
 
+    });
+
+
+    $(".datepicker--buttons").html('<span class="datepicker--button datepicker--button-apply" data-action="apply">Применить</button')
+    $(".datepicker--button-apply").on('click', function() {
+        
+        console.log('hello')
     });
 
     $(".calendar").datepicker({
