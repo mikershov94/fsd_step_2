@@ -6,15 +6,17 @@ $(() => {
             daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
         },
         clearButton: true,
+        onShow: function(dp, animationCompleted) {
+            if (animationCompleted) {
+                $('.datepicker').find('.datepicker--button-apply').on('click', function() {
+                    dp.hide();
+                }); 
+            }
+        },
 
     });
 
-
-    $(".datepicker--buttons").html('<span class="datepicker--button datepicker--button-apply" data-action="apply">Применить</button')
-    $(".datepicker--button-apply").on('click', function() {
-        
-        console.log('hello')
-    });
+    $(".datepicker--buttons").html('<span class="datepicker--button-apply" data-action="apply">Применить</button');
 
     $(".calendar").datepicker({
         range: true
