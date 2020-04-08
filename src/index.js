@@ -11,9 +11,10 @@ import './components/form-elements/pagination/pagination.js';
 
 import './components/form-elements/guest-dropdown/guest-dropdown.js';
 
-import './components/form-elements/checkbox-expandable/checkbox-expandable.js'
+import './components/form-elements/checkbox-expandable/checkbox-expandable.js';
 
-import './components/cards/calendar/calendar.js'
+import './components/cards/calendar/calendar.js';
+import './components/cards/room-preview/room-preview.js'
 
 $(document).ready(() => {
 

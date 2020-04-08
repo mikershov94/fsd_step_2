@@ -5,10 +5,12 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
 	src: path.join(__dirname, '../src'),
-    dist: path.join(__dirname, '../dist'),
+	dist: path.join(__dirname, '../dist'),
+	static: path.join(__dirname, '../static'),
 };
 
 const PAGES_DIR = `${PATHS.src}/pages`;
@@ -97,6 +99,10 @@ module.exports = {
 			template: `${PAGES_DIR}/${page}`,
 			filename: `./${page.replace(/\.pug/, '.html')}`
 		})),
+
+		new CopyWebpackPlugin([
+			{ from:  `${PATHS.static}/img`, to: `${PATHS.dist}/img` }
+		]),
 
 		new webpack.ProvidePlugin({
 			$: 'jquery',
