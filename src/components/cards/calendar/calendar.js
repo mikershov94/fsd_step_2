@@ -19,7 +19,7 @@ $(() => {
     $(".datepicker--buttons").html('<span class="datepicker--button-apply" data-action="apply">Применить</button');
 
     $(".calendar").datepicker({
-        range: true
-    })
-    $(".calendar").data('datepicker').selectDate([new Date(2019, 7, 19), new Date(2019, 7, 23)])
+        range: true,
+    });
+    $(".calendar").data('datepicker').selectDate([new Date(2019, 7, 19), new Date(2019, 7, 23)]);
 })
