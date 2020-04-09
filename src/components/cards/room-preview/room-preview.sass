@@ -8,6 +8,7 @@
         box-shadow: 0 0.3rem 2rem $dark-shade-5
 
         &__carousel
+            position: relative
             width: 22.5rem
             height: 12.5rem
 
@@ -23,6 +24,7 @@
             opacity: 0
             top: 0
             z-index: 2
+            border-radius: 0.3rem 0 0 0
 
             &_back
                 left: 0
@@ -63,4 +65,27 @@
 
             &_back
                 left: 0.5rem
+
+    .slick-dots
+        position: absolute
+        bottom: 0.8rem
+        width: 10rem
+        right: -2rem
+        z-index: 3
+
+        li
+            border: 1px solid white
+            border-radius: 50%
+            width: 0.5rem
+            height: 0.5rem
+            margin: 0 0.15rem
+
+            button
+
+                &::before
+                    content: ''
+
+        li.slick-active
+            background: white
+
             
