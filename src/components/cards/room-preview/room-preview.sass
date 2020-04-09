@@ -16,11 +16,51 @@
                 height: 12.5rem
                 border-radius: 0.3rem 0.3rem 0 0
 
-    .slick
-
-        &-arrow
+        &__container
+            height: 12.5rem
+            width: 7rem
             position: absolute
+            opacity: 0
+            top: 0
             z-index: 2
 
-        &-prev
-            left: 3rem
+            &_back
+                left: 0
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%)
+
+                &:hover
+                    opacity: 1
+
+            &_next
+                right: 0
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%)
+                transform: matrix(-1, 0, 0, 1, 0, 0)
+
+                &:hover
+                    opacity: 1
+
+        &__arrow
+            position: absolute
+            z-index: 3
+            top: 5.3rem
+            -webkit-appearance: none
+            -moz-appearance: none
+            background: none
+            border: none
+            outline: none
+            color: white
+            font-size: 2rem
+            opacity: 0.5
+            cursor: pointer
+
+            &:hover,
+            &:active
+                opacity: 1
+
+            &_next
+                right: 3.8rem
+                transform: matrix(-1, 0, 0, 1, 0, 0)
+
+            &_back
+                left: 0.5rem
+            
