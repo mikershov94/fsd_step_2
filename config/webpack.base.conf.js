@@ -90,6 +90,12 @@ module.exports = {
 	
 	
 	plugins: [
+		new webpack.ProvidePlugin({
+			$: 'jquery',
+			jQuery: 'jquery',
+			
+		}),
+
 		new MiniCssExtractPlugin({
 			filename: 'css/main-[hash:7].css'
 		}),
@@ -103,11 +109,6 @@ module.exports = {
 		new CopyWebpackPlugin([
 			{ from:  `${PATHS.static}/img`, to: `${PATHS.dist}/img` }
 		]),
-
-		new webpack.ProvidePlugin({
-			$: 'jquery',
-			jQuery: 'jquery'
-		}),
 	]
 
 }

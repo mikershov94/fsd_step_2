@@ -1,11 +1,26 @@
 =room-preview()
     .room-preview
+        position: relative
         width: 22.5rem
         height: 21.4rem
         background: white
         border-radius: 0.3rem
+        box-shadow: 0 0.3rem 2rem $dark-shade-5
 
         &__carousel
             width: 22.5rem
             height: 12.5rem
-            background: black
+
+            img
+                width: 22.5rem
+                height: 12.5rem
+                border-radius: 0.3rem 0.3rem 0 0
+
+    .slick
+
+        &-arrow
+            position: absolute
+            z-index: 2
+
+        &-prev
+            left: 3rem
