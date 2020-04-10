@@ -1,3 +1,5 @@
+include ../../form-elements/rate-button/rate-button
+
 mixin room-preview()
     .room-preview
         div(class="room-preview__carousel")
@@ -9,4 +11,19 @@ mixin room-preview()
                 img(src="/img/num_lux.jpg" alt="Фото 3")
             .room-preview__img_4
                 img(src="/img/num_lux.jpg" alt="Фото 4")
-        .room-preveiw__info
+        .room-preview__info_1
+            .room-preview__room
+                span.room-preview__symbol № 
+                span.room-preview__number 888
+                span.room-preview__type люкс
+            .room-preview__price
+                span.room-preview__rubles 9 990₽
+                span.room-preview__period в сутки
+        .room-preview__separator
+        .room-preview__info_2
+            .room-preview__rating
+                +rate-button(5)
+            .room-preview__comments
+                span.room-preview__comments_count 145
+                span.room-preview__comments_label Отзывов
+
