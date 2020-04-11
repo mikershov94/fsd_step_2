@@ -1,0 +1,54 @@
+extends layouts/base
+
+include ../components/cards/search-room/search-room
+include ../components/cards/signup/signup
+
+include ../components/cards/order-room/order-room
+include ../components/cards/signin/signin
+
+include ../components/cards/calendar/calendar
+include ../components/cards/room-preview/room-preview
+
+
+block content
+    .cards
+        include ../components/uikit-header/uikit-header
+        .cards__container
+            .cards__col
+                .cards__row
+                    +search-room()
+                .cards__row
+                    +signup()
+            .cards__col
+                .cards__row
+                    +order-room()
+                .cards__row
+                    +signin()
+            .cards__col
+                .cards__row
+                    +calendar()
+                .cards__row
+                    +room-preview(
+                        "/img/num_lux.jpg",
+                        "/img/num_lux.jpg",
+                        "/img/num_lux.jpg",
+                        "/img/num_lux.jpg",
+                        '888',
+                        true,
+                        '9 990',
+                        5,
+                        '146'
+                    )
+                .cards__row
+                    +room-preview(
+                        "/img/num.jpg",
+                        "/img/num.jpg",
+                        "/img/num.jpg",
+                        "/img/num.jpg",
+                        '840',
+                        false,
+                        '9 990',
+                        4,
+                        '165'
+                    )
+
