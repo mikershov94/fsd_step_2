@@ -1,0 +1,62 @@
+@import "../form-elements/buttons/primary/button-primary.sass";
+@import "../form-elements/buttons/outline/button-outline.sass";
+
+=header()
+    .header
+        display: flex
+        height: 6rem
+        background: white
+        align-items: center
+        justify-content: space-between
+        padding: 0 9% 0 9%
+
+        &__logo
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            flex-grow: 1
+
+            &_main
+                height: 3.2rem
+                margin: 0 1rem
+
+            &_label
+                height: 1.2rem
+
+        &__menu
+            display: flex
+            flex-grow: 2
+            justify-content: flex-end
+            padding-right: 1.5rem
+
+            &_container
+                margin: 0
+                padding: 0
+                display: flex
+                justify-content: space-between
+                +font-type($type-body)
+                color: $dark-shade-50
+
+            &_item
+                display: flex
+                list-style: none
+                margin: 0 1.1rem
+                cursor: pointer
+                border-bottom: 2px solid white
+
+                &:hover
+                    border-bottom: 2px solid $dark-shade-50
+
+            &_active
+                font-weight: bold
+                color: $dark-shade-75
+
+            &_arrow
+                font-size: 2rem
+
+        &__buttons
+            display: flex
+            justify-content: space-between
+            flex-grow: 0.2
+            +btn-outline(6.6rem, 2.8rem)
+            +btn-primary(8.5rem, 2.8rem)

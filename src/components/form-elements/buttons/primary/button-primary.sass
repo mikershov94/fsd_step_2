@@ -1,9 +1,11 @@
 @import "../buttons.sass";
 
-=btn-primary()
+=btn-primary($width: 8.25rem, $height: 3.7rem)
     +btn()
 
-    .btn_primary
+    .btn.btn_primary
+        width: $width
+        height: $height
         +font-type($type-h3)
         font-size: 0.97rem
         letter-spacing: 0.005rem

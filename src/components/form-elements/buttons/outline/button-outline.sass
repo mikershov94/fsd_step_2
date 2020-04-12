@@ -1,36 +1,28 @@
 @import "../buttons.sass";
 
-=btn-outline()
+=btn-outline($width: 8.25rem, $height: 3.7rem)
     +btn()
 
-    .btn_outline
+    .btn.btn_outline
         position: relative
+        background: white
+        width: $width
+        height: $height
+        border: 3px solid $purple
+        +font-type($type-h3)
+        font-size: 0.96rem
+        color: $purple
+
+        &:hover
+            background: linear-gradient(180deg, $purple 0%, $blue 100%)
+            color: white
+
+        &:active
+            background: $green
+
         &:disabled
             opacity: 0.5
 
-            .btn_outline__background:hover
+            &:hover
                 background: white
                 color: $purple
-
-        &__background
-            position: absolute
-            background: white
-            width: 7.9rem
-            height: 3.3rem
-            border-radius: 2rem
-            top: 0.2rem
-            left: 0.15rem
-            z-index: 1
-            display: flex
-            align-items: center
-            justify-content: center
-            +font-type($type-h3)
-            font-size: 0.96rem
-            color: $purple
-
-            &:hover
-                background: linear-gradient(180deg, $purple 0%, $blue 100%)
-                color: white
-
-            &:active
-                background: $green

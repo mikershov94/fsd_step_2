@@ -1,5 +1,14 @@
 extends layouts/base
 
+include ../components/header/header
+
 block content
     .headers-footers
         include ../components/uikit-header/uikit-header
+        .headers-footers__container
+            .headers-footers__row
+                +header()
+            .headers-footers__row
+            .headers-footers__row
+            .headers-footers__row
+
