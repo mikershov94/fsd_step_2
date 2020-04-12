@@ -11,30 +11,30 @@ mixin footer()
                     .footer__logo_text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
                 .footer__menu
                     nav.footer__navigation
-                        .footer__navigation_label Navigation
-                        ul
-                            li.footer__navigation_item About Us
-                            li.footer__navigation_item News
-                            li.footer__navigation_item Support
-                            li.footer__navigation_item Products
+                        .footer__label Navigation
+                        ul.footer__menu_container
+                            li.footer__item About Us
+                            li.footer__item News
+                            li.footer__item Support
+                            li.footer__item Products
                     nav.footer__about-us
-                        .footer__about-us_label About Us
-                        ul
-                            li.footer__about-us_item Who we are
-                            li.footer__about-us_item Our team
-                            li.footer__about-us_item Careers
-                            li.footer__about-us_item Investors
+                        .footer__label About Us
+                        ul.footer__menu_container
+                            li.footer__item Who we are
+                            li.footer__item Our team
+                            li.footer__item Careers
+                            li.footer__item Investors
                     nav.footer__support
-                        .footer__support_label Support
-                        ul
-                            li.footer__support_item Documentation
-                            li.footer__support_item Community
-                            li.footer__support_item Get in Touch
+                        .footer__label Support
+                        ul.footer__menu_container
+                            li.footer__item Documentation
+                            li.footer__item Community
+                            li.footer__item Get in Touch
                 .footer__subscribe
-                    .footer__subscribe_label Subscribe to our newsletter
+                    .footer__label Subscribe to our newsletter
                     .footer__subscribe_text Receive our latest news and promotions in your inbox!
                     .footer__subscribe_form
-                        +textfield-subscription('')
+                        +textfield-subscription('', 'Your email address')
             .footer__row_bottom
                 .footer__copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
                 .footer__social

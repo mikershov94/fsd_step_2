@@ -1,5 +1,67 @@
+@import "../form-elements/textfield-subscription/textfield-subscription.sass";
+    
 =footer()
     .footer
         background: white
         height: 37rem
         box-shadow: 0 1rem 2rem $dark-shade-5
+        +font-type($type-body)
+        color: $dark-shade-50
+
+        &__row_top
+            display: flex
+            padding: 0 7.8% 0 9%
+            justify-content: space-between
+            align-items: center
+            height: 28rem
+
+        &__logo
+            flex-grow: 1
+
+            &_container
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                flex-grow: 1
+                height: 6.4rem
+
+            &_main
+                height: 3.2rem
+                margin: 0 1rem
+
+            &_label
+                height: 1.2rem
+
+            &_text
+                width: 22rem
+                margin-left: 1rem
+
+        &__menu
+            display: flex
+            justify-content: space-between
+            flex-grow: 3
+
+            &_container
+                list-style: none
+                margin: 0
+                padding: 0
+        
+        &__label
+            +font-type($type-h3)
+            color: $dark-shade-100
+
+        &__subscribe
+            padding-left: 10rem
+            flex-grow: 0.2
+
+            &_text
+                width: 22rem 
+
+            &_form
+                +textfield-subscription(21.2rem)
+
+
+
+        &__row_bottom
+            display: flex
+            padding: 0 9%
