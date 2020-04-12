@@ -1,7 +1,7 @@
 include ../form-elements/buttons/outline/button-outline
 include ../form-elements/buttons/primary/button-primary
 
-mixin header()
+mixin header(user='')
     header.header
         .header__logo
             img(src="/svg/main_logo.svg" class="header__logo_main")
@@ -17,8 +17,11 @@ mixin header()
                 li.header__menu_item Careers
                 li.header__menu_item News
                 li.header__menu_item Documentation
-        .header__buttons
-            .header__buttons_login
-                +btn-outline('Login')
-            .header__buttons_register
-                +btn-primary('Register')
+        if (user=='') 
+            .header__buttons
+                .header__buttons_login
+                    +btn-outline('Login')
+                .header__buttons_register
+                    +btn-primary('Register')
+        else
+            .header__username= user
