@@ -1,6 +1,7 @@
 extends layouts/base
 
 include ../components/header/header
+include ../components/footer-menu/footer-menu
 
 block content
     .headers-footers
@@ -11,5 +12,6 @@ block content
             .headers-footers__row
                 +header('Cosmin Negoita')
             .headers-footers__row
+                +footer-menu()
             .headers-footers__row
 
