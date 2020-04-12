@@ -1,0 +1,43 @@
+include ../form-elements/textfield-subscription/textfield-subscription
+
+mixin footer()
+    footer.footer
+        .footer
+            .footer__row_top
+                .footer__logo
+                    .footer__logo_container
+                        img(src="/svg/main_logo.svg" class="footer__logo_main")
+                        img(src="/svg/label_logo.svg" class="footer__logo_label")
+                    .footer__logo_text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+                .footer__menu
+                    nav.footer__navigation
+                        .footer__navigation_label Navigation
+                        ul
+                            li.footer__navigation_item About Us
+                            li.footer__navigation_item News
+                            li.footer__navigation_item Support
+                            li.footer__navigation_item Products
+                    nav.footer__about-us
+                        .footer__about-us_label About Us
+                        ul
+                            li.footer__about-us_item Who we are
+                            li.footer__about-us_item Our team
+                            li.footer__about-us_item Careers
+                            li.footer__about-us_item Investors
+                    nav.footer__support
+                        .footer__support_label Support
+                        ul
+                            li.footer__support_item Documentation
+                            li.footer__support_item Community
+                            li.footer__support_item Get in Touch
+                .footer__subscribe
+                    .footer__subscribe_label Subscribe to our newsletter
+                    .footer__subscribe_text Receive our latest news and promotions in your inbox!
+                    .footer__subscribe_form
+                        +textfield-subscription('')
+            .footer__row_bottom
+                .footer__copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
+                .footer__social
+                    img(src="/svg/tw.svg" class="footer__social_tw")
+                    img(src="/svg/fb.svg" class="footer__social_fb")
+                    img(src="/svg/inst.svg" class="footer__social_inst")
