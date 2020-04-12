@@ -4,11 +4,12 @@
 =header()
     .header
         display: flex
-        height: 6rem
+        height: 5.9rem
         background: white
         align-items: center
         justify-content: space-between
         padding: 0 9% 0 9%
+        box-shadow: 0 1rem 2rem $dark-shade-5
 
         &__logo
             display: flex
@@ -22,6 +23,9 @@
 
             &_label
                 height: 1.2rem
+
+        &__burger
+            display: none
 
         &__menu
             display: flex
@@ -60,3 +64,25 @@
             flex-grow: 0.2
             +btn-outline(6.6rem, 2.8rem)
             +btn-primary(8.5rem, 2.8rem)
+
+    @media ( max-width:  1450px)
+        .header__burger
+            display: flex
+            flex-grow: 3
+            justify-content: center
+            cursor: pointer
+            
+            span
+                font-size: 2rem
+
+
+        .header__menu
+            display: none
+
+    @media ( max-width:  1000px)
+        .header
+            padding: 0 2% 0 2%
+
+        
+
+        

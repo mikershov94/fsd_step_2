@@ -1,18 +1,19 @@
 @import "../buttons.sass";
 
-=btn-submit()
+=btn-submit($width: 26.7rem, $height: 3.7rem)
     +btn()
 
-    .btn_submit
+    .btn.btn_submit
         position: relative
-        width: 26.7rem
         +font-type($type-h3)
+        width: $width
+        height: $height
         padding-top: 0.2rem
         color: white
         outline: none
 
-        &__icon
-            position: absolute
-            font-size: 2rem
-            top: 0.8rem
-            right: 0.8rem
+    .btn_submit__icon
+        position: absolute
+        font-size: 2rem
+        top: 0.8rem
+        right: 0.8rem
