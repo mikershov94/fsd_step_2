@@ -55,6 +55,15 @@
         &__item
             margin-bottom: 1.2rem
 
+            a
+                text-decoration: none
+                color: $dark-shade-50
+
+                &:hover
+                    text-decoration: underline
+                &:active
+                    color: $green
+
         &__subscribe
             margin-left: 1rem
             align-self: flex-start
@@ -82,4 +91,43 @@
         &__social
             
             +social()
+    
+    @media (max-width: 1700px)
+        .footer
+            &__logo
+                display: none
+                
+    @media (max-width: 1150px)
+        .footer
+            height: 52rem
+
+            &__row_top
+                display: block
+                height: 46rem
+                
+            &__menu
+                padding-top: 6rem
+
+            &__subscribe
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                margin: 2rem 0
+                padding: 0
+
+                &_text
+                    text-align: center
+
+    @media (max-width: 800px)
+        .footer
+            height: 54rem
+
+            &__menu
+                flex-wrap: wrap
+
+            &__row_bottom
+                display: block
+                text-align: center
             
+        
