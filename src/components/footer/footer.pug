@@ -1,4 +1,5 @@
 include ../form-elements/textfield-subscription/textfield-subscription
+include ../social/social
 
 mixin footer()
     footer.footer
@@ -37,9 +38,4 @@ mixin footer()
             .footer__row_bottom
                 .footer__copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
                 .footer__social
-                    a(href="#")
-                        img(src="/svg/tw.svg" class="footer__social_tw")
-                    a(href="#")
-                        img(src="/svg/fb.svg" class="footer__social_fb")
-                    a(href="#")
-                        img(src="/svg/inst.svg" class="footer__social_inst")
+                    +social()

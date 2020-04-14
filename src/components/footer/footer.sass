@@ -1,5 +1,6 @@
 @import "../form-elements/textfield-subscription/textfield-subscription.sass";
 @import "../logo/logo.sass";
+@import "../social/social.sass";
     
 =footer()
     .footer
@@ -23,10 +24,7 @@
             flex-grow: 1
 
             &_container
-                margin-bottom: 1.6rem
-                +logo()
-
-            &_text
+                margin-bottom: 2rem
                 width: 22rem
                 margin-left: 1rem
                 color: $dark-shade-75
@@ -77,15 +75,5 @@
 
         &__social
             
-            &_tw
-                height: 1.7rem
-                margin: 0 1rem
-
-            &_fb
-                height: 1.7rem
-                margin: 0 0.8rem
-
-            &_inst
-                height: 1.7rem
-                margin: 0 0.9rem
+            +social()
             
