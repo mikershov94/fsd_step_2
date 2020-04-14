@@ -2,6 +2,7 @@
 @import "../form-elements/buttons/outline/button-outline.sass";
 
 @import "../logo/logo.sass";
+@import "./dropdown-item/dropdown-item.sass";
 
 =header()
     .header
@@ -43,6 +44,14 @@
 
                 &:hover
                     border-bottom: 2px solid $dark-shade-50
+            
+            &_dropdown
+                display: flex
+                list-style: none
+                margin: 0
+                cursor: pointer
+
+                +dropdown-item()
 
             &_active
                 font-weight: bold
