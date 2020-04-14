@@ -1,4 +1,5 @@
 @import "../form-elements/textfield-subscription/textfield-subscription.sass";
+@import "../logo/logo.sass";
     
 =footer()
     .footer
@@ -17,23 +18,13 @@
             border-bottom: 1px solid $dark-shade-25
 
         &__logo
-            flex-grow: 1
             align-self: flex-start
-            padding-top: 7rem
+            padding-top: 8.5rem
+            flex-grow: 1
 
             &_container
-                display: flex
-                justify-content: flex-start
-                align-items: center
-                flex-grow: 1
-                height: 6.4rem
-
-            &_main
-                height: 3.2rem
-                margin: 0 1rem
-
-            &_label
-                height: 1.2rem
+                margin-bottom: 1.6rem
+                +logo()
 
             &_text
                 width: 22rem

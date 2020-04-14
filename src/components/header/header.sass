@@ -1,6 +1,8 @@
 @import "../form-elements/buttons/primary/button-primary.sass";
 @import "../form-elements/buttons/outline/button-outline.sass";
 
+@import "../logo/logo.sass";
+
 =header()
     .header
         display: flex
@@ -12,17 +14,8 @@
         box-shadow: 0 1rem 2rem $dark-shade-5
 
         &__logo
-            display: flex
-            justify-content: flex-start
-            align-items: center
             flex-grow: 1
-
-            &_main
-                height: 3.2rem
-                margin: 0 1rem
-
-            &_label
-                height: 1.2rem
+            +logo()
 
         &__burger
             display: none
