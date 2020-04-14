@@ -2,6 +2,7 @@ extends layouts/base
 
 include ../components/header/header
 include ../components/footer/footer
+include ../components/uikit-footer/uikit-footer
 
 block content
     .headers-footers
@@ -14,4 +15,5 @@ block content
             .headers-footers__row
                 +footer()
             .headers-footers__row
+                +uikit-footer()
 
