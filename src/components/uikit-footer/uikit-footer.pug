@@ -1,2 +1,10 @@
+include ../logo/logo
+include ../social/social
+
 mixin uikit-footer()
     footer.uikit-footer
+        .uikit-footer__logo
+            +logo()
+        .uikit-footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        .uikit-footer__social
+            +social()

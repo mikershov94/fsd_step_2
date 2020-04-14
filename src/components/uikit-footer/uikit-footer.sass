@@ -1,2 +1,28 @@
+@import "../logo/logo.sass";
+@import "../social/social.sass";
+
 =uikit-footer()
     .uikit-footer
+        height: 13.9rem
+        background: white
+        margin-top: 3.5rem
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 8.3rem 35rem
+        box-shadow: 0 1rem 2rem $dark-shade-5
+
+        &__logo
+            +logo()
+            padding-bottom: 1.55rem
+            
+
+        &__text
+            +font-type($type-body)
+            color: $dark-shade-75
+            text-align: center
+            padding: 0 0rem 1.6rem 1rem
+
+        &__social
+            +social()
+            padding: 0.6rem 0 0.5rem 1rem
