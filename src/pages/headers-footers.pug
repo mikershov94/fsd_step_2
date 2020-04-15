@@ -1,0 +1,19 @@
+extends layouts/base
+
+include ../components/header/header
+include ../components/footer/footer
+include ../components/uikit-footer/uikit-footer
+
+block content
+    .headers-footers
+        include ../components/uikit-header/uikit-header
+        .headers-footers__container
+            .headers-footers__row
+                +header()
+            .headers-footers__row
+                +header('Cosmin Negoita')
+            .headers-footers__row
+                +footer()
+            .headers-footers__row
+                +uikit-footer()
+

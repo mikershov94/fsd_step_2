@@ -3,7 +3,7 @@ include ../form-elements/buttons/primary/button-primary
 include ../logo/logo
 include ./dropdown-item/dropdown-item
 
-mixin header(user='')
+mixin header(user='', rus=false)
     header.header
         .header__logo
             +logo()
@@ -11,18 +11,33 @@ mixin header(user='')
             span.material-icons dehaze
         nav.header__menu
             ul.header__menu_container
-                li.header__menu_item.header__menu_active Home
-                li.header__menu_item About Us
-                .header__menu_dropdown
-                    +dropdown-item('Services')
-                li.header__menu_item Careers
-                li.header__menu_item News
-                li.header__menu_item Documentation
+                if (rus)
+                    li.header__menu_item О нас
+                    .header__menu_dropdown
+                        +dropdown-item('Услуги')
+                    li.header__menu_item Вакансии
+                    li.header__menu_item Новости
+                    .header__menu_dropdown
+                        +dropdown-item('Соглашения')
+                else
+                    li.header__menu_item.header__menu_active Home
+                    li.header__menu_item About Us
+                    .header__menu_dropdown
+                        +dropdown-item('Services')
+                    li.header__menu_item Careers
+                    li.header__menu_item News
+                    li.header__menu_item Documentation
         if (user=='') 
             .header__buttons
-                .header__buttons_login
-                    +btn-outline('Login')
-                .header__buttons_register
-                    +btn-primary('Register')
+                if (rus)
+                    .header__buttons_login
+                        +btn-outline('Войти')
+                    .header__buttons_register.header__buttons_rus
+                        +btn-primary('Зарегистрироваться') 
+                else
+                    .header__buttons_login
+                        +btn-outline('Login')
+                    .header__buttons_register
+                        +btn-primary('Register')
         else
             .header__username= user

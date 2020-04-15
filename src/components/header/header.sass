@@ -67,6 +67,10 @@
             +btn-outline(6.6rem, 2.8rem)
             +btn-primary(8.5rem, 2.8rem)
 
+            &_rus
+                +btn-primary(16rem, 2.8rem)
+
+
         &__username
             display: flex
             align-items: center
@@ -76,12 +80,20 @@
             padding-left: 2.6rem
             height: 2.5rem
 
-    @media ( max-width:  1450px)
+    @media ( max-width:  1500px)
+        .header
+            padding: 0 1%
+
+    @media ( max-width:  1250px)
+        .header
+            padding: 0 1%
+
         .header__burger
             display: flex
             flex-grow: 3
             justify-content: center
             cursor: pointer
+            
             
             span
                 font-size: 2rem
@@ -89,10 +101,6 @@
 
         .header__menu
             display: none
-
-    @media ( max-width:  1000px)
-        .header
-            padding: 0 2% 0 2%
 
         
 

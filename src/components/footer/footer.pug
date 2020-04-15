@@ -1,52 +1,98 @@
 include ../form-elements/textfield-subscription/textfield-subscription
 include ../social/social
 
-mixin footer()
+mixin footer(rus=false)
     footer.footer
         .footer
             .footer__row_top
                 .footer__logo
                     .footer__logo_container
                         +logo()
-                    .footer__logo_text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+                    if (rus)
+                        .footer__logo_text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                    else
+                        .footer__logo_text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
                 .footer__menu
                     nav.footer__navigation
-                        .footer__label Navigation
-                        ul.footer__menu_container
-                            li.footer__item 
-                                a(href="#") About Us
-                            li.footer__item
-                                a(href="#") News
-                            li.footer__item
-                                a(href="#") Support
-                            li.footer__item
-                                a(href="#") Products
+                        if (rus)
+                            .footer__label Навигация
+                            ul.footer__menu_container
+                                li.footer__item 
+                                    a(href="#") О нас
+                                li.footer__item
+                                    a(href="#") Новости
+                                li.footer__item
+                                    a(href="#") Служба поддержки
+                                li.footer__item
+                                    a(href="#") Услуги
+                        else
+                            .footer__label Navigation
+                            ul.footer__menu_container
+                                li.footer__item 
+                                    a(href="#") About Us
+                                li.footer__item
+                                    a(href="#") News
+                                li.footer__item
+                                    a(href="#") Support
+                                li.footer__item
+                                    a(href="#") Products
                     nav.footer__about-us
-                        .footer__label About Us
-                        ul.footer__menu_container
-                            li.footer__item
-                                a(href="#") Who we are
-                            li.footer__item
-                                a(href="#") Our team
-                            li.footer__item
-                                a(href="#") Careers
-                            li.footer__item
-                                a(href="#") Investors
+                        if (rus)
+                            .footer__label О нас
+                            ul.footer__menu_container
+                                li.footer__item
+                                    a(href="#") О сервисе
+                                li.footer__item
+                                    a(href="#") Наша команда
+                                li.footer__item
+                                    a(href="#") Вакансии
+                                li.footer__item
+                                    a(href="#") Инвесторы
+                        else
+                            .footer__label About Us
+                            ul.footer__menu_container
+                                li.footer__item
+                                    a(href="#") Who we are
+                                li.footer__item
+                                    a(href="#") Our team
+                                li.footer__item
+                                    a(href="#") Careers
+                                li.footer__item
+                                    a(href="#") Investors
                     nav.footer__support
-                        .footer__label Support
-                        ul.footer__menu_container
-                            li.footer__item
-                                a(href="#") Documentation
-                            li.footer__item
-                                a(href="#") Community
-                            li.footer__item
-                                a(href="#") Get in Touch
+                        if (rus)
+                            .footer__label Служба поддержки
+                            ul.footer__menu_container
+                                li.footer__item
+                                    a(href="#") Соглашения
+                                li.footer__item
+                                    a(href="#") Сообщества
+                                li.footer__item
+                                    a(href="#") Связь с нами
+                        else
+                            .footer__label Support
+                            ul.footer__menu_container
+                                li.footer__item
+                                    a(href="#") Documentation
+                                li.footer__item
+                                    a(href="#") Community
+                                li.footer__item
+                                    a(href="#") Get in Touch
                 .footer__subscribe
-                    .footer__label Subscribe to our newsletter
-                    .footer__subscribe_text Receive our latest news and promotions in your inbox!
-                    .footer__subscribe_form
-                        +textfield-subscription('', 'Your email address')
+                    if (rus)
+                        .footer__label Подписка
+                        .footer__subscribe_text Получайте специальные предложения и новости сервиса
+                        .footer__subscribe_form
+                            +textfield-subscription('', 'Email')
+                    else
+                        .footer__label Subscribe to our newsletter
+                        .footer__subscribe_text Receive our latest news and promotions in your inbox!
+                        .footer__subscribe_form
+                            +textfield-subscription('', 'Your email address')
             .footer__row_bottom
-                .footer__copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
+                if (rus)
+                    .footer__copyright Copyright © 2018 Toxin отель. Все права зачищены.
+                else
+                    .footer__copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
                 .footer__social
                     +social()
