@@ -21,6 +21,13 @@ $(document).ready(() => {
     $('.text-field_masked input').mask("99.99.9999", {placeholder: "ДД.ММ.ГГГГ"});
     $('.checkbox-expandable').checkboxExpandable();
 
+    $('.offer__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
     //const filterDateDropdown = $('.filter-date-dropdown').find('.filter-date-dropdown__input').datepicker().data('datepicker');
     //filterDateDropdown.selectDate([new Date(2020, 7, 19), new Date(2020, 7, 23)]);
 
