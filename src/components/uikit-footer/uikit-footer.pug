@@ -1,10 +1,17 @@
 include ../logo/logo
 include ../social/social
 
-mixin uikit-footer()
-    footer.uikit-footer
+mixin uikit-footer(rus=false)
+    - var uikitFooterClass = 'uikit-footer'
+    if (rus)
+        - uikitFooterClass = 'uikit-footer uikit-footer_rus'
+
+    footer(class= uikitFooterClass)
         .uikit-footer__logo
             +logo()
-        .uikit-footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        if (rus)
+            .uikit-footer__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        else
+            .uikit-footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
         .uikit-footer__social
             +social()

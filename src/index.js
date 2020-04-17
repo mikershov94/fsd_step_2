@@ -1,5 +1,6 @@
 import './main.sass';
 import 'jquery-mask-plugin';
+import 'slick-carousel';
 
 import './components/form-elements/filter-dropdown/filter-dropdown.js';
 import './components/form-elements/date-dropdown/date-dropdown.js';
@@ -26,6 +27,7 @@ $(document).ready(() => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
+        arrows: false,
     });
 
 });

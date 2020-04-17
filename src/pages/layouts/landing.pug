@@ -2,10 +2,12 @@ extends base
 
 include ../../components/header/header
 include ../../components/footer/footer
+include ../../components/uikit-footer/uikit-footer
 
 block content
     .container
         +header('', true)
         block section
         +footer(true)
+        +uikit-footer(true)
     

@@ -1,22 +1,84 @@
 .container
     width: 100%
     position: relative
+    max-width: 1920px
+    min-width: 320px
+
+    
     
 .offer
+    z-index: 0
+    min-height: 665px
     position: relative
-    width: 100%
 
     img
         position: relative
         max-width: 100%
         z-index: 0
 
-    &__slider
-        height: 70rem
-
     &__container
-        height: 52.68rem
-        max-width: 100%
+        position: relative
+        min-height: 665px
+        
+
+        &_absolute
+            height: 52.68rem
+            max-width: 100%
+            position: absolute
+            top: 11.7rem
+            left: 11.7rem
+
+    &__text
+        +font-type($type-body)
+        font-size: 1.18rem
+        width: 24.5rem
+        text-align: end
         position: absolute
-        top: 11.7rem
-        left: 11.7rem
+        bottom: 1.4rem
+        right: 10rem
+
+.uikit-footer_rus
+    display: none
+
+@media (max-width: 1250px)
+    .offer__text
+        display: none
+        
+@media (max-width: 1150px)
+    .offer__container
+        display: none
+
+        &_absolute
+            left: 27%
+
+@media (max-width: 800px)
+    .offer__container_absolute
+        left: 17%
+
+    .uikit-footer
+        display: block
+
+    .footer_rus
+        display: none
+
+@media (max-width: 700px)
+    .offer__container_absolute
+        left: 11%
+
+
+
+@media (max-width: 600px)
+    .header
+        &__logo
+            flex-grow: 1
+
+        &__burger
+            flex-grow: 1
+            justify-content: flex-end
+            padding-right: 2rem
+
+        &__buttons
+            display: none
+
+    .offer__container_absolute
+        left: 0

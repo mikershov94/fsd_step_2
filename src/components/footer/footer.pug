@@ -2,7 +2,11 @@ include ../form-elements/textfield-subscription/textfield-subscription
 include ../social/social
 
 mixin footer(rus=false)
-    footer.footer
+    - var footerClass = 'footer'
+    if (rus)
+        - footerClass = 'footer footer_rus'
+
+    footer(class=footerClass)
         .footer
             .footer__row_top
                 .footer__logo
