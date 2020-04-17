@@ -28,7 +28,4 @@ $(document).ready(() => {
         autoplaySpeed: 2000,
     });
 
-    //const filterDateDropdown = $('.filter-date-dropdown').find('.filter-date-dropdown__input').datepicker().data('datepicker');
-    //filterDateDropdown.selectDate([new Date(2020, 7, 19), new Date(2020, 7, 23)]);
-
 });

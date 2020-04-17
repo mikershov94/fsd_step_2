@@ -4,7 +4,11 @@ include ../logo/logo
 include ./dropdown-item/dropdown-item
 
 mixin header(user='', rus=false)
-    header.header
+    - var headerClass = 'header'
+    if (rus)
+        - headerClass = 'header header_fixed'
+
+    header(class=headerClass)
         .header__logo
             +logo()
         .header__burger
