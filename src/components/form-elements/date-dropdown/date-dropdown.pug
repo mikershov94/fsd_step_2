@@ -1,9 +1,11 @@
-mixin date-dropdown(label="Date dropdown", content="", icon='keyboard_arrow_down')
+mixin date-dropdown(label="Date dropdown", customClass='', content="", icon='keyboard_arrow_down')
+    - var datepickerClass = 'date-dropdown__input datepicker-here ' + customClass
+
     .date-dropdown
         label(class="date-dropdown__label")= label
         .date-dropdown__box
             input(type="text"
                   value= content
-                  class="date-dropdown__input datepicker-here"
+                  class= datepickerClass
                   data-date-format="dd.mm.yyyy")
             .date-dropdown__arrow= icon

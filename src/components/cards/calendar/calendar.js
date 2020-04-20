@@ -17,7 +17,7 @@ $(() => {
     });
 
     $(".datepicker--buttons").html('<span class="datepicker--button-apply" data-action="apply">Применить</button');
-
+    
     const calendar = $(".calendar").datepicker({
         range: true,
     });

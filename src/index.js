@@ -31,3 +31,5 @@ $(document).ready(() => {
     });
 
 });
+
+import './components/cards/search-room/search-room.js';
