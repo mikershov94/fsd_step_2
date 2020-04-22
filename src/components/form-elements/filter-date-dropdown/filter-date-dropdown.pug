@@ -1,6 +1,6 @@
-mixin filter-date-dropdown()
+mixin filter-date-dropdown(label="Filter date dropdown")
     .filter-date-dropdown
-        label(class="filter-date-dropdown__label") Filter date dropdown
+        label(class="filter-date-dropdown__label")= label
         .filter-date-dropdown__box
             input(type="text"
                   class="filter-date-dropdown__input datepicker-here"

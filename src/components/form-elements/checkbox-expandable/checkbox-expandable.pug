@@ -1,6 +1,6 @@
 include ../checkbox/checkbox
 
-mixin checkbox-expandable(expand=false)
+mixin checkbox-expandable(label="Expandable checkbox list", expand=false)
     - var listClass = 'checkbox-expandable__list'
     - var arrow = 'expand_more'
     - var state = ''
@@ -11,7 +11,7 @@ mixin checkbox-expandable(expand=false)
 
     .checkbox-expandable
         .checkbox-expandable__string
-            label(class="checkbox-expandable__label") Expandable checkbox list
+            label(class="checkbox-expandable__label")= label
             .material-icons.checkbox-expandable__arrow= arrow
         div(class= listClass data-state= state)
             +checkbox-button('breakfast', 'Завтрак')

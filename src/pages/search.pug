@@ -1,15 +1,53 @@
 extends layouts/landing
 
+include ../components/form-elements/filter-date-dropdown/filter-date-dropdown
+include ../components/form-elements/guest-dropdown/guest-dropdown
+include ../components/form-elements/range-slider/range-slider
+include ../components/form-elements/checkbox/checkbox
+include ../components/form-elements/checkbox-expandable/checkbox-expandable
+include ../components/form-elements/filter-dropdown/filter-dropdown
+include ../components/form-elements/checkbox-rich/checkbox-rich
+include ../components/form-elements/pagination/pagination
+
+include ../components/cards/room-preview/room-preview
+
 block section
-    aside.filters
-        .filters__filter-date
-        .filters__guests
-        .filters__range
-        .filters__checkbox
-        .filters__checkbox_rich
-        .filters__dropdown
-        .filters__checkbox_expandable
-    section.results
-        h1.results__label
-        .results__cards
-        .results__paginator
+    - var n = 0
+
+    .search-container
+        aside.filters
+            .filters__filter-date
+                +filter-date-dropdown('Даты пребывания в отеле')
+            .filters__guests
+                +guest-dropdown('Гости')
+            .filters__range
+                +range-slider('Диапазон цены')
+            .filters__checkbox
+                +checkbox()
+            .filters__checkbox_rich
+                label Доступность
+                +checkbox-rich('hall', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
+                +checkbox-rich('helper', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера')
+            .filters__dropdown
+                +filter-dropdown('Удобства номера')
+            .filters__checkbox_expandable
+                +checkbox-expandable('Дополнительные удобства')
+        section.results
+            h1.results__label
+            .results__cards
+                while n < 12
+                    +room-preview(
+                        "/img/num_lux.jpg",
+                        "/img/num_lux.jpg",
+                        "/img/num_lux.jpg",
+                        "/img/num_lux.jpg",
+                        '888',
+                        true,
+                        '9 990',
+                        5,
+                        '146'
+                    )
+                    - n++
+                
+            .results__paginator
+                +pagination(false)
