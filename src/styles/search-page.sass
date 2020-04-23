@@ -2,8 +2,26 @@
     display: flex
     background: white
     margin-top: 5rem
-    padding: 1.4rem 9% 4rem 9.8%
+    padding: 1.4rem 0 4rem 9.8%
     border-bottom: 1px solid $dark-shade-25
+
+@media (max-width: 1710px)
+    .search-container
+        padding-left: 5%
+
+@media (max-width: 1630px)
+    .search-container
+        padding-left: 1%
+
+    .results__cards
+        justify-content: space-around
+
+@media (max-width: 780px)
+    .filters
+        display: none
+
+
+    
 
 .filters
     width: 22rem
@@ -34,7 +52,7 @@
         margin: 2rem 0 2.5rem
 
 .results
-    padding-left: 4.3%
+    padding-left: 3.8%
 
     &__label
         padding-left: 0.8rem
