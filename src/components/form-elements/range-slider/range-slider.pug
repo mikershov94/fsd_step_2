@@ -1,4 +1,4 @@
-mixin range-slider(label)
+mixin range-slider(label, info='')
     .range-slider
         label= label
         span(class="values")
@@ -6,3 +6,4 @@ mixin range-slider(label)
             span(class="values__separ")= " - "
             span(class="values__high" id="values__high")
         div(id="slider")
+        .range-slider__info= info
