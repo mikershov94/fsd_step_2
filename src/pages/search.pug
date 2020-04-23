@@ -33,21 +33,22 @@ block section
             .filters__checkbox_expandable
                 +checkbox-expandable('Дополнительные удобства')
         section.results
-            h1.results__label
+            h1.results__label Номера, которые мы для вас подобрали
             .results__cards
                 while n < 12
-                    +room-preview(
-                        "/img/num_lux.jpg",
-                        "/img/num_lux.jpg",
-                        "/img/num_lux.jpg",
-                        "/img/num_lux.jpg",
-                        '888',
-                        true,
-                        '9 990',
-                        5,
-                        '146'
-                    )
-                    - n++
+                    .results__card
+                        +room-preview(
+                            "/img/num_lux.jpg",
+                            "/img/num_lux.jpg",
+                            "/img/num_lux.jpg",
+                            "/img/num_lux.jpg",
+                            '888',
+                            true,
+                            '9 990',
+                            5,
+                            '146'
+                        )
+                        - n++
                 
             .results__paginator
                 +pagination(false)
