@@ -1,27 +1,15 @@
+.search-wrapper
+    max-width: 100%
+    display: flex
+    justify-content: center
+
 .search-container
     display: flex
     background: white
     margin-top: 5rem
-    padding: 1.4rem 0 4rem 9.8%
-    border-bottom: 1px solid $dark-shade-25
-
-@media (max-width: 1710px)
-    .search-container
-        padding-left: 5%
-
-@media (max-width: 1630px)
-    .search-container
-        padding-left: 1%
-
-    .results__cards
-        justify-content: space-around
-
-@media (max-width: 780px)
-    .filters
-        display: none
-
-
-    
+    padding: 1.4rem 0 4rem 0.5rem
+    max-width: 96.6rem
+    border-bottom: 1px solid $dark-shade-25    
 
 .filters
     width: 22rem
@@ -52,10 +40,10 @@
         margin: 2rem 0 2.5rem
 
 .results
-    padding-left: 3.8%
+    padding-left: 4.1rem
 
     &__label
-        padding-left: 0.8rem
+        padding-left: 0.9rem
         +font-type($type-h1)
         margin: 2rem 0 1.6rem
 
@@ -71,3 +59,20 @@
         display: flex
         justify-content: center
         margin: 0.7rem 0
+
+@media (max-width: 1630px)
+    .results__cards
+        justify-content: space-around
+
+@media (max-width: 780px)
+    .search-container
+        padding-left: 0
+
+    .filters
+        display: none
+
+    .results
+        padding-left: 0
+
+    .results__cards
+        justify-content: center

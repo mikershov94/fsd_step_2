@@ -14,41 +14,42 @@ include ../components/cards/room-preview/room-preview
 block section
     - var n = 0
 
-    .search-container
-        aside.filters
-            .filters__filter-date
-                +filter-date-dropdown('Даты пребывания в отеле')
-            .filters__guests
-                +guest-dropdown('Гости')
-            .filters__range
-                +range-slider('Диапазон цены', 'Стоимость за сутки пребывания в номере')
-            .filters__checkbox
-                +checkbox()
-            .filters__checkbox_rich
-                label Доступность
-                +checkbox-rich('hall', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
-                +checkbox-rich('helper', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера')
-            .filters__dropdown
-                +filter-dropdown('Удобства номера')
-            .filters__checkbox_expandable
-                +checkbox-expandable('Дополнительные удобства')
-        section.results
-            h1.results__label Номера, которые мы для вас подобрали
-            .results__cards
-                while n < 12
-                    .results__card
-                        +room-preview(
-                            "/img/num_lux.jpg",
-                            "/img/num_lux.jpg",
-                            "/img/num_lux.jpg",
-                            "/img/num_lux.jpg",
-                            '888',
-                            true,
-                            '9 990',
-                            5,
-                            '146'
-                        )
-                        - n++
-                
-            .results__paginator
-                +pagination(false)
+    .search-wrapper
+        .search-container
+            aside.filters
+                .filters__filter-date
+                    +filter-date-dropdown('Даты пребывания в отеле')
+                .filters__guests
+                    +guest-dropdown('Гости')
+                .filters__range
+                    +range-slider('Диапазон цены', 'Стоимость за сутки пребывания в номере')
+                .filters__checkbox
+                    +checkbox()
+                .filters__checkbox_rich
+                    label Доступность
+                    +checkbox-rich('hall', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
+                    +checkbox-rich('helper', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера')
+                .filters__dropdown
+                    +filter-dropdown('Удобства номера')
+                .filters__checkbox_expandable
+                    +checkbox-expandable('Дополнительные удобства')
+            section.results
+                h1.results__label Номера, которые мы для вас подобрали
+                .results__cards
+                    while n < 12
+                        .results__card
+                            +room-preview(
+                                "/img/num_lux.jpg",
+                                "/img/num_lux.jpg",
+                                "/img/num_lux.jpg",
+                                "/img/num_lux.jpg",
+                                '888',
+                                true,
+                                '9 990',
+                                5,
+                                '146'
+                            )
+                            - n++
+                    
+                .results__paginator
+                    +pagination(false)
