@@ -13,6 +13,21 @@ include ../components/cards/room-preview/room-preview
 
 block section
     - var n = 0
+    - 
+        testData = [
+            { slide1: '/img/num_lux.jpg', slide2: '/img/num_lux.jpg', slide3: '/img/num_lux.jpg', slide4: '/img/num_lux.jpg', num: '888', lux: true, cost: '9 990', rating: 5, comments: '145' },
+            { slide1: '/img/num.jpg', slide2: '/img/num.jpg', slide3: '/img/num.jpg', slide4: '/img/num.jpg', num: '840', lux: false, cost: '9 990', rating: 4, comments: '65' },
+            { slide1: '/img/num_2.jpg', slide2: '/img/num_2.jpg', slide3: '/img/num_2.jpg', slide4: '/img/num_2.jpg', num: '980', lux: true, cost: '8 500', rating: 3, comments: '35' },
+            { slide1: '/img/num_3.jpg', slide2: '/img/num_3.jpg', slide3: '/img/num_3.jpg', slide4: '/img/num_3.jpg', num: '856', lux: false, cost: '7 300', rating: 5, comments: '19' },
+            { slide1: '/img/num_4.jpg', slide2: '/img/num_4.jpg', slide3: '/img/num_4.jpg', slide4: '/img/num_4.jpg', num: '740', lux: false, cost: '6 000', rating: 4, comments: '44' },
+            { slide1: '/img/num_5.jpg', slide2: '/img/num_5.jpg', slide3: '/img/num_5.jpg', slide4: '/img/num_5.jpg', num: '982', lux: false, cost: '5 800', rating: 3, comments: '56' },
+            { slide1: '/img/num_6.jpg', slide2: '/img/num_6.jpg', slide3: '/img/num_6.jpg', slide4: '/img/num_6.jpg', num: '678', lux: false, cost: '5 500', rating: 5, comments: '45' },
+            { slide1: '/img/num_7.jpg', slide2: '/img/num_7.jpg', slide3: '/img/num_7.jpg', slide4: '/img/num_7.jpg', num: '450', lux: false, cost: '5 300', rating: 4, comments: '39' },
+            { slide1: '/img/num_8.jpg', slide2: '/img/num_8.jpg', slide3: '/img/num_8.jpg', slide4: '/img/num_8.jpg', num: '350', lux: false, cost: '5 000', rating: 3, comments: '77' },
+            { slide1: '/img/num_9.jpg', slide2: '/img/num_9.jpg', slide3: '/img/num_9.jpg', slide4: '/img/num_9.jpg', num: '666', lux: false, cost: '5 000', rating: 5, comments: '25' },
+            { slide1: '/img/num_10.jpg', slide2: '/img/num_10.jpg', slide3: '/img/num_10.jpg', slide4: '/img/num_10.jpg', num: '444', lux: false, cost: '5 000', rating: 3, comments: '15' },
+            { slide1: '/img/num_11.jpg', slide2: '/img/num_11.jpg', slide3: '/img/num_11.jpg', slide4: '/img/num_11.jpg', num: '352', lux: false, cost: '5 000', rating: 3, comments: '55' },       
+        ]
 
     .search-wrapper
         .search-container
@@ -36,18 +51,18 @@ block section
             section.results
                 h1.results__label Номера, которые мы для вас подобрали
                 .results__cards
-                    while n < 12
+                    each card in testData
                         .results__card
                             +room-preview(
-                                "/img/num_lux.jpg",
-                                "/img/num_lux.jpg",
-                                "/img/num_lux.jpg",
-                                "/img/num_lux.jpg",
-                                '888',
-                                true,
-                                '9 990',
-                                5,
-                                '146'
+                                card.slide1,
+                                card.slide2,
+                                card.slide3,
+                                card.slide4,
+                                card.num,
+                                card.lux,
+                                card.cost,
+                                card.rating,
+                                card.comments
                             )
                             - n++
                     
