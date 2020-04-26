@@ -1,8 +1,7 @@
 include ../feature/feature
 
-mixin features()
+mixin features(features)
     .features
-        .features__item
-            +feature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
-        .features__item
-            +feature('location_city', 'Удобство', 'Окно в каждой из спален')
+        each item in features
+            .features__item
+                +feature(item.icon, item.label, item.description)
