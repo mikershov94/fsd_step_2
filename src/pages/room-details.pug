@@ -2,6 +2,7 @@ extends layouts/landing
 
 include ../components/features/features
 include ../components/chart/chart
+include ../components/cards/order-room/order-room
 
 block section
     -
@@ -25,6 +26,7 @@ block section
                         h1 Сведения о номере
                         +features(numFeatures)
                     .room-details__rates
+                        h1 Впечатления от номера
                         +chart() 
 
                 .room-details__comments
@@ -33,4 +35,5 @@ block section
                     .room-details__rules
                     .room-details__cancel
             .room-details__order
+                +order-room()
         
