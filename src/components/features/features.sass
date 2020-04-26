@@ -1,3 +1,5 @@
+@import "../feature/feature.sass";
+    
 =features()
     .features
         max-width: 23rem
@@ -8,21 +10,4 @@
             padding: 1.4rem 0 1.8rem 0
             border-bottom: 1px solid $dark-shade-5
 
-        &__img
-            +gradient-text($blue, $purple)
-            font-size: 4rem
-            margin: 0
-            margin-right: 0.8rem
-            align-self: start
-
-        &__label
-            +font-type($type-h3)
-            margin: 0
-            text-transform: none
-            font-size: 1.15rem
-            line-height: 1.15rem
-            color: $dark-shade-100
-
-        &__text
-            +font-type($type-body)
-            color: $dark-shade-75
+     +feature()   
