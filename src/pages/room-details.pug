@@ -1,6 +1,15 @@
 extends layouts/landing
 
+include ../components/features/features
+
 block section
+    -
+        var numFeatures = [
+            {icon: 'insert_emoticon', label: 'Комфорт', description: 'Шумопоглощающие стены'},
+            {icon: 'location_city', label: 'Удобство', description: 'Окно в каждой из спален'},
+            {icon: 'whatshot', label: 'Уют', description: 'Номер оснащен камином'},
+        ] 
+
     section.room-details
         .room-details__view
             .room-details__img_main
@@ -12,6 +21,8 @@ block section
             .room-details__description
                 .room-details__wrapper
                     .room-details__features
+                        h1 Сведения о номере
+                        +features(numFeatures)
                     .room-details__rates
                 .room-details__comments
                 .room-details__wrapper
