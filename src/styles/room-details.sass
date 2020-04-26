@@ -1,3 +1,5 @@
+@import "../components/chart/chart.sass";
+    
 .room-details
     margin-top: 5.9rem
 
@@ -13,3 +15,10 @@
         &_small
             img
                 width: 37.8rem
+
+    &__wrapper
+        display: flex
+
+    &__rates
+        width: 17rem
+        +chart()

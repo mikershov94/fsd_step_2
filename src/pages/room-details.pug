@@ -1,6 +1,7 @@
 extends layouts/landing
 
 include ../components/features/features
+include ../components/chart/chart
 
 block section
     -
@@ -24,7 +25,10 @@ block section
                         h1 Сведения о номере
                         +features(numFeatures)
                     .room-details__rates
+                        +chart() 
+
                 .room-details__comments
+
                 .room-details__wrapper
                     .room-details__rules
                     .room-details__cancel

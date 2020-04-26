@@ -1,0 +1,40 @@
+mixin chart()
+    figure
+        .chart
+            svg(width="100%" height="100%" viewBox="0 0 42 42" class="donut")
+                linearGradient(id="gold" x1="0" y1="0%" x2="0%" y2="100%")
+                    stop(offset="0%" stop-color="#FFE39C")
+                    stop(offset="100%" stop-color="#FFBA9C")
+
+                linearGradient(id="green" x1="0" y1="0%" x2="0%" y2="100%")
+                    stop(offset="0%" stop-color="#6FCF97")
+                    stop(offset="100%" stop-color="#66D2EA")
+
+                linearGradient(id="purple" x1="0" y1="0%" x2="0%" y2="100%")
+                    stop(offset="0%" stop-color="#BC9CFF")
+                    stop(offset="100%" stop-color="#8BA4F9")
+
+                linearGradient(id="grey" x1="0" y1="0%" x2="0%" y2="100%")
+                    stop(offset="0%" stop-color="#919191")
+                    stop(offset="100%" stop-color="#3D4975")
+
+                circle(class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff")
+                circle(class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#FFF" stroke-width="1")
+                circle(class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="url(#gold)" stroke-width="1" stroke-dasharray="50 50" stroke-dashoffset="-25")
+                circle(class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="url(#green)" stroke-width="1" stroke-dasharray="25 75" stroke-dashoffset="0")
+                circle(class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="url(#purple)" stroke-width="1" stroke-dasharray="25 75" stroke-dashoffset="25")
+
+                g(class="chart__text")
+                    text(x="50%" y="50%" class="chart__number") 260
+                    text(x="50%" y="50%" class="chart__label") Голосов
+
+        figcaption(class="chart-key")
+            ul(class="chart-key__list" aria-hidden="true" role="presentation")
+                li Великолепно
+                    span(class="chart-key__item chart-key__item_gold")                                      
+                li Хорошо
+                    span(class="chart-key__item chart-key__item_green") 
+                li Удовлетворительно
+                    span(class="chart-key__item chart-key__item_purple") 
+                li Разочарован
+                    span(class="chart-key__item chart-key__item_grey")
