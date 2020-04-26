@@ -108,7 +108,7 @@ block content
             .form-elements__cell.form-elements__cell_checkbox-closed
                 +checkbox-expandable()
             .form-elements__cell.form-elements__cell_checkbox-opened
-                +checkbox-expandable(true)
+                +checkbox-expandable('Expandable checkbox list', true)
         .form-elements__col_2
             .form-elements__cell.form-elements__cell_checkbox-rich
                 label Rich checkbox buttons
@@ -118,6 +118,12 @@ block content
             .form-elements__cell
                 label Bullet list
                 +bullet-list()
+
+    -
+        var featuresData = [
+            {icon: 'insert_emoticon', label: 'Комфорт', description: 'Шумопоглощающие стены'},
+            {icon: 'location_city', label: 'Удобство', description: 'Окно в каждой из спален'},
+        ]            
     
     .form-elements__row_4
         .form-elements__col_1
