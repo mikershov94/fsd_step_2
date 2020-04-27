@@ -3,6 +3,8 @@ extends layouts/landing
 include ../components/features/features
 include ../components/chart/chart
 include ../components/cards/order-room/order-room
+include ../components/comment/comment
+include ../components/form-elements/bullet-list/bullet-list
 
 block section
     -
@@ -30,10 +32,17 @@ block section
                         +chart() 
 
                 .room-details__comments
+                    h1 Отзывы посетителей номера
+                    +comment()
+                    +comment()
 
-                .room-details__wrapper
+                .room-details__wrapper_cancel
                     .room-details__rules
+                        h1 Правила
+                        +bullet-list()
                     .room-details__cancel
+                        h1 Отмена
+                        .room-details__cancel_text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
             .room-details__order
                 +order-room()
         

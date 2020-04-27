@@ -2,12 +2,23 @@
     
 .room-details
     margin-top: 5.9rem
+    padding-bottom: 4.9rem
+    border-bottom: 1px solid $dark-shade-25
 
     &__view
         display: flex
 
     &__info
         display: flex
+        padding-top: 5.5rem
+        padding-left: 11.5rem
+        padding-right: 7%
+
+        h1
+            font-size: 1.6rem
+            padding: 0
+            margin: 0
+            margin-bottom: 0.3rem
 
     &__description
         flex-grow: 2
@@ -27,7 +38,35 @@
 
     &__wrapper
         display: flex
+        justify-content: space-between
+        margin-bottom: 1.2rem
+
+        &_cancel
+            display: flex
+            justify-content: space-between
+            padding: 0 7.3rem 0 0.1rem  
 
     &__rates
-        width: 17rem
+        width: 34.9rem
         +chart()
+
+    &__comments
+        margin-bottom: 0.9rem
+
+        h1
+            margin-bottom: 0rem
+
+    &__rules
+        h1
+            margin-bottom: 1.5rem
+            padding-left: 1.6rem
+        
+
+    &__cancel
+        h1
+            margin-bottom: 1.5rem
+            padding-left: 0.4rem
+
+        &_text
+            +font-type($type-body)
+            width: 28rem

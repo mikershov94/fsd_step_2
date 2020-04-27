@@ -6,6 +6,11 @@
 
     .chart
         position: absolute
+        top: -0.8rem
+        left: -4rem
+        
+        .donut
+            width: 13rem
 
         &__number
             +font-type($type-h1)
@@ -22,7 +27,7 @@
             text-anchor: middle
 
     .chart-key
-        margin-left: 13rem
+        margin-left: 10.2rem
         padding-top: 2rem
 
         &__list
@@ -34,21 +39,21 @@
             li
                 position: relative
                 width: 13rem
-                padding-left: 2rem
+                padding-left: 1.2rem
 
         &__item
             display: inline-block
             position: absolute
             left: 0
             top: 0.4rem
-            width: 1rem
-            height: 1rem
+            width: 0.8rem
+            height: 0.8rem
             border-radius: 50%
             
             &_gold
                 +gradient-color($gold, $white-gold)
             &_green
-                +gradient-color($green, $white-green)
+                +gradient-color($white-green, $green)
             &_purple
                 +gradient-color($purple, $blue)
             &_grey
