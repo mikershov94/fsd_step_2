@@ -1,4 +1,16 @@
-mixin chart()
+mixin chart(rates)
+    - var notGold = String(100 - rates.gold)
+    - var notGreen = String(100 - rates.green)
+    - var notPurple = String(100 - rates.purple)
+
+    - var gold = String(rates.gold)
+    - var green = String(rates.green)
+    - var purple = String(rates.purple)
+
+    - var dasharrayGold = gold + " " + notGold
+    - var dasharrayGreen = green + " " + notGreen
+    - var dasharrayPurple = purple + " " + notPurple
+
     figure
         .chart
             svg(width="100%" height="100%" viewBox="0 0 42 42" class="donut")
@@ -20,12 +32,12 @@ mixin chart()
 
                 circle(class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff")
                 circle(class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#FFF" stroke-width="1")
-                circle(class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="url(#gold)" stroke-width="1" stroke-dasharray="50 50" stroke-dashoffset="-25")
-                circle(class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="url(#green)" stroke-width="1" stroke-dasharray="25 75" stroke-dashoffset="0")
-                circle(class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="url(#purple)" stroke-width="1" stroke-dasharray="25 75" stroke-dashoffset="25")
+                circle(class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="url(#gold)" stroke-width="1" stroke-dasharray=dasharrayGold stroke-dashoffset="-25")
+                circle(class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="url(#green)" stroke-width="1" stroke-dasharray=dasharrayGreen stroke-dashoffset="0")
+                circle(class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="url(#purple)" stroke-width="1" stroke-dasharray=dasharrayPurple stroke-dashoffset="25")
 
                 g(class="chart__text")
-                    text(x="50%" y="50%" class="chart__number") 260
+                    text(x="50%" y="50%" class="chart__number")= rates.count
                     text(x="50%" y="50%" class="chart__label") Голосов
 
         figcaption(class="chart-key")

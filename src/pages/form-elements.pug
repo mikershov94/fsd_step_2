@@ -123,12 +123,22 @@ block content
         var featuresData = [
             {icon: 'insert_emoticon', label: 'Комфорт', description: 'Шумопоглощающие стены'},
             {icon: 'location_city', label: 'Удобство', description: 'Окно в каждой из спален'},
-        ]            
+        ]
+
+    -
+        var testComment = {
+            foto: "/img/murad.jpg",
+            date: new Date(2020, 3, 22),
+            likes: 12,
+            liked: true,
+            name: 'Мурад Сарафанов',
+            text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены действительно шумоподавляющие. Выкрикивал комплименты повару - никто не жаловалсяиз соседей.'
+        }            
     
     .form-elements__row_4
         .form-elements__col_1
             +features(featuresData)
         .form-elements__col_comment
             .form-elements__cell.form-elements__cell_comment
-                +comment()
+                +comment(testComment)
         

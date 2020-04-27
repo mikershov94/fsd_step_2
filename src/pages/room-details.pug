@@ -7,6 +7,47 @@ include ../components/comment/comment
 include ../components/form-elements/bullet-list/bullet-list
 
 block section
+
+    -
+        var testRoom = {
+            slides: ["/img/num_lux_1.jpg", "/img/num_lux_2.jpg", "/img/num_lux_3.jpg"],
+            features: [
+                {icon: 'insert_emoticon', label: 'Комфорт', description: 'Шумопоглощающие стены'},
+                {icon: 'location_city', label: 'Удобство', description: 'Окно в каждой из спален'},
+                {icon: 'whatshot', label: 'Уют', description: 'Номер оснащен камином'},
+            ],
+            rates: {
+                count: 260,
+                gold: 50,
+                green: 25,
+                purple: 25
+            },
+            numb: '888',
+            lux: true,
+            price: '9 990',
+            collecting_1: 0,
+            collecting_2: 300,
+            comments: [
+                {
+                    foto: "/img/murad.jpg",
+                    date: new Date(2020, 3, 22),
+                    likes: 12,
+                    liked: true,
+                    name: 'Мурад Сарафанов',
+                    text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены действительно шумоподавляющие. Выкрикивал комплименты повару - никто не жаловалсяиз соседей.'
+                },
+                {
+                    foto: "/img/murad.jpg",
+                    date: new Date(2020, 3, 22),
+                    likes: 12,
+                    liked: true,
+                    name: 'Мурад Сарафанов',
+                    text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены действительно шумоподавляющие. Выкрикивал комплименты повару - никто не жаловалсяиз соседей.'
+                },
+            ] 
+
+        }
+
     -
         var numFeatures = [
             {icon: 'insert_emoticon', label: 'Комфорт', description: 'Шумопоглощающие стены'},
@@ -26,15 +67,18 @@ block section
                 .room-details__wrapper
                     .room-details__features
                         h1 Сведения о номере
-                        +features(numFeatures)
+                        +features(testRoom.features)
                     .room-details__rates
                         h1 Впечатления от номера
-                        +chart() 
+                        +chart(testRoom.rates) 
 
                 .room-details__comments
+                    .room-details__comments_count
+                        .room-details__count= testRoom.comments.length
+                        .room-details__label отзыва
                     h1 Отзывы посетителей номера
-                    +comment()
-                    +comment()
+                    each comment in testRoom.comments
+                        +comment(comment)
 
                 .room-details__wrapper_cancel
                     .room-details__rules

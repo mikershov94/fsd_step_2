@@ -1,14 +1,17 @@
 include ../form-elements/like-button/like-button
 
-mixin comment()
+mixin comment(comment)
+    - var today = new Date()
+    - var time = 5
+
     .comment
         .comment__user
             .comment__img
-                img(src="../static/img/murad.jpg")
+                img(src=comment.foto)
             .comment__userinfo
-                .comment__name Мурад Сарафанов
-                .comment__date 5 дней назад
+                .comment__name= comment.name
+                .comment__date= time + ' дней назад'
         .comment__body
             .comment__like
-                +like-button(12, true)
-            .comment__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены действительно шумоподавляющие. Выкрикивал комплименты повару - никто не жаловалсяиз соседей. 
+                +like-button(comment.likes, comment.liked)
+            .comment__text= comment.text
