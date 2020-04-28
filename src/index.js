@@ -33,3 +33,4 @@ $(document).ready(() => {
 });
 
 import './components/cards/search-room/search-room.js';
+import './components/cards/order-room/order-room.js';

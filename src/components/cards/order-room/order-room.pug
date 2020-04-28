@@ -13,8 +13,8 @@ mixin order-room()
                 span.order-room__price 9 990₽
                 span.order-room__period в сутки
         .order-room__range
-            +date-dropdown('Прибытие')
-            +date-dropdown('Выезд')
+            +date-dropdown('Прибытие', '_from')
+            +date-dropdown('Выезд', '_to')
         .order-room__guests
             +guest-dropdown('Гости')
         .order-room__wrapper
