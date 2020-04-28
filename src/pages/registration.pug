@@ -1,7 +1,6 @@
-extends layouts/landing
+extends layouts/login
 
 include ../components/cards/signup/signup
 
-block section
-    section.registration
-        +signup()
+block card
+    +signup()
