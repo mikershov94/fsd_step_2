@@ -6,7 +6,13 @@
     border-bottom: 1px solid $dark-shade-25
 
     &__view
+        padding-top: 0.35rem
         display: flex
+        height: 40.3rem
+
+        & img
+            width: 100%
+            background-size: cover
 
     &__info
         display: flex
@@ -22,18 +28,20 @@
 
     &__description
         flex-grow: 2
+        max-width: 65rem
 
     &__order
         flex-grow: 1
 
     &__img
         &_main
-            img
-                width: 81.5rem
+            width: 68.125%
         
         &_small
-            img
-                width: 37.8rem
+            width: 31.875%
+
+            & img:last-child
+                margin: -1.8px 0
 
     &__wrapper
         display: flex
@@ -53,6 +61,8 @@
         position: relative
         margin-bottom: 0.9rem
         max-width: 59rem
+        min-width: 20rem
+        margin-right: 6rem
 
         h1
             margin-bottom: 0rem
@@ -82,4 +92,62 @@
 
         &_text
             +font-type($type-body)
-            width: 28rem
+            max-width: 28rem
+
+@media ( max-width:  1630px)
+    .room-details
+        &__info
+            padding: 0 3%
+            flex-wrap: wrap
+            justify-content: center
+
+        &__order
+            display: flex
+            padding: 0
+            justify-content: center
+
+
+@media ( max-width:  1250px)
+    .room-details__view
+        height: 25rem
+        
+
+@media ( max-width:  750px )
+    .room-details
+        &__view
+            height: 15rem
+        &__wrapper
+            flex-wrap: wrap
+            justify-content: center
+
+        &__rates
+            h1
+                margin-right: 7rem
+
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-end
+            margin-top: 5rem
+
+        &__wrapper_cancel
+            flex-wrap: wrap
+            justify-content: center
+            padding: 0
+
+        &__rules
+            h1
+                text-align: center
+                padding: 0
+        
+        &__cancel
+            h1
+                text-align: center
+                padding: 0
+            
+            margin-bottom: 5rem
+
+        &__comments
+            padding-left: 9%
+
+            &_count
+                display: none
