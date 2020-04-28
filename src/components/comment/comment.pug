@@ -1,8 +1,7 @@
 include ../form-elements/like-button/like-button
 
 mixin comment(comment)
-    - var today = new Date()
-    - var time = 5
+    
 
     .comment
         .comment__user
@@ -10,7 +9,7 @@ mixin comment(comment)
                 img(src=comment.foto)
             .comment__userinfo
                 .comment__name= comment.name
-                .comment__date= time + ' дней назад'
+                .comment__date= comment.date
         .comment__body
             .comment__like
                 +like-button(comment.likes, comment.liked)
