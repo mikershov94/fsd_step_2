@@ -109,6 +109,7 @@ module.exports = {
 		new CopyWebpackPlugin([
 			{ from:  `${PATHS.static}/img`, to: `${PATHS.dist}/img` },
 			{ from:  `${PATHS.static}/svg`, to: `${PATHS.dist}/svg` },
+			{ from:  `${PATHS.static}/icons`, to: `${PATHS.dist}/icons` },
 		]),
 	]
 
