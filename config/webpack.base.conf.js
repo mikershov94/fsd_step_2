@@ -110,6 +110,7 @@ module.exports = {
 			{ from:  `${PATHS.static}/img`, to: `${PATHS.dist}/img` },
 			{ from:  `${PATHS.static}/svg`, to: `${PATHS.dist}/svg` },
 			{ from:  `${PATHS.static}/icons`, to: `${PATHS.dist}/icons` },
+			{ from:  `${PATHS.static}/fonts`, to: `${PATHS.dist}/fonts` },
 		]),
 	]
 
