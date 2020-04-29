@@ -37,7 +37,23 @@ module.exports = {
 			},
 
 			{
-				test: /\.sass$/,
+				test: /\.css$/,
+      			use: [
+        			'style-loader',
+        			MiniCssExtractPlugin.loader,
+					{
+						loader: 'css-loader',
+						options: { sourceMap: true }
+					}, 
+					{
+						loader: 'postcss-loader',
+						options: { sourceMap: true, config: { path: __dirname } }
+					}
+      			]
+			},
+
+			{
+				test: /\.(sass)$/,
 				use: [
 					MiniCssExtractPlugin.loader,
 					{
@@ -74,7 +90,7 @@ module.exports = {
 				loader: 'url-loader',
 			},
 			{
-				test: /\.(woff|woff2|ttf|otf|eot)$/,
+				test: /\.(woff|woff2|ttf|otf|eot)?$/,
 				use: [
 					{
 						loader: 'file-loader',
@@ -109,6 +125,7 @@ module.exports = {
 		new CopyWebpackPlugin([
 			{ from:  `${PATHS.static}/img`, to: `${PATHS.dist}/img` },
 			{ from:  `${PATHS.static}/svg`, to: `${PATHS.dist}/svg` },
+			{ from:  `${PATHS.static}/img/loaders`, to: `${PATHS.dist}/css/img` },
 			{ from:  `${PATHS.static}/icons`, to: `${PATHS.dist}/icons` },
 			{ from:  `${PATHS.static}/fonts`, to: `${PATHS.dist}/fonts` },
 		]),

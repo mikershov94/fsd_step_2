@@ -1,4 +1,6 @@
+import './components/font-type/fonts.css';
 import './main.sass';
+import 'jquery'
 import 'jquery-mask-plugin';
 import 'slick-carousel';
 
