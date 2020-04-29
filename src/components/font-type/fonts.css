@@ -2,11 +2,11 @@
 	font-family: 'Quicksand';
 	font-style: normal;
 	font-weight: bold;
-	src: url('/fonts/quicksand/Quicksand-Bold.woff2') format('woff2'),
-		 url('/fonts/quicksand/Quicksand-Bold.woff') format('woff'),
-		 url('/fonts/quicksand/Quicksand-Bold.eot?#iefix') format('embedded-opentype'),
-		 url('/fonts/quicksand/Quicksand-Bold.ttf') format('truetype');
-	src: url('/fonts/quicksand/Quicksand-Bold.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/Quicksand-Bold.woff2') format('woff2'),
+		 url('/fonts/Quicksand-Bold.woff') format('woff'),
+		 url('/fonts/Quicksand-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/Quicksand-Bold.ttf') format('truetype');
+	src: url('/fonts/Quicksand-Bold.eot'); /* IE9 Compat Modes */
 	src: local('Quicksand Bold'), local('Quicksand-Bold');
 }
 
@@ -14,11 +14,11 @@
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: bold;
-	src: url('/fonts/open-sans/OpenSans-Bold.woff2') format('woff2'),
-		 url('/fonts/open-sans/OpenSans-Bold.woff') format('woff'),
-		 url('/fonts/open-sans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
-		 url('/fonts/open-sans/OpenSans-Bold.ttf') format('truetype');
-	src: url('/fonts/open-sans/OpenSans-Bold.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/OpenSans-Bold.woff2') format('woff2'),
+		 url('/fonts/OpenSans-Bold.woff') format('woff'),
+		 url('/fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/OpenSans-Bold.ttf') format('truetype');
+	src: url('/fonts/OpenSans-Bold.eot'); /* IE9 Compat Modes */
 	src: local('Open Sans Bold'), local('OpenSans-Bold');
 }
 
@@ -26,11 +26,11 @@
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/fonts/open-sans/open-sans-v17-latin_cyrillic-regular.woff2') format('woff2'),
-		 url('/fonts/open-sans/open-sans-v17-latin_cyrillic-regular.woff') format('woff'),
-		 url('/fonts/open-sans/open-sans-v17-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
-		 url('/fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
-	src: url('/fonts/open-sans/open-sans-v17-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/open-sans-v17-latin_cyrillic-regular.woff2') format('woff2'),
+		 url('/fonts/open-sans-v17-latin_cyrillic-regular.woff') format('woff'),
+		 url('/fonts/open-sans-v17-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/OpenSans-Regular.ttf') format('truetype');
+	src: url('/fonts/open-sans-v17-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
 	src: local('Open Sans Regular'), local('OpenSans-Regular');
 }
 
@@ -38,11 +38,11 @@
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: bold;
-	src: url('/fonts/montserrat/Montserrat-Bold.woff2') format('woff2'),
-		 url('/fonts/montserrat/Montserrat-Bold.woff') format('woff'),
-		 url('/fonts/montserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
-		 url('/fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
-	src: url('/fonts/montserrat/Montserrat-Bold.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/Montserrat-Bold.woff2') format('woff2'),
+		 url('/fonts/Montserrat-Bold.woff') format('woff'),
+		 url('/fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/Montserrat-Bold.ttf') format('truetype');
+	src: url('/fonts/Montserrat-Bold.eot'); /* IE9 Compat Modes */
 	src: local('Montserrat Bold'), local('Montserrat-Bold');
 }
 
@@ -50,11 +50,11 @@
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
-		 url('/fonts/montserrat/Montserrat-Regular.woff') format('woff'),
-		 url('/fonts/montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
-		 url('/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
-	src: url('/fonts/montserrat/Montserrat-Regular.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/Montserrat-Regular.woff2') format('woff2'),
+		 url('/fonts/Montserrat-Regular.woff') format('woff'),
+		 url('/fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/Montserrat-Regular.ttf') format('truetype');
+	src: url('/fonts/Montserrat-Regular.eot'); /* IE9 Compat Modes */
 	src: local('Montserrat Regular'), local('Montserrat-Regular');
 }
 
@@ -62,11 +62,11 @@
 	font-family: 'MaterialIcons';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/fonts/material-icons/MaterialIcons-Regular.woff2') format('woff2'),
-		 url('/fonts/material-icons/MaterialIcons-Regular.woff') format('woff'),
-		 url('/fonts/material-icons/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'),
-		 url('/fonts/material-icons/MaterialIcons-Regular.ttf') format('truetype');
-	src: url('/fonts/material-icons/MaterialIcons-Regular.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/materialicons-regular.woff2') format('woff2'),
+		 url('/fonts/materialicons-regular.woff') format('woff'),
+		 url('/fonts/materialicons-regular.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/materialicons-regular.ttf') format('truetype');
+	src: url('/fonts/materialicons-regular.eot'); /* IE9 Compat Modes */
 	src: local('Material Icons'), local('MaterialIcons-Regular');
 }
 
