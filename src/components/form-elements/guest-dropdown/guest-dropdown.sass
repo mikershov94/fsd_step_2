@@ -1,6 +1,7 @@
 =guest-dropdown()
     
     .guest-dropdown
+        max-width: 26.5rem
 
         &__label
             +label()
@@ -16,7 +17,7 @@
         &__box
             background: white
             position: relative
-            max-width: 26.5rem
+            width: 100%
             height: 3.5rem
             border: 1px solid $dark-shade-25
             border-radius: 0.3rem
@@ -50,7 +51,9 @@
             top: 3.5rem
             left: -0.1rem
             display: none
-            width: 26.5rem
+            width: 100%
+            //max-width: 26.5rem
+            //min-width: 22rem
             height: 13rem
             border: 1px solid $dark-shade-25
             border-radius: 0 0 0.3rem 0.3rem
